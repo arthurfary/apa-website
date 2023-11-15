@@ -1,0 +1,36 @@
+/* Estilos para o header */
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+  
+/* Estilos para a barra de navegação */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+  
+.nav li {
+    margin-right: 20px;
+}
+  
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+  
+.nav a:hover {
+    color: #ff9900; /* Cor de destaque ao passar o mouse */
+}
