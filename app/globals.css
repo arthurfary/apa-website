@@ -1,3 +1,10 @@
+/* Variaveis globais para as cores */
+:root{
+  --primary-color: #96E072;
+  --secondary-color: #3DA35D;
+  /* Add more colors as needed */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,3 +21,4 @@ a {
   color: inherit;
   text-decoration: none;
 }
+

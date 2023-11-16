@@ -30,7 +30,12 @@
     font-weight: 600;
     transition: color 0.3s ease;
 }
-  
+
+.nav .active{
+    color: var(--primary-color);
+}  
+
 .nav a:hover {
-    color: #ff9900; /* Cor de destaque ao passar o mouse */
+    color: var(--secondary-color); /* Cor de destaque ao passar o mouse */
 }
+
