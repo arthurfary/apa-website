@@ -1,4 +1,4 @@
-import Menu from "../s_menu/menu"
+import Menu from "../sistema_menu/menu"
 
 export default function SystemPage({ children }) {
   return (
