@@ -1,7 +1,6 @@
 /* Estilos para o header */
 .header {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--navbar-color);
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -26,7 +25,7 @@
   
 .nav a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     transition: color 0.3s ease;
 }
