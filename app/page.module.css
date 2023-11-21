@@ -1,22 +1,150 @@
-.herodiv {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+/* Hero Section */
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
 
-    display: flex;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    z-index: 1; /* Ensure the div appears on top of the image */
-  }
+.heroContainer h1 {
+  font-size: 6em;
+  color: #101010;
+}
+
+.heroContainer p {
+  font-size: 1.6em;
+  color: #101010;
+  font-weight: 600;
+}
+
+/* Images Section */
+.imageContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.singleImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 18em;
+  margin: 0 8em;
+  transform: translateY(-11em);
+}
+
+.responsiveImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.textBox {
+  transform: translateY(-15em);
+}
+
+/* Help Section */
+.helpContainer{
+  display: flex;
+  justify-content: space-between; /* Add this property */
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+
+  transform: translateY(-10em);
+}
+
+
+.dogCircle {
+  float: right;
+  /* position: relative; */
+  width: 30em;
+  height: 30em;
+  margin-right: 12em;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.helpText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  height: 100%;
+  padding-left: 15em;
+}
+
+.helpText h1{
+  font-size: 3em;
+}
+
+.helpText p{
+  margin-top: 1em;
+  font-size: 1.6em;
+}
+
+/* Dog Circle */
+.circleDogImage{
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/* Lines Section */
+.linesContainer{
+  float: right;
+  width: 10em;
+  height: auto;
+  transform: translateY(-22em);
+}
+
+.linesImage{
+  position: absolute;
+  width: 20em;
+  height: auto;
+  z-index: 2;
+  transform: translateX(-35em);
+}
+
+/* Ball and Bone */
+
+.ballAndBoneContainer{
+  width: 10em;
+  height: auto;
+  margin-left: 8em;
+  transform: translateY(-25em);
+}
+
+.ballAndBoneImage{
+  width: 100%;
+  height: 100%;
+}
+
+/* Paws */
+
+.pawsContainer{
+  position: absolute;
+  width: 15em;
+  height: auto;
+  z-index: 2;
   
-  .herodiv h1 {
-    font-size: 4em;
-  }
-  
-  .herodiv p {
-    font-size: 1.2em;
-  }
-  
+  transform: translateX(95em);
+}
+
+.pawsImage{
+  width: 100%;
+  height: auto;
+  transform: translateY(-43em);
+}
+
+
