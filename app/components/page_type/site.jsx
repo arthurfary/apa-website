@@ -1,4 +1,5 @@
 import Header from "../header/header"
+import Footer from "../footer/footer"
 
 export default function SitePage({ children }) {
   return (
@@ -6,7 +7,8 @@ export default function SitePage({ children }) {
         <Header />
 
         {children}
-
+        <Footer/>
     </>
+
   )
 }
