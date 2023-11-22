@@ -7,6 +7,10 @@ import CircleDogImage from '../public/cachorro_ciruclo.png'
 import LinesImage from '../public/lines_home.png'
 import BallAndBoneImage from '@/public/ball_and_bone_home.png'
 import PawsImage from '@/public/patas_home.png'
+import CurvyRectagle from '@/public/curvy_rectangle_home.png'
+
+// pipoca temporaria
+import pipoca from '@/public/pipoca.jpeg'
 
 import SitePage from './components/page_type/site'
 import ImageHero from './components/hero_maker/ImageHero'
@@ -51,7 +55,6 @@ export default function Home() {
 
         <div className={styles.helpContainer}>
           
-
           <div className={styles.helpText}> 
             <h1>Como ajudar</h1>
             <p>Você pode nos ajudar com doações, sendo um voluntário ou adotando um pet!</p>
@@ -63,9 +66,19 @@ export default function Home() {
 
         </div>
 
-        <ColorHero color={'var(--primary-color)'} height={100}>
-          <h1>teste</h1>
-        </ColorHero>
+        <div className={styles.curvyRectangle}>
+          <ImageHero src={CurvyRectagle} height={90}>
+            
+              <div className={styles.rectContainer}>
+                {Array(4).fill().map((_, i) => (
+                  <div key={i} className={styles.rectDiv}>
+                    <Image src={pipoca} alt={`Image ${i+1}`} className={styles.rectImage} />
+                  </div>
+                ))}
+              </div>
+            
+          </ImageHero>
+        </div>
 
         <h2>test</h2>
       </main>

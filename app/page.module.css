@@ -60,7 +60,8 @@
   width: 100%;
   height: 70vh;
 
-  transform: translateY(-10em);
+  margin-top: -20em; /* Add this property */
+  margin-bottom: 5em;
 }
 
 
@@ -148,3 +149,37 @@
 }
 
 
+/* curvy rect */
+
+.curvyRectangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 5em; /* Adjust as needed */
+}
+
+
+.rectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  width: 100vw;
+  height: 100%;
+  transform: translateY(-3em);
+}
+
+
+.rectImage {
+  width: 20em; /* Adjust as needed */
+  height: auto;
+  margin: 0 3em; /* Adjust as needed */
+
+  border-radius: 100%;
+}
+
+.rectDiv{
+  /*  */
+}
