@@ -7,8 +7,9 @@
   width: 100%;
   background: var(--footer-color);
   color: rgb(255, 255, 255);
-  padding-top: 3rem;
+  padding-top: 3vw;
   padding-bottom: 6rem;
+  margin-top: 15vw;
 }
 
 .footer cap {
