@@ -1,0 +1,231 @@
+/* Estilos padrão para telas maiores */
+.titulo {
+    transform: translateY(10em);
+    padding-left: 8em;
+    font-size: 20px;
+}
+
+.tex1 {
+    transform: translateY(15em);
+    padding-left: 10em; 
+    margin-right: 50em;
+}
+.ramp{
+    transform: translateY(20em);
+    height: 17em;
+
+}
+.ramprever{
+    width: 100%;
+    height: 100%;
+}
+.comi{
+    width: 13em;
+    transform: translateY(4.5em);
+    margin-left: 20em;
+}
+.comida{
+    width: 100%;
+    height: 100%;
+}
+.tex2{
+
+    transform: translateY(-8em);
+    margin-left: 50em;
+    font-size: 18px;
+}
+.tex3{
+    transform: translateY(-4em);
+    margin-left: 20em;
+    font-size: 30px;
+}
+.pix{
+    transform: translateY(-6em);
+    margin-left: 46em;
+}
+.espira{
+    width: 13em;
+    transform: translateY(-25.9em);
+    margin-left: 67em;
+}
+.seta{
+    width: 100%;
+    height: 100%;
+}
+.tex4{
+    transform: translateY(-7em);
+    font-size: 20px;
+    margin-left: 8em;
+}
+.tex5{
+    transform: translateY(-2em);
+    font-size: 35px;
+    margin-left: 4.5em;
+}
+.verde{
+    width: 110em;
+    transform: translateY(-1em);
+    margin-left: 6em;
+}
+.ver{
+    width: 100%;
+    height: 100%;
+}
+.cachorro{
+    width: 93em;
+    transform: translateY(-42em);
+    margin-left: 13em;
+
+}
+.quatro{
+    width: 100%;
+    height: 100%;
+}
+.vasilha{
+    width: 20em;
+    transform: translateY(-40em);
+    margin-left: 20em;
+}
+.pote{
+    width: 100%;
+    height: 100%;
+}
+.rever{
+    width: 10em;
+    transform: translateY(3em);
+    margin-left: 90em;
+    position: absolute;
+}
+.patas{
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajustes para telas menores, como celulares */
+@media only screen and (max-width: 600px) {
+    .titulo {
+        transform: translateY(8em); /* Ajuste para posição padrão */
+        padding-left: 3em; /* Ajuste de espaço à esquerda */
+        font-size: 16px; /* Tamanho de fonte reduzido */
+    }
+
+    .tex1 {
+        transform: translateY(15em); /* Ajuste para posição padrão */
+        padding-left: 5em; /* Ajuste de espaço à esquerda */
+        margin-right: 5em; /* Remover a margem à direita */
+        font-size: 9px;
+    }
+    .ramp {
+        transform: translateY(40vw);
+        height: 8em;
+        display: block;
+    }
+    
+    .ramprever {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .comi {
+        width: 5em;
+        transform: translateY(18vw);
+        margin-left: 15vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .comida {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .tex2 {
+        transform: translateY(-1em);
+        margin-left: 33vw; /* Ajuste conforme necessário */
+        font-size: 9px;
+    }
+    
+    .tex3 {
+        transform: translateY(-1.1vw);
+        margin-left: 33vw; /* Ajuste conforme necessário */
+        font-size: 12px;
+    }
+    
+    .pix {
+        transform: translateY(1vw);
+        margin-left: 33vw; /* Ajuste conforme necessário */
+        font-size: 7px;
+    }
+    
+    .espira {
+        width: 5em;
+        transform: translateY(-28vw);
+        margin-left: 54vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .seta {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .tex4 {
+        transform: translateY(-4vw);
+        font-size: 16px;
+        margin-left: 3em; /* Ajuste conforme necessário */
+    }
+    
+    .tex5 {
+        transform: translateY(-1vw);
+        font-size: 35px;
+        margin-left: 2.5em; /* Ajuste conforme necessário */
+        font-size: 20px;
+        display: block;
+    }
+    
+    .verde {
+        width: 110vw; /* Ajuste conforme necessário */
+        transform: translateY(4vw);
+        margin-left: -3vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .ver {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .cachorro {
+        width: 90vw; /* Ajuste conforme necessário */
+        transform: translateY(-35vw);
+        margin-left: 2em; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .quatro {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .vasilha {
+        width: 20vw;
+        transform: translateY(-33vw);
+        margin-left: 17vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .pote {
+        width: 100%;
+        height: 100%;
+    }
+    .rever{
+        width: 3em;
+        transform: translateY(10em);
+        margin-left: 1em;
+        position: absolute;
+    }
+    .patas{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
