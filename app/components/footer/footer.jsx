@@ -34,8 +34,9 @@ return(
           </div>
         </div>
       </div>
+{/*      
       <div className={styles.contatoCollumn}> 
-        <h2 style={{textAlign:'center', color: "black"}}>
+      <h2 style={{textAlign:'center', color: "black"}}>
           Entre em contato conosco
         </h2>
         <u1>
@@ -50,8 +51,32 @@ return(
                 <Image src={imgPawIcon} alt='Icone Botão' className={styles.BtnImage}/>
               </button>
         </u1>
+      </div> 
+*/}
+      <div className={styles.footerItem}>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/historia">História</a>
+          </li>
+          <li>
+            <a href="/doacao">Doação</a>
+          </li>
+          <li>
+            <a href="/adocao">Adoção</a>
+          </li>
+          <li>
+            <a href="/atividades">Atividades</a>
+          </li>
+          <li>
+            <a href="/noticias">Noticias</a>
+          </li>
+        </ul>
       </div>
-      <Image src={imgApaLogo} alt="apaLogo" style={{maxWidth:'25%', height:'fit-content', alignSelf:'center', marginBottom:'3em'}}/>
+      
+      <Image src={imgApaLogo} alt="apaLogo" className={styles.apaLogo}/>
     </div>
   <Image src={imgPaws} className={styles.miscImage} style={{left:'15px', bottom:'15px'}}/>
   <Image src={imgPetToys} className={styles.miscImage} style={{right:'15px', bottom:'15px'}}/>

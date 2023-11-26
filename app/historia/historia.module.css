@@ -1,4 +1,11 @@
 
+.justifyContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
 .titleContainer{
     display: flex;
     justify-content: center;
@@ -10,27 +17,44 @@
 .historyContainer {
     position: relative;
     width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    height: fit-content;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+}
+
+.invHistoryContainer {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     height: fit-content;
-    margin-top: 5vw;
     padding-top: 5vw;
     padding-bottom: 5vw;
     border-radius: 5vw;
 }
 
 .dogImageLeft{
-    max-width: 25vw;
+    width: 25vw;
     height: auto;
-    margin-left: 10vw;
+    max-width: 240px;
+    margin-left: 5vw;
 }
 
 .dogImageRight{
-    max-width: 25vw;
+    width: 25vw;
     height: auto;
+    max-width: 240px;
     margin-right: 10vw;
 }
 
@@ -44,7 +68,7 @@
 
 .historyText{
     color: #000000;
-    font-size: 2.5vw;
+    font-size: 24px;
     text-align: left;
     /*max-width: 50%;*/
     margin: 5vw;
@@ -65,4 +89,53 @@
     width: 8vw;
     height: auto;
     z-index: 1;
+}
+
+@media screen and (max-width:719px){
+    .titleContainer{
+        margin-top: 15vw;
+    }
+
+    .historyContainer {
+        position: relative;
+        width: 100%;
+        max-width: 960px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .invHistoryContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .historyText{
+        text-align: center;
+    }
+
+    .historyTitle{
+        font-size: 9vw;
+        position: relative;
+        top: -15vw;
+        padding-right: 0;
+    }
+
+    .bgImg{
+        max-width: 100%;
+        height: -webkit-fill-available;
+    }
+
+    .dogImageLeft{
+        width: 40vw;
+        margin-left: 0vw;
+    }
+    
+    .dogImageRight{
+        width: 40vw;
+        margin-right: 0vw;
+    }
+
 }
