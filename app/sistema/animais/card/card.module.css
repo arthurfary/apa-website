@@ -1,0 +1,36 @@
+.card {
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Espaçamento externo */
+    max-width: 300px; /* Largura máxima do card */
+    text-align: center; /* Centraliza o texto */
+    background-color: #ffffff; /* Cor de fundo */
+  }
+  
+  .card h2 {
+    color: #333333; /* Cor do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+  }
+  
+  .card p {
+    color: #666666; /* Cor do texto */
+    margin-bottom: 10px; /* Espaço abaixo do parágrafo */
+  }
+  
+  .card img {
+    max-width: 100%; /* Largura máxima da imagem */
+    height: auto; /* Altura automática */
+    border-radius: 5px; /* Bordas arredondadas na imagem */
+  }
+  
+    .card button {
+        border: none; /* Remove a borda */
+        background-color: #007bff; /* Cor de fundo */
+        color: #ffffff; /* Cor do texto */
+        padding: 10px; /* Espaçamento interno */
+        border-radius: 5px; /* Borda arredondada */
+        cursor: pointer; /* Cursor apontando mão */
+        transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    }
