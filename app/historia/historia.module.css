@@ -1,0 +1,141 @@
+
+.justifyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.titleContainer{
+    display: flex;
+    min-height: 28vw;
+    width: 100%;
+    background: url(/historia-bg-01.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: -5vw;
+    padding-left: 12vw;
+    padding-bottom: 5vw;
+}
+
+.historyContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+}
+
+.invHistoryContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+}
+
+.dogImageLeft{
+    width: 25vw;
+    height: auto;
+    max-width: 320px;
+    margin-left: 5vw;
+}
+
+.dogImageRight{
+    width: 25vw;
+    height: auto;
+    max-width: 320px;
+    margin-right: 10vw;
+}
+
+.historyTitle{
+    color: #000000;
+    font-size: 4.5vw;
+    text-align: left;
+    font-weight: bold;
+}
+
+.historyText{
+    color: #000000;
+    font-size: 28px;
+    text-align: left;
+    max-width: 40%;
+    margin: 5vw;
+}
+
+.historyTextCenter{
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+    max-width: 60%;
+    margin: 2.5vw;
+}
+
+.bgImg{
+    color: transparent;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.fgImgSmall{
+    position: absolute;
+    color: transparent;
+    max-width: 15vw;
+    width: 8vw;
+    height: auto;
+    z-index: 1;
+}
+
+@media screen and (max-width:719px){
+
+    .historyContainer {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .invHistoryContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .historyText{
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .historyTextCenter{
+        max-width: 100%;
+    }
+
+    .historyTitle{
+        font-size: 8vw;
+    }
+
+    .bgImg{
+        height: -webkit-fill-available;
+    }
+
+    .dogImageLeft{
+        width: 40vw;
+        margin-left: 0vw;
+    }
+    
+    .dogImageRight{
+        width: 40vw;
+        margin-right: 0vw;
+    }
+
+}
