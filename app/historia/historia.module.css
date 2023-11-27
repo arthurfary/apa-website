@@ -1,44 +1,44 @@
 
 .justifyContainer{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 .titleContainer{
     display: flex;
-    justify-content: center;
-    min-height: 22vw;
-    align-content: center;
-    flex-wrap: wrap;
+    min-height: 28vw;
+    width: 100%;
+    background: url(/historia-bg-01.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: -5vw;
+    padding-left: 12vw;
+    padding-bottom: 5vw;
 }
 
 .historyContainer {
-    position: relative;
     width: 100%;
-    max-width: 960px;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
     align-items: center;
-    justify-content: flex-end;
-    height: fit-content;
+    justify-content: center;
     padding-top: 5vw;
     padding-bottom: 5vw;
     border-radius: 5vw;
 }
 
 .invHistoryContainer {
-    position: relative;
     width: 100%;
-    max-width: 960px;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
     align-items: center;
-    justify-content: space-between;
-    height: fit-content;
+    justify-content: center;
     padding-top: 5vw;
     padding-bottom: 5vw;
     border-radius: 5vw;
@@ -47,14 +47,14 @@
 .dogImageLeft{
     width: 25vw;
     height: auto;
-    max-width: 240px;
+    max-width: 320px;
     margin-left: 5vw;
 }
 
 .dogImageRight{
     width: 25vw;
     height: auto;
-    max-width: 240px;
+    max-width: 320px;
     margin-right: 10vw;
 }
 
@@ -63,20 +63,27 @@
     font-size: 4.5vw;
     text-align: left;
     font-weight: bold;
-    padding-right: 45vw;
 }
 
 .historyText{
     color: #000000;
-    font-size: 24px;
+    font-size: 28px;
     text-align: left;
-    /*max-width: 50%;*/
+    max-width: 40%;
     margin: 5vw;
+}
+
+.historyTextCenter{
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+    max-width: 60%;
+    margin: 2.5vw;
 }
 
 .bgImg{
     color: transparent;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     position: absolute;
     z-index: -1;
@@ -92,17 +99,9 @@
 }
 
 @media screen and (max-width:719px){
-    .titleContainer{
-        margin-top: 15vw;
-    }
 
     .historyContainer {
-        position: relative;
-        width: 100%;
-        max-width: 960px;
-        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         flex-direction: column-reverse;
     }
 
@@ -114,17 +113,18 @@
 
     .historyText{
         text-align: center;
+        max-width: 100%;
+    }
+
+    .historyTextCenter{
+        max-width: 100%;
     }
 
     .historyTitle{
-        font-size: 9vw;
-        position: relative;
-        top: -15vw;
-        padding-right: 0;
+        font-size: 8vw;
     }
 
     .bgImg{
-        max-width: 100%;
         height: -webkit-fill-available;
     }
 
