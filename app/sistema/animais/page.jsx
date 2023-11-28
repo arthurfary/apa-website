@@ -25,32 +25,22 @@ function Animais(){
     };
 
     function salvarNovo(){
-        console.log("entrei")
         const nome = document.querySelector('input[name="nome"]').value;
         const especie = document.querySelector('input[name="especie"]').value;
         const foto = image;
 
-        const formData = {
-            nome,
-            especie,
-            foto
-        };
-
         fetch('https://apasbs.000webhostapp.com/salvarPet.php', {
             method: 'POST',
-            body: formData
+            body: JSON.stringify({
+                nome: nome,
+                especie: especie,
+                foto: foto
+            })
         })
             .then(response => response.json())
             .then(data => {
-                if (data.sucesso) {
-                    alert('Pet cadastrado com sucesso!');
-                    window.location.reload();
-                } else {
-                    alert('Erro ao cadastrar pet!');
-                }
+                setRefresh(!refresh);
             });
-            
-        setRefresh(!refresh);
     }
 
     return (
@@ -60,7 +50,7 @@ function Animais(){
                     <h1>Animais para Adoção</h1>
                 </div>
 
-                <div className={styles.cardGrid}>
+                <section className={styles.cardGrid}>
                     {showAddForm ? (
                         <div className={styles.addCardForm}>
                             <input className={styles.inputField} type="text" placeholder="Nome" name='nome' />
@@ -82,7 +72,7 @@ function Animais(){
                             <Card id={animal.id} nome={animal.nome} especie={animal.especie} foto={animal.foto} />
                         </div>
                     ))}
-                </div>
+                </section>
             </main>
         </SystemPage>
     );
