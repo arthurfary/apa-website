@@ -20,14 +20,23 @@ function ImageUpload({setImage,image}) {
   return (
     <div className={styles.uploadImageComponent}>
 
-      <Dropzone onDrop={handleDrop}>
-        {({ getRootProps, getInputProps }) => (
-          <div {...getRootProps()} className={styles.button}>
-            <input {...getInputProps()} />
-            <p className={styles.textUploadButton}>Upload Capa</p>
-          </div>
-        )}
-      </Dropzone>
+      {!image &&
+        <Dropzone onDrop={handleDrop}>
+          {({ getRootProps, getInputProps }) => (
+            <div {...getRootProps()} className={styles.button}>
+              <input {...getInputProps()} />
+              <p className={styles.textUploadButton}>Selecionar Foto</p>
+            </div>
+          )}
+        </Dropzone>
+      }
+
+      {image &&
+        <div className={styles.imageContainer}>
+          <button className={styles.buttonX} onClick={() => setImage(false)}>X</button>
+          <img src={image} alt="Capa do Livro" className={styles.image} width={180} height={120}/>
+        </div>
+      }
 
     </div>
   );

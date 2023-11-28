@@ -5,21 +5,53 @@ import styles from '@/app/sistema/animais/page.module.css';
 import { useEffect, useState } from 'react';
 
 import Card from './card/card';
+import ImageUpload from '@/app/components/image_upload/image_upload';
 
 function Animais(){
 
     const [animais, setAnimais] = useState([]);
     const [showAddForm, setShowAddForm] = useState(false);
+    const [image, setImage] = useState(false);
+    const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
         fetch('https://apasbs.000webhostapp.com/obterPets.php')
             .then(response => response.json())
             .then(data => setAnimais(data.pets));
-    }, []);
+    }, [refresh]);
 
     function alteraCard() {
         setShowAddForm(!showAddForm);
     };
+
+    function salvarNovo(){
+        console.log("entrei")
+        const nome = document.querySelector('input[name="nome"]').value;
+        const especie = document.querySelector('input[name="especie"]').value;
+        const foto = image;
+
+        const formData = {
+            nome,
+            especie,
+            foto
+        };
+
+        fetch('https://apasbs.000webhostapp.com/salvarPet.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    alert('Pet cadastrado com sucesso!');
+                    window.location.reload();
+                } else {
+                    alert('Erro ao cadastrar pet!');
+                }
+            });
+            
+        setRefresh(!refresh);
+    }
 
     return (
         <SystemPage>
@@ -33,10 +65,10 @@ function Animais(){
                         <div className={styles.addCardForm}>
                             <input className={styles.inputField} type="text" placeholder="Nome" name='nome' />
                             <input className={styles.inputField} type="text" placeholder="Espécie" name='especie' />
-                            <input className={styles.inputField} type="text" placeholder="Upload da Foto" name='foto' />
+                            <ImageUpload setImage={setImage} image={image} />
                             <div>
-                                <button className={`${styles.button} ${styles.salvar}`}>Salvar</button>
-                                <button className={`${styles.button} ${styles.cancelar}`} onClick={alteraCard}>Cancelar</button>
+                                <button className={`${styles.button} ${styles.salvar}`} onClick={salvarNovo} >Salvar</button>
+                                <button className={`${styles.button} ${styles.cancelar}`} onClick={alteraCard} >Cancelar</button>
                             </div>
                         </div>
                     ) : (
