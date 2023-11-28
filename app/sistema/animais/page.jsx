@@ -17,8 +17,8 @@ function Animais(){
             .then(data => setAnimais(data.pets));
     }, []);
 
-    const handleAddClick = () => {
-        setShowAddForm(true); // Alterna para o formulário de adição
+    function alteraCard() {
+        setShowAddForm(!showAddForm);
     };
 
     return (
@@ -30,14 +30,17 @@ function Animais(){
 
                 <div className={styles.cardGrid}>
                     {showAddForm ? (
-                        <div className={styles.cardCommon}>
-                            <input className={styles.inputField} type="text" placeholder="Nome" />
-                            <input className={styles.inputField} type="text" placeholder="Espécie" />
-                            <input className={styles.inputField} type="text" placeholder="URL da Foto" />
-                            {/* Adicione um botão para salvar ou cancelar */}
+                        <div className={styles.addCardForm}>
+                            <input className={styles.inputField} type="text" placeholder="Nome" name='nome' />
+                            <input className={styles.inputField} type="text" placeholder="Espécie" name='especie' />
+                            <input className={styles.inputField} type="text" placeholder="Upload da Foto" name='foto' />
+                            <div>
+                                <button className={`${styles.button} ${styles.salvar}`}>Salvar</button>
+                                <button className={`${styles.button} ${styles.cancelar}`} onClick={alteraCard}>Cancelar</button>
+                            </div>
                         </div>
                     ) : (
-                        <div className={`${styles.cardCommon} ${styles.addCard}`} onClick={handleAddClick}>
+                        <div className={`${styles.cardCommon} ${styles.addCard}`} onClick={alteraCard}>
                             +
                         </div>
                     )}

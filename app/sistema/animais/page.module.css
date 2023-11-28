@@ -48,6 +48,20 @@
     background-color: #e6f0ff; /* Cor de fundo ao passar o mouse */
 }
 
+.addCardForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    height: 350px; /* Altura fixa */
+    width: 300px;
+    font-size: 3rem; /* Tamanho grande para o símbolo de + */
+    color: #007bff;
+    background-color: #f2f6fd;
+}
+
 .formCard {
     display: flex;
     flex-direction: column;
@@ -76,4 +90,31 @@
 .cardCommon{
     width: 300px;
     height: 350px;
+}
+
+.button{
+    padding: 10px;
+    margin: 0px 6px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.salvar{
+    background-color: rgb(7, 151, 26);
+}
+
+.salvar:hover{
+    background-color: rgb(12, 102, 24);
+}
+
+.cancelar{
+    background-color: #dc3545;
+}
+
+.cancelar:hover{
+    background-color: #c82333;
 }
