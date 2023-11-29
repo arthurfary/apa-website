@@ -8,6 +8,7 @@ import LinesImage from '../public/lines_home.png'
 import BallAndBoneImage from '@/public/ball_and_bone_home.png'
 import PawsImage from '@/public/patas_home.png'
 import CurvyRectagle from '@/public/curvy_rectangle_home.png'
+import boneImage from '@/public/osso.png'
 
 // pipoca temporaria
 import pipoca from '@/public/pipoca.jpeg'
@@ -76,11 +77,18 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+              
+              <div className={styles.boneButtonContainer}>
+                <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
+                  
+                  <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
+                  <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Como Ajudar</h1>
+                </div>
+              </div>
             
           </ImageHero>
         </div>
 
-        <h2>test</h2>
       </main>
     </SitePage>
   )
