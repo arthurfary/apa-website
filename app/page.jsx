@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <SitePage>
       <main className={styles.main}>
-        <ImageHero src={BackgroundImage} height={115} pullUp={5}>
+        <ImageHero src={BackgroundImage} height={115}>
           <div className={styles.heroContainer}>
             <div className={styles.imageContainer}>
               <div className={styles.singleImageContainer}>

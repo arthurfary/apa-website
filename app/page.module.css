@@ -5,20 +5,20 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  padding: 20px;
+  margin-top: 6rem;
   color: white;
   text-align: center;
   z-index: 1;
+  
 }
 
 .heroContainer h1 {
-  font-size: 6em;
+  font-size: 6rem;
   color: #101010;
 }
 
 .heroContainer p {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   color: #101010;
   font-weight: 600;
 }
@@ -28,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   text-align: center;
 }
 
@@ -36,10 +35,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20em;
-  height: 18em;
-  margin: 0 8em;
-  transform: translateY(-11em);
+  width: 15rem;
+  height: 13rem;
+  margin: 0 10rem;
 }
 
 .responsiveImage {
@@ -49,7 +47,7 @@
 }
 
 .textBox {
-  transform: translateY(-15em);
+  transform: translateY(-2rem);
 }
 
 /* Help Section */
@@ -68,8 +66,7 @@
 .dogCircle {
   float: right;
   /* position: relative; */
-  width: 30em;
-  height: 30em;
+  width: 30vw;
   margin-right: 12em;
   border-radius: 100%;
   background-color: #fff;
@@ -106,24 +103,25 @@
   float: right;
   width: 10em;
   height: auto;
-  transform: translateY(-22em);
+  margin-top: -14rem;
+
+  margin-right: 30vw;
 }
 
 .linesImage{
   position: absolute;
-  width: 20em;
+  width: 20vw;
   height: auto;
   z-index: 2;
-  transform: translateX(-35em);
 }
 
 /* Ball and Bone */
 
 .ballAndBoneContainer{
-  width: 10em;
+  width: 10vw;
   height: auto;
-  margin-left: 8em;
-  transform: translateY(-25em);
+  margin-left: 2rem;
+  transform: translateY(-15rem);
 }
 
 .ballAndBoneImage{
