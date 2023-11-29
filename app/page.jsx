@@ -7,7 +7,7 @@ import CircleDogImage from '../public/cachorro_ciruclo.png'
 import LinesImage from '../public/lines_home.png'
 import BallAndBoneImage from '@/public/ball_and_bone_home.png'
 import PawsImage from '@/public/patas_home.png'
-import CurvyRectagle from '@/public/curvy_rectangle_home.png'
+import CurvyRectangle from '@/public/curvy_rectangle_home.png'
 import boneImage from '@/public/osso.png'
 
 // pipoca temporaria
@@ -23,6 +23,7 @@ export default function Home() {
   return (
     <SitePage>
       <main className={styles.main}>
+        
         <ImageHero src={BackgroundImage} height={115}>
           <div className={styles.heroContainer}>
             <div className={styles.imageContainer}>
@@ -39,7 +40,13 @@ export default function Home() {
               <p>Associação Protetora dos Animais</p>
             </div>
           </div>
+
+          <div className={styles.pawsContainer}>
+            <Image src={PawsImage} className={styles.pawsImage}></Image>
+          </div>
         </ImageHero>
+
+        
 
         {/* Imagens entre o hero e o container */}
         <div className={styles.linesContainer}>
@@ -50,11 +57,11 @@ export default function Home() {
           <Image src={BallAndBoneImage} className={styles.ballAndBoneImage}></Image>
         </div>
 
-        <div className={styles.pawsContainer}>
-          <Image src={PawsImage} className={styles.pawsImage}></Image>
-        </div>
+        
+        
 
         <div className={styles.helpContainer}>
+
           
           <div className={styles.helpText}> 
             <h1>Como ajudar</h1>
@@ -67,28 +74,31 @@ export default function Home() {
 
         </div>
 
-        <div className={styles.curvyRectangle}>
-          <ImageHero src={CurvyRectagle} height={90}>
-            
-              <div className={styles.rectContainer}>
-                {Array(4).fill().map((_, i) => (
-                  <div key={i} className={styles.rectDiv}>
-                    <Image src={pipoca} alt={`Image ${i+1}`} className={styles.rectImage} />
-                  </div>
-                ))}
-              </div>
-              
-              <div className={styles.boneButtonContainer}>
-                <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
-                  
-                  <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
-                  <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Como Ajudar</h1>
-                </div>
-              </div>
-            
-          </ImageHero>
-        </div>
+        
+          
+          <div className={styles.curvyRectangle}>
+                <Image src={CurvyRectangle} className={styles.CurvyRectangleBg} alt="imgBg2"/> 
 
+                <div className={styles.rectContainer}>
+                  {Array(4).fill().map((_, i) => (
+                    <div key={i} className={styles.rectDiv}>
+                      <Image src={pipoca} alt={`Image ${i+1}`} className={styles.rectImage} />
+                    </div>
+                  ))}
+                </div>
+                
+                <div className={styles.boneButtonContainer}>
+                  <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
+                    
+                    <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
+                    <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Como Ajudar</h1>
+                  </div>
+                </div>
+
+
+          </div>
+          
+        
       </main>
     </SitePage>
   )
