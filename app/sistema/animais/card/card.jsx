@@ -31,7 +31,12 @@ function Card({id, nome, especie, adotado, foto, setRefresh, refresh}){
       <p>{especie}</p>
       <p>{adotado ? 'Adotado' : 'Disponível para adoção'}</p>
       <img src={foto} alt={`Foto de ${nome}`} />
-      {loading === false && <button className={styles.remover} onClick={removerPet}>Remover</button>}
+      {loading === false && 
+        <>
+          <button className={styles.remover} onClick={removerPet}>Remover</button>
+          <button className={styles.editar}>Editar</button>
+        </>
+      }
       {loading === true && 
         <div className={styles.loading}>
           <Load size={30}/>

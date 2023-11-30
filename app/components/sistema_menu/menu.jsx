@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const HorizontalMenuContainer = styled.nav`
   display: flex;
@@ -26,13 +27,13 @@ export default function Menu() {
   return (
     <HorizontalMenuContainer>
       <MenuItem>
-        <a href="/sistema/animais">Animais para Adoção</a>
+        <Link href="/sistema/animais">Animais para Adoção</Link>
       </MenuItem>
       <MenuItem>
-        <a href="/sistema/atividades">Atividades</a>
+        <Link href="/sistema/atividades">Atividades</Link>
       </MenuItem>
       <MenuItem>
-        <a href="/sistema/noticias">Notícias</a>
+        <Link href="/sistema/noticias">Notícias</Link>
       </MenuItem>
     </HorizontalMenuContainer>
   );
