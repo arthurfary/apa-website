@@ -3,13 +3,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Mudança para iniciar o conteúdo do topo */
-    height: 100%;
+    min-height: 100vh;
     padding: 2rem;
     width: 100%;
     background-color: #f5f5f5;
     font-family: 'Arial', sans-serif; /* Tipografia moderna */
     color: #111; /* Cor do texto mais escura para melhor legibilidade */
     gap: 1rem; /* Espaço entre os elementos filhos */
+    overflow-y: hidden;
 }
 
 /* Estilo adicional para o título e botão */
@@ -89,7 +90,7 @@
 
 .cardCommon{
     width: 300px;
-    height: 350px;
+    height: 400px;
 }
 
 .button{

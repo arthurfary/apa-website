@@ -3,7 +3,8 @@
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     padding: 20px; /* Espaçamento interno */
-    margin: 20px 0; /* Espaçamento externo */
+    margin: 20px; /* Espaçamento externo */
+    margin-top: 0px;
     max-width: 300px; /* Largura máxima do card */
     text-align: center; /* Centraliza o texto */
     background-color: #ffffff; /* Cor de fundo */
@@ -34,3 +35,16 @@
         cursor: pointer; /* Cursor apontando mão */
         transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
     }
+
+.remover{
+  background-color: red !important;
+  margin-top: 10px;
+}
+
+.remover:hover{
+  background-color: rgb(197, 1, 1) !important;
+}
+
+.loading{
+  margin-top: 20px;
+}
