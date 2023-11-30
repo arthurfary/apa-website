@@ -88,9 +88,9 @@ function Animais(){
                     )}
 
                     {animais.map((animal, index) => (
-                        <div className={styles.cardCommon} key={index}>
-                            <Card id={animal.id} nome={animal.nome} especie={animal.especie} foto={animal.foto} setRefresh={setRefresh} refresh={refresh} />
-                        </div>
+
+                        <Card id={animal.id} nome={animal.nome} especie={animal.especie} foto={animal.foto} setRefresh={setRefresh} refresh={refresh} />
+
                     ))}
                 </section>
             </main>

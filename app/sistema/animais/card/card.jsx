@@ -36,8 +36,8 @@ function Card({id, nome, especie, adotado, foto, setRefresh, refresh}){
       <img src={foto} alt={`Foto de ${nome}`} />
       {loading === false && 
         <>
-          <button className={styles.remover} onClick={removerPet}>Remover</button>
           <button className={styles.editar} onClick={() => {setEdit(true)}}>Editar</button>
+          <button className={styles.remover} onClick={removerPet}>Remover</button>
         </>
       }
       {loading === true && 

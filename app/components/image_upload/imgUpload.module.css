@@ -46,7 +46,6 @@
 .image {
     display: block;
     width: 180px;
-    height: 120px;
     border-radius: 5px; /* Borda ligeiramente arredondada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }

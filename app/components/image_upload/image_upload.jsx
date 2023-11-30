@@ -34,7 +34,7 @@ function ImageUpload({setImage,image}) {
       {image &&
         <div className={styles.imageContainer}>
           <button className={styles.buttonX} onClick={() => setImage(false)}>X</button>
-          <img src={image} alt="Capa do Livro" className={styles.image} width={180} height={120}/>
+          <img src={image} alt="Capa do Livro" className={styles.image}/>
         </div>
       }
 

@@ -5,7 +5,7 @@
     justify-content: center;
     border: 2px dashed #007bff;
     border-radius: 10px;
-    height: 350px; /* Altura fixa */
+    height: 400px; /* Altura fixa */
     width: 300px;
     font-size: 3rem; /* Tamanho grande para o símbolo de + */
     color: #007bff;
@@ -25,11 +25,13 @@
     flex-direction: column;
     border: 2px dashed #007bff;
     border-radius: 10px;
-    height: 350px; /* Altura fixa */
+    height: 400px; /* Altura fixa */
     width: 300px;
     font-size: 3rem; /* Tamanho grande para o símbolo de + */
     color: #007bff;
     background-color: #f2f6fd;
+    margin: 0px 20px;
+    margin-bottom: 20px;
 }
 
 .formCard {

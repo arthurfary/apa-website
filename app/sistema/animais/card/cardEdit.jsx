@@ -11,14 +11,13 @@ function CardEdit({id, nome, especie, adotado, foto, setRefresh, refresh, setEdi
 
     const [loading, setLoading] = useState(false);
     const [image, setImage] = useState(foto);
+    const [nomeEdit, setNomeEdit] = useState(nome);
+    const [especieEdit, setEspecieEdit] = useState(especie);
 
     function salvarAlteracao(){
         setLoading(true)
-        const nome = document.querySelector('input[name="nome"]').value;
-        const especie = document.querySelector('input[name="especie"]').value;
-        const foto = image;
 
-        if (!nome || !especie || !foto) {
+        if (!nomeEdit || !especieEdit || !image) {
             alert('Preencha todos os campos!');
             setLoading(false)
             return;
@@ -28,22 +27,23 @@ function CardEdit({id, nome, especie, adotado, foto, setRefresh, refresh, setEdi
             method: 'POST',
             body: JSON.stringify({
                 id: id,
-                nome: nome,
-                especie: especie,
-                foto: foto
+                nome: nomeEdit,
+                especie: especieEdit,
+                foto: image
             })
         })
             .then(response => response.json())
             .then(data => {
                 setRefresh(!refresh);
                 setLoading(false)
+                setEdit(false)
             });
     }
 
   return (
     <div className={styles.addCardForm}>
-        <input className={styles.inputField} type="text" placeholder="Nome" name='nome' />
-        <input className={styles.inputField} type="text" placeholder="Espécie" name='especie' />
+        <input className={styles.inputField} type="text" placeholder="Nome" name='nome' onChange={(e) => setNomeEdit(e.target.value)}  value={nomeEdit}/>
+        <input className={styles.inputField} type="text" placeholder="Espécie" name='especie' onChange={(e) => setEspecieEdit(e.target.value)} value={especieEdit} />
         <ImageUpload setImage={setImage} image={image} />
         {loading === false && 
             <div>
