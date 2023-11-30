@@ -3,11 +3,14 @@
 import styles from './card.module.css';
 
 import Load from '@/app/components/load/load';
+import CardEdit from './cardEdit';
+
 import { useState } from 'react';
 
 function Card({id, nome, especie, adotado, foto, setRefresh, refresh}){
 
   const [loading, setLoading] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   async function removerPet(){
 
@@ -25,7 +28,7 @@ function Card({id, nome, especie, adotado, foto, setRefresh, refresh}){
   }
 
 
-  return (
+  return !edit ? (
     <div className={styles.card}>
       <h2>{nome}</h2>
       <p>{especie}</p>
@@ -34,7 +37,7 @@ function Card({id, nome, especie, adotado, foto, setRefresh, refresh}){
       {loading === false && 
         <>
           <button className={styles.remover} onClick={removerPet}>Remover</button>
-          <button className={styles.editar}>Editar</button>
+          <button className={styles.editar} onClick={() => {setEdit(true)}}>Editar</button>
         </>
       }
       {loading === true && 
@@ -43,6 +46,10 @@ function Card({id, nome, especie, adotado, foto, setRefresh, refresh}){
         </div>
       }
     </div>
+  ) : (
+    <>
+      <CardEdit id={id} nome={nome} especie={especie} adotado={adotado} foto={foto} setRefresh={setRefresh} refresh={refresh} setEdit={setEdit} />
+    </>
   );
 };
 
