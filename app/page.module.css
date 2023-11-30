@@ -113,7 +113,7 @@
 
 .linesImage{
   position: absolute;
-  width: 15vw;
+  width: 20vw;
   height: auto;
   z-index: 2;
 }
@@ -241,7 +241,7 @@
 
 .boneButton h1{
   top: 50%;
-  font-size: 2rem;
+  font-size: 1.9vw;
   width: 100%;
 
   cursor: pointer;
@@ -255,3 +255,22 @@
 
 
 
+/* Lines Section 2 */
+.linesContainer2{
+  float: right;
+  width: 15em;
+  height: auto;
+
+  margin-top: -50vh;
+
+  margin-right: 45vw;
+  
+}
+
+.linesImage2{
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  z-index: -1;
+  transform: rotate(90deg);
+}
