@@ -24,7 +24,7 @@ export default function Home() {
     <SitePage>
       <main className={styles.main}>
         
-        <ImageHero src={BackgroundImage} height={115} cover={true}>
+        <ImageHero src={BackgroundImage} height={115}>
           <div className={styles.heroContainer}>
             <div className={styles.imageContainer}>
               <div className={styles.singleImageContainer}>
