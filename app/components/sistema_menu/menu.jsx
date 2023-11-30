@@ -26,15 +26,21 @@ const MenuItem = styled.div`
 export default function Menu() {
   return (
     <HorizontalMenuContainer>
-      <MenuItem>
-        <Link href="/sistema/animais">Animais para Adoção</Link>
-      </MenuItem>
-      <MenuItem>
-        <Link href="/sistema/atividades">Atividades</Link>
-      </MenuItem>
-      <MenuItem>
-        <Link href="/sistema/noticias">Notícias</Link>
-      </MenuItem>
+      <Link href="/sistema/animais">
+        <MenuItem>
+          <p>Animais para Adoção</p>
+        </MenuItem>
+      </Link>
+      <Link href="/sistema/atividades">
+        <MenuItem>
+          <p>Atividades</p>
+        </MenuItem>
+      </Link>
+      <Link href="/sistema/noticias">
+        <MenuItem>
+          <p>Notícias</p>
+        </MenuItem>
+      </Link>
     </HorizontalMenuContainer>
   );
 }
