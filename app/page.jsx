@@ -24,7 +24,7 @@ export default function Home() {
     <SitePage>
       <main className={styles.main}>
         
-        <ImageHero src={BackgroundImage} height={115}>
+        <ImageHero src={BackgroundImage} height={115} cover={true}>
           <div className={styles.heroContainer}>
             <div className={styles.imageContainer}>
               <div className={styles.singleImageContainer}>
@@ -79,12 +79,11 @@ export default function Home() {
           <Image src={LinesImage} className={styles.linesImage2}></Image>
         </div>
 
-        {/* <div className={styles.pawsContainer}>
-            <Image src={PawsImage} className={styles.pawsImage}></Image>
-        </div> */}
+        <div className={styles.pawsContainer2}>
+            <Image src={PawsImage} className={styles.pawsImage2}></Image>
+        </div>
 
         
-          
         <div className={styles.curvyRectangle}>
           <Image src={CurvyRectangle} className={styles.CurvyRectangleBg} alt="imgBg2"/> 
 
@@ -100,7 +99,7 @@ export default function Home() {
             <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
               
               <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
-              <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Como Ajudar</h1>
+              <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Adote um Pet!</h1>
             </div>
           </div>
 

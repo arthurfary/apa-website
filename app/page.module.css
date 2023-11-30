@@ -58,45 +58,46 @@
   display: flex;
   justify-content: space-between; /* Add this property */
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 70vh; /* Add this property */
   margin-bottom: 5em;
   margin-top: -5rem;
+  padding: 10vw;
 }
 
 
-.dogCircle {
-  float: right;
-  /* position: relative; */
-  width: 30vw;
-  margin-right: 12em;
-  border-radius: 100%;
-  background-color: #fff;
-  z-index: 3;
-}
+
 
 .helpText {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50vw;
+  width: 50%;
   height: 100%;
-  padding-left: 15em;
 }
 
 .helpText h1{
-  font-size: 3em;
+  font-size: 3vw;
 }
 
 .helpText p{
   margin-top: 1em;
-  font-size: 1.6em;
+  font-size: 1.6vw;
 }
 
 /* Dog Circle */
 .circleDogImage{
   width: 100%;
   height: 100%;
+  z-index: 3;
+}
+
+.dogCircle {
+  float: right;
+  /* position: relative; */
+  width: 30vw;
+  border-radius: 100%;
+  background-color: #fff;
   z-index: 3;
 }
 
@@ -257,13 +258,13 @@
 
 /* Lines Section 2 */
 .linesContainer2{
-  float: right;
-  width: 15em;
+  float:left;
+  width: 20rem;
   height: auto;
 
-  margin-top: -50vh;
+  margin-top: -25vw;
 
-  margin-right: 45vw;
+  margin-left: 40vw;
   
 }
 
@@ -273,4 +274,25 @@
   height: auto;
   z-index: -1;
   transform: rotate(90deg);
+}
+
+
+
+.pawsContainer2{
+  position: absolute;
+  width: 5vw;
+  height: auto;
+  z-index: 2;
+  
+  margin-left: 40vw;
+  margin-top: -20vh;
+
+  transform: rotate(230deg);
+  
+}
+
+.pawsImage2{
+  width: 100%;
+  height: auto;
+  
 }
