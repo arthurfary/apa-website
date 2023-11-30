@@ -1,139 +1,189 @@
 /* Estilos padrão para telas maiores */
-.titulo {
-    transform: translateY(10em);
-    padding-left: 8em;
-    font-size: 20px;
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 100%;
+}
+.titulo {
+    display: flex;
+    min-height: 28vw;
+    width: 100%;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: -5vw;
+    padding-left: 11vw;
+    padding-bottom: 5vw;
 }
 
 .tex1 {
-    transform: translateY(15em);
-    padding-left: 10em; 
-    margin-right: 50em;
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+    
+    
+    font-size: 14px;
+    text-align: left;
+    max-width: 40%;
+    margin: -13vw;
+    margin-left: -50vw;
+    
 }
-.ramp{
+.conjunto{
     width: 100%;
-    height: 100%;
-
+   display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
 }
 .ramprever{
-    transform: translateY(20em);
-    height: 17em;
-}
-.comi{
+    color: transparent;
     width: 100%;
-    height: 100%;
-}
-.comida{
-    width: 13em;
     height: 15em;
-    transform: translateY(4em);
-    margin-left: 22em;
+    position: absolute;
+    z-index: -1;
+}
+
+.comida{
+    width: 9vw;
+    height: auto;
+    max-width: 320px;
+    position: absolute;
+    margin-left: -50vw;
+    
+    
 }
 .tex2{
 
-    transform: translateY(-9em);
-    margin-left: 50em;
-    font-size: 18px;
-    width: 100%;
-    height: 100%;
+    font-size: 14px;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 10vw;
+    transform: translatey(-11.6em);
+    display: flex;
 }
 .tex3{
-    transform: translateY(-4.5em);
-    margin-left: 20em;
     font-size: 30px;
-    width: 100%;
-    height: 100%;
+    text-align: left;
+    max-width: 60%;
+    margin-left: 20vw;
+    transform: translatey(-5em);
+    display: flex;
 }
 .pix{
-    transform: translateY(-7em);
-    margin-left: 46em;
-    width: 100%;
-    height: 100%;
-}
-.espira{
-    width: 100%;
-    height: 100%;
+    font-size: 14px;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 10vw;
+    transform: translatey(-8em);
+    display: flex;
 }
 .seta{
-    width: 13em;
-    height: 10em;
-    transform: translateY(-25.9em);
-    margin-left: 67em;
+    width: 13vw;
+    height: auto;
+    max-width: 200px;
+    position: absolute;
+    margin-left: 21vw;
+    transform: translateY(-10em);
+    display: flex;
 }
 .tex4{
-    transform: translateY(-7em);
-    font-size: 20px;
-    margin-left: 5em;
+    display: flex;
+    min-height: 2vw;
     width: 100%;
-    height: 100%;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: 1vw;
+    padding-left: 11vw;
+    padding-bottom: 5vw;
+    
+    
 }
 .tex5{
-    transform: translateY(-2em);
-    font-size: 35px;
-    margin-left: 3em;
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+    
+    
+    font-size: 30px;
+    text-align: left;
+    max-width: 70%;
+    margin: -5vw;
+    margin-left: -28vw;
 }
-.verde{
+.conjunto2{
     width: 100%;
-    height: 100%;
+    /* display: flex;*/
+     flex-wrap: nowrap;
+     position: relative;
+     align-items: center;
+     justify-content: center;
+     padding-top: 20vw;
+     padding-bottom: 5vw;
+     border-radius: 5vw;
 }
 .ver{
-    width: 80em;
-    height: 60em;
-    transform: translateY(-1em);
-    margin-left: 1em;
-}
-.cachorro{
-    
+    color: transparent;
     width: 100%;
-    height: 100%;
+    height: auto;
+    z-index: -1;;
+    margin-top: -20vw;
 }
 .quatro{
-    width: 65em;
-    height: 20em;
-    transform: translateY(-40em);
-    margin-left: 8em;
-}
-.vasilha{
-    width: 100%;
-    height: 100%;
+    width: 80vw;
+    height: auto;
+    max-width: 2000px;
+    position: absolute;
+    margin-left: -90vw;
+    margin-top: -1vw;
 }
 .pote{
-    width: 20em;
-    height: 10em;
-    transform: translateY(-40em);
-    margin-left: 15em;
-}
-.rever{
-    width: 10em;
-    transform: translateY(3em);
-    margin-left: 90em;
+    width: 13vw;
+    height: auto;
+    max-width: 320px;
     position: absolute;
+    margin-left: -80vw;
+    margin-top: 20vw;
 }
+
 .patas{
-    width: 100%;
-    height: 100%;
+    width: 8vw;
+    height: auto;
+    max-width: 320px;
+    position: absolute;
+    margin-left: 60vw;
+    transform: translateY(10em);
+    display: flex;
 }
+
 
 /* Ajustes para telas menores, como celulares */
 @media only screen and (max-width: 798px) {
-    .titulo {
-        transform: translateY(8em); /* Ajuste para posição padrão */
-        padding-left: 3em; /* Ajuste de espaço à esquerda */
-        font-size: 16px; /* Tamanho de fonte reduzido */
-    }
-
-    .tex1 {
-        transform: translateY(15em); /* Ajuste para posição padrão */
-        padding-left: 5em; /* Ajuste de espaço à esquerda */
-        margin-right: 5em; /* Remover a margem à direita */
-        font-size: 9px;
-    }
+  
+.conjunto{
+    flex-wrap: wrap;
+        flex-direction: column-reverse;
+}
     .ramp {
         transform: translateY(40vw);
         height: 8em;
@@ -158,21 +208,19 @@
     }
     
     .tex2 {
-        transform: translateY(-1em);
-        margin-left: 33vw; /* Ajuste conforme necessário */
-        font-size: 9px;
+        text-align: center;
+        max-width: 100%;
     }
     
     .tex3 {
-        transform: translateY(-1.1vw);
-        margin-left: 33vw; /* Ajuste conforme necessário */
-        font-size: 12px;
+        text-align: center;
+        max-width: 100%;
     }
     
     .pix {
-        transform: translateY(1vw);
-        margin-left: 33vw; /* Ajuste conforme necessário */
-        font-size: 7px;
+        text-align: center;
+        max-width: 100%;
+        display: flex;
     }
     
     .espira {
