@@ -26,3 +26,9 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+      color:#000;
+      background:#fff
+  }
+}
