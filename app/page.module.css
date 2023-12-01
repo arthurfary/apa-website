@@ -118,6 +118,7 @@
   width: 20vw;
   height: auto;
   z-index: 2;
+  margin-top: 3vw;
 }
 
 /* Bola e Osso */
@@ -140,7 +141,7 @@
   height: auto;
   z-index: 2;
   margin-left: 80vw;
-  margin-top: 75vh;
+  margin-top: -45vh;
 }
 
 .pawsImage {
