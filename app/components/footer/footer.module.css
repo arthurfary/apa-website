@@ -4,7 +4,7 @@
   position: absolute;
   left: 0;
   top: auto;
-  width: 100%;
+  width: 100vw;
   background: var(--footer-color);
   color: rgb(255, 255, 255);
   padding-top: 3vw;
@@ -28,9 +28,8 @@
 }
 
 .footerContainer {
-  width: 100%;
-  margin-right: 30px;
-  margin-left: 30px;
+  width: 100vw;
+
   margin-bottom: 5vw;
   display: flex;
   flex-wrap: wrap;
