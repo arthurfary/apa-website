@@ -28,7 +28,7 @@ function Card({ id, nome, descricao, data, setRefresh, refresh }) {
     <div className={styles.card}>
       <h2>{nome}</h2>
       <p>{descricao}</p>
-      <p>Data: {new Date(data).toLocaleDateString()}</p>
+      <p>Data: {new Date(data).toLocaleDateString('pt-BR')}</p>
       {loading === false && 
         <>
           <button className={styles.editar} onClick={() => {setEdit(true)}}>Editar</button>

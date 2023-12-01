@@ -9,7 +9,7 @@ function CardEdit({ id, nome, descricao, data, setRefresh, refresh, setEdit }) {
     const [loading, setLoading] = useState(false);
     const [nomeEdit, setNomeEdit] = useState(nome);
     const [descricaoEdit, setDescricaoEdit] = useState(descricao);
-    const [dataEdit, setDataEdit] = useState(data);
+    const [dataEdit, setDataEdit] = useState(new Date(data).toISOString().split('T')[0]);
 
     function salvarAlteracao() {
         setLoading(true)

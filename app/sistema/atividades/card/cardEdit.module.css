@@ -42,7 +42,7 @@
     /* Repita os estilos comuns aqui se necessário */
 }
 
-.inputField {
+.inputField, .textareaField {
     width: 90%;
     padding: 10px;
     margin: 10px 0;
@@ -50,13 +50,18 @@
     border-radius: 4px;
 }
 
-.inputField:focus {
+.inputField:focus, .textareaField:focus {
     outline: none;
     border-color: #007bff;
 }
 
-.inputField::placeholder {
+.inputField::placeholder, .textareaField::placeholder {
     color: #ccc;
+}
+
+.textareaField {
+    height: 100px; /* Altura do textarea */
+    resize: vertical; /* Permite redimensionamento vertical */
 }
 
 .cardCommon{

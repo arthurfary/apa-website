@@ -89,7 +89,7 @@ function Atividades() {
                             id={atividade.id} 
                             nome={atividade.nome} 
                             descricao={atividade.descricao} 
-                            data={atividade.date} 
+                            data={atividade.data} 
                             setRefresh={setRefresh} 
                             refresh={refresh} 
                         />

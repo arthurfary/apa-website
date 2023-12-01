@@ -6,7 +6,7 @@
   margin: 20px; /* Espaçamento externo */
   margin-top: 0px;
   width: 300px; /* Largura máxima do card */
-  height: 400px;
+  height: auto;
   text-align: center; /* Centraliza o texto */
   background-color: #ffffff; /* Cor de fundo */
 }
