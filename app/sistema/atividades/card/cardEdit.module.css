@@ -1,0 +1,97 @@
+/* Estilo para o card especial de adição */
+.addCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    height: 400px; /* Altura fixa */
+    width: 300px;
+    font-size: 3rem; /* Tamanho grande para o símbolo de + */
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none; /* Evita que o usuário selecione o texto */
+}
+
+.addCard:hover {
+    background-color: #e6f0ff; /* Cor de fundo ao passar o mouse */
+}
+
+.addCardForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    height: 400px; /* Altura fixa */
+    width: 300px;
+    font-size: 3rem; /* Tamanho grande para o símbolo de + */
+    color: #007bff;
+    background-color: #f2f6fd;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+}
+
+.formCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Repita os estilos comuns aqui se necessário */
+}
+
+.inputField, .textareaField {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inputField:focus, .textareaField:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.inputField::placeholder, .textareaField::placeholder {
+    color: #ccc;
+}
+
+.textareaField {
+    height: 100px; /* Altura do textarea */
+    resize: vertical; /* Permite redimensionamento vertical */
+}
+
+.cardCommon{
+    width: 300px;
+    height: 400px;
+}
+
+.button{
+    padding: 10px;
+    margin: 0px 6px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.salvar{
+    background-color: rgb(7, 151, 26);
+}
+
+.salvar:hover{
+    background-color: rgb(12, 102, 24);
+}
+
+.cancelar{
+    background-color: #dc3545;
+}
+
+.cancelar:hover{
+    background-color: #c82333;
+}

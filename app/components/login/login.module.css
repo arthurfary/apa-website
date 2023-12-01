@@ -1,0 +1,88 @@
+.mainLogin{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #dfdfdf;
+}
+
+.mainLogin2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0f0f0;
+}
+
+.formBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    height: 310px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.formBox h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.formBox input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: 0px transparent;
+    transition-duration: .5s;
+}
+
+.formBox input:focus {
+    outline: 1px solid black;
+    box-shadow: 0px 0px 3px black;
+}
+
+.formBox button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formBox button:hover {
+    background-color: #0056b3;
+}
+
+.errorBorder {
+    border: 1px solid rgb(220, 0, 0) !important;
+}
+
+.errorBorder:focus {
+    outline: 1px solid rgb(220, 0, 0) !important;
+    box-shadow: 0px 0px 3px rgb(220, 0, 0);
+}
+
+.errorMessage{
+    color: rgb(220, 0, 0);
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: -5px;
+}
