@@ -4,11 +4,12 @@
   position: absolute;
   left: 0;
   top: auto;
-  width: 100%;
+  width: 100vw;
   background: var(--footer-color);
   color: rgb(255, 255, 255);
-  padding-top: 3rem;
+  padding-top: 3vw;
   padding-bottom: 6rem;
+  margin-top: 15vw;
 }
 
 .footer cap {
@@ -20,26 +21,33 @@
 
 .capImage {
   position: absolute;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   bottom: -6px;
   z-index: -2;
 }
 
 .footerContainer {
-  width: 100%;
-  margin-right: 30px;
-  margin-left: 30px;
+  width: 100vw;
+
+  margin-bottom: 5vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 }
 
-.enderecoContainer{
+.adressContainer{
   max-width: 35%;
   border-right: black 2px solid;
   border-right-style: dashed;
   padding: 1em
+}
+
+.adressContainer h2{
+  color: black;
+  text-align: center;
+  font-size: xxx-large;
 }
 
 .contatoCollumn {
@@ -91,6 +99,15 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 5px;
+  max-width: 6vw;
+}
+
+.adressText{
+  text-align: center;
+  text-wrap: pretty;
+  color: black;
+  padding: 5px;
+  font-size: xx-large;
 }
 
 .container {
@@ -156,23 +173,17 @@
     background: transparent;
     border: none;
   }
-  
-  .BtnImage {
-    width: 70px;
-    height: 70px;
-    margin-left: 15px;
-  }
 
-  .image {
-    width: 40px;
-    height: 40px;
+  .btnImage {
+    width: 4vw;
+    height: auto;
     filter: invert(1);
   }
   
   .miscImage {
     color: transparent;
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 10vw;
+    max-height: 10vw;
     position: absolute;
   }
 
@@ -181,6 +192,86 @@
     margin-right: 25%;
     white-space: nowrap;
   }
+
+  .footerItem{
+    width: 20%;
+    margin-left: 10%;
+  }
+
+  .footerItem p{
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 23px;
+    letter-spacing: 0px;
+    color: black;
+  }
+
+  .footerItem ul{
+    list-style: disc;
+    margin-top: 1.5rem;
+    color: black;
+  }
+
+  .footerItem ul li{
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+
+  .footerItem ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .apaLogo{
+    color: transparent;
+    max-width: 25%;
+    height: fit-content;
+    align-self: center;
+    margin-bottom: 3em;
+  }
   
- 
+  @media screen and (max-width:719px){
+    .apaLogo{
+      max-width: 40%;
+      margin-top: 2.5em;
+    }
+
+    .footerContainer {
+      justify-content: center;
+    }
+
+    .footerItem ul li a{
+      color: black;
+      text-decoration: none;
+      font-size: x-large;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .adressContainer{
+      max-width: 50%;
+      padding: 0em;
+      padding-right: 5vw;
+    }
+
+    .adressText{
+      font-size: x-large;
+    }
+
+    .adressContainer h2{
+      font-size: xx-large;
+    }
+
+    .centeredImage {
+      max-width: 15vw;
+    }
+
+    .btnImage {
+      width: 8vw;
+    }
+
+  }
   

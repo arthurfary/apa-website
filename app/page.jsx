@@ -1,3 +1,4 @@
+"use client"
 import styles from './page.module.css'
 
 import BackgroundImage from '../public/foto_fundo_home.png'
@@ -7,23 +8,40 @@ import CircleDogImage from '../public/cachorro_ciruclo.png'
 import LinesImage from '../public/lines_home.png'
 import BallAndBoneImage from '@/public/ball_and_bone_home.png'
 import PawsImage from '@/public/patas_home.png'
-import CurvyRectagle from '@/public/curvy_rectangle_home.png'
+import CurvyRectangle from '@/public/curvy_rectangle_home.png'
+import boneImage from '@/public/osso.png'
+import MobileCurvyImage from '@/public/mobile_curvy_image.png'
 
 // pipoca temporaria
 import pipoca from '@/public/pipoca.jpeg'
 
 import SitePage from './components/page_type/site'
-import ImageHero from './components/hero_maker/ImageHero'
-import ColorHero from './components/hero_maker/ColorHero'
+
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(undefined);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <SitePage>
       <main className={styles.main}>
-        <ImageHero src={BackgroundImage} height={115} pullUp={5}>
+        
+        
           <div className={styles.heroContainer}>
+            <Image src={BackgroundImage} layout='fill' objectPosition='center' className={styles.BackgroundImage} alt="imgBg2"/> 
             <div className={styles.imageContainer}>
               <div className={styles.singleImageContainer}>
                 <Image className={styles.responsiveImage} src={CatImage}></Image>
@@ -38,7 +56,13 @@ export default function Home() {
               <p>Associação Protetora dos Animais</p>
             </div>
           </div>
-        </ImageHero>
+
+          <div className={styles.pawsContainer}>
+            <Image src={PawsImage} className={styles.pawsImage}></Image>
+          </div>
+        
+
+        
 
         {/* Imagens entre o hero e o container */}
         <div className={styles.linesContainer}>
@@ -49,12 +73,11 @@ export default function Home() {
           <Image src={BallAndBoneImage} className={styles.ballAndBoneImage}></Image>
         </div>
 
-        <div className={styles.pawsContainer}>
-          <Image src={PawsImage} className={styles.pawsImage}></Image>
-        </div>
+        
+        
 
         <div className={styles.helpContainer}>
-          
+
           <div className={styles.helpText}> 
             <h1>Como ajudar</h1>
             <p>Você pode nos ajudar com doações, sendo um voluntário ou adotando um pet!</p>
@@ -66,21 +89,39 @@ export default function Home() {
 
         </div>
 
-        <div className={styles.curvyRectangle}>
-          <ImageHero src={CurvyRectagle} height={90}>
-            
-              <div className={styles.rectContainer}>
-                {Array(4).fill().map((_, i) => (
-                  <div key={i} className={styles.rectDiv}>
-                    <Image src={pipoca} alt={`Image ${i+1}`} className={styles.rectImage} />
-                  </div>
-                ))}
-              </div>
-            
-          </ImageHero>
+
+        {/* Imagens entre o hero e o container */}
+        <div className={styles.linesContainer2}>
+          <Image src={LinesImage} className={styles.linesImage2}></Image>
         </div>
 
-        <h2>test</h2>
+        <div className={styles.pawsContainer2}>
+            <Image src={PawsImage} className={styles.pawsImage2}></Image>
+        </div>
+
+        
+        <div className={styles.curvyRectangle}>
+          <Image src={windowWidth > 700 ? CurvyRectangle : MobileCurvyImage} objectPosition='center' className={styles.CurvyRectangleBg} alt="imgBg2"/> 
+
+          <div className={styles.rectContainer}>
+            {Array(4).fill().map((_, i) => (
+              <div key={i} className={styles.rectDiv}>
+                <Image src={pipoca} alt={`Image ${i+1}`} className={styles.rectImage} />
+              </div>
+            ))}
+          </div>
+          
+          <div className={styles.boneButtonContainer}>
+            <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
+              
+              <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
+              <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Adote um Pet!</h1>
+            </div>
+          </div>
+
+        </div>
+        
+        
       </main>
     </SitePage>
   )

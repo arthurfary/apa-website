@@ -15,27 +15,28 @@ return(
     <footer className={styles.footer}>
     <cap><Image src={imgFooterCap} alt="footerCap" className={styles.capImage}/></cap>
     <div className={styles.footerContainer}>
-      <div className={styles.enderecoContainer}> 
-        <Image src={imgLocationPin} alt="locatinoPin" className={styles.centeredImage} style={{maxWidth: '64px'}}/>
-        <h2 style={{textAlign:'center', color: "black"}}>
+      <div className={styles.adressContainer}> 
+        <Image src={imgLocationPin} alt="locatinoPin" className={styles.centeredImage}/>
+        <h2>
           Nosso Endereço
         </h2>
-        <p style={{textAlign:'center', textWrap:'pretty', color: "black", padding: '5px'}}>
+        <p className={styles.adressText}>
           R. Darci Roesler, 152 - Oxford, São Bento do Sul - SC, 89285-696
         </p>
         <div className={styles.buttonsContainer}>
           <div className={styles.buttonsWrap}>
             <a href="https://www.facebook.com/ApasbsProtetoraDosAnimais" className={styles.button} target="_blank">
-              <Image src={imgFaceLogo} alt="facebookBtn" className={styles.image} />
+              <Image src={imgFaceLogo} alt="facebookBtn" className={styles.btnImage} />
             </a>
             <a href="https://www.instagram.com/apa.sbs" className={styles.button} target="_blank">
-              <Image src={imgInstLogo} alt="InstagramBtn" className={styles.image} />
+              <Image src={imgInstLogo} alt="InstagramBtn" className={styles.btnImage} />
             </a>
           </div>
         </div>
       </div>
+{/*      
       <div className={styles.contatoCollumn}> 
-        <h2 style={{textAlign:'center', color: "black"}}>
+      <h2 style={{textAlign:'center', color: "black"}}>
           Entre em contato conosco
         </h2>
         <u1>
@@ -50,11 +51,35 @@ return(
                 <Image src={imgPawIcon} alt='Icone Botão' className={styles.BtnImage}/>
               </button>
         </u1>
+      </div> 
+*/}
+      <div className={styles.footerItem}>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/historia">História</a>
+          </li>
+          <li>
+            <a href="/doacao">Doação</a>
+          </li>
+          <li>
+            <a href="/adocao">Adoção</a>
+          </li>
+          <li>
+            <a href="/atividades">Atividades</a>
+          </li>
+          <li>
+            <a href="/noticias">Noticias</a>
+          </li>
+        </ul>
       </div>
-      <Image src={imgApaLogo} alt="apaLogo" style={{maxWidth:'25%', height:'fit-content', alignSelf:'center', marginBottom:'3em'}}/>
+      
+      <Image src={imgApaLogo} alt="apaLogo" className={styles.apaLogo}/>
     </div>
-  <Image src={imgPaws} className={styles.miscImage} style={{left:'15px', bottom:'15px'}}/>
-  <Image src={imgPetToys} className={styles.miscImage} style={{right:'15px', bottom:'15px'}}/>
+  <Image src={imgPaws} alt="imgPaws" className={styles.miscImage} style={{left:'15px', bottom:'15px'}}/>
+  <Image src={imgPetToys} alt="imgPetToys" className={styles.miscImage} style={{right:'15px', bottom:'15px'}}/>
   </footer>
 )
 

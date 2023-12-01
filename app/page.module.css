@@ -1,4 +1,6 @@
-/* Hero Section */
+/* Seção Hero */
+
+
 .heroContainer {
   display: flex;
   flex-direction: column;
@@ -6,29 +8,36 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  padding: 20px;
   color: white;
   text-align: center;
   z-index: 1;
+  margin-top: -5vh;
 }
 
+.BackgroundImage {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  z-index: -1;
+}
+
+
 .heroContainer h1 {
-  font-size: 6em;
+  font-size: 5vw;
   color: #101010;
 }
 
 .heroContainer p {
-  font-size: 1.6em;
+  font-size: 2vw;
   color: #101010;
   font-weight: 600;
 }
 
-/* Images Section */
-.imageContainer{
+/* Seção de Imagens */
+.imageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   text-align: center;
 }
 
@@ -36,10 +45,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20em;
-  height: 18em;
-  margin: 0 8em;
-  transform: translateY(-11em);
+  width: 32vw;
+  height: 30vh;
+  margin: 0 3vw;
 }
 
 .responsiveImage {
@@ -49,137 +57,362 @@
 }
 
 .textBox {
-  transform: translateY(-15em);
+  transform: translateY(-2rem);
 }
 
-/* Help Section */
-.helpContainer{
+/* Seção de Ajuda */
+.helpContainer {
   display: flex;
-  justify-content: space-between; /* Add this property */
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 70vh;
-
-  margin-top: -20em; /* Add this property */
   margin-bottom: 5em;
-}
-
-
-.dogCircle {
-  float: right;
-  /* position: relative; */
-  width: 30em;
-  height: 30em;
-  margin-right: 12em;
-  border-radius: 100%;
-  background-color: #fff;
-  z-index: 3;
+  margin-top: -5rem;
+  padding: 10vw;
 }
 
 .helpText {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50vw;
+  width: 50%;
   height: 100%;
-  padding-left: 15em;
 }
 
-.helpText h1{
-  font-size: 3em;
+.helpText h1 {
+  font-size: 3vw;
 }
 
-.helpText p{
+.helpText p {
   margin-top: 1em;
-  font-size: 1.6em;
+  font-size: 1.6vw;
 }
 
-/* Dog Circle */
-.circleDogImage{
+/* Círculo do Cachorro */
+.circleDogImage {
   width: 100%;
   height: 100%;
   z-index: 3;
 }
 
-/* Lines Section */
-.linesContainer{
+.dogCircle {
+  float: right;
+  width: 30vw;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 3;
+}
+
+/* Seção de Linhas */
+.linesContainer {
   float: right;
   width: 10em;
   height: auto;
-  transform: translateY(-22em);
+  margin-top: -30vh;
+  margin-right: 30vw;
 }
 
-.linesImage{
+.linesImage {
   position: absolute;
-  width: 20em;
+  width: 20vw;
   height: auto;
   z-index: 2;
-  transform: translateX(-35em);
+  margin-top: 3vw;
 }
 
-/* Ball and Bone */
-
-.ballAndBoneContainer{
-  width: 10em;
+/* Bola e Osso */
+.ballAndBoneContainer {
+  width: 10vw;
   height: auto;
-  margin-left: 8em;
-  transform: translateY(-25em);
+  margin-left: 2rem;
+  transform: translateY(-15rem);
 }
 
-.ballAndBoneImage{
+.ballAndBoneImage {
   width: 100%;
   height: 100%;
 }
 
-/* Paws */
-
-.pawsContainer{
+/* Patas */
+.pawsContainer {
   position: absolute;
-  width: 15em;
+  width: 15vw;
   height: auto;
   z-index: 2;
-  
-  transform: translateX(95em);
+  margin-left: 80vw;
+  margin-top: -45vh;
 }
 
-.pawsImage{
+.pawsImage {
   width: 100%;
   height: auto;
-  transform: translateY(-43em);
 }
 
-
-/* curvy rect */
-
+/* Retângulo Curvo */
 .curvyRectangle {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 0 5em; /* Adjust as needed */
+  height: 100vh;
+  padding: 0 5vw;
+  flex-direction: column;
 }
 
+.CurvyRectangleBg {
+  color: transparent;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  padding: 0 2vw;
+}
 
 .rectContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
   width: 100vw;
-  height: 100%;
-  transform: translateY(-3em);
+  height: auto;
 }
 
+.rectDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .rectImage {
-  width: 20em; /* Adjust as needed */
+  width: 17vw;
   height: auto;
-  margin: 0 3em; /* Adjust as needed */
-
+  margin: 0 3em;
   border-radius: 100%;
 }
 
-.rectDiv{
-  /*  */
+/* Imagem do osso */
+.boneButtonContainer {
+  width: 20vw;
+  height: 15vh;
+  display: flex;
+  margin-left: -50vw;
+  transition: ease-out;
+  transition-duration: 0.2s;
+}
+
+.boneButton {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10vh;
+  transform-origin: center;
+  transition-duration: 1s;
+  transition: transform 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.boneButton:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.boneButton h1 {
+  top: 50%;
+  font-size: 1.9vw;
+  width: 100%;
+  cursor: pointer;
+  transition: ease-out;
+  transition-duration: 0.2s;
+}
+
+/* Seção de Linhas 2 */
+.linesContainer2 {
+  float:left;
+  width: 20rem;
+  height: auto;
+  margin-top: -25vw;
+  margin-left: 40vw;
+}
+
+.linesImage2 {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  z-index: -1;
+  transform: rotate(90deg);
+}
+
+.pawsContainer2 {
+  position: absolute;
+  width: 5vw;
+  height: auto;
+  z-index: 2;
+  margin-left: 40vw;
+  margin-top: -20vh;
+  transform: rotate(230deg);
+}
+
+.pawsImage2 {
+  width: 100%;
+  height: auto;
+}
+
+
+/* MOBILE */
+
+
+/* Media query for mobile screens */
+@media screen and (max-width:719px) {
+    /* Seção Hero */
+
+  .BackgroundImage {
+    object-fit: cover;
+  }
+  
+  .heroContainer {
+    padding: 3vh;
+    margin-top: -20vw;
+  }
+
+  .heroContainer h1 {
+    font-size: 18vw;
+  
+  }
+
+  .heroContainer p {
+    font-size: 6vw; 
+  }
+
+    /* Seção de Imagens */
+
+  .singleImageContainer {
+    width: 40vw;
+    height: 30vh;
+  }
+
+    /* Seção de Linhas */
+  .linesContainer {
+    float: left;
+    width: 10vw;
+    margin-top: -25vh;
+    margin-left: 30vw;
+    transform: rotate(10deg);
+  }
+
+  .linesImage {
+    width: 20vh;
+  }
+
+  /* Bola e Osso */
+  .ballAndBoneContainer {
+    float: right;
+    width: 18vw;
+    height: auto;
+    margin-right: 11vw;
+    transform: translateY(-12rem);
+  }
+
+  .ballAndBoneImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Patas */
+  .pawsContainer {
+    margin-left: 14vw;
+    margin-top: -5vh;
+    width: 20vw;
+    transform: rotate(170deg);
+  }
+  
+    /* Seção de Ajuda */
+  .helpContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .helpText {
+    width: 90%;
+    height: 100%;
+  }
+
+  .helpText h1 {
+    font-size: 11vw;
+  }
+
+  .helpText p {
+    font-size: 5vw;
+  }
+
+  /* Círculo do Cachorro */
+
+
+  .dogCircle {
+    width: 70vw;
+    margin-bottom: 3vh;
+  }
+
+  
+  .curvyRectangle {
+    flex-direction: column;
+    justify-items: start;
+    height: 80vh;
+    margin-bottom: 10vh;
+  }
+  
+  
+  .rectContainer {
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .rectDiv:not(:first-child) {
+    display: none;
+  }
+
+  .rectImage{
+    width: 55vw;
+  }
+
+    /* Imagem do osso */
+  .boneButtonContainer {
+    position: absolute;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    margin-left: 0;
+    margin-top: 60vh;
+
+
+  }
+
+  .boneButton h1 {
+    font-size: 5vw;
+  }
+
+  .linesContainer2 {
+    float:left;
+    width: 20rem;
+    height: auto;
+    margin-top: -30vw;
+    margin-left: 40vw;
+  }
+  
+  .linesImage2 {
+    display: none;
+    position: absolute;
+  }
+  
+  .pawsContainer2 {
+    display: flex;
+    width: 10vh;
+    margin-top: 4vh;
+    margin-left: 65vw;
+  }
+  
+  .pawsImage2 {
+    width: 100%;
+    height: auto;
+  }
 }

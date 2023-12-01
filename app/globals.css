@@ -7,6 +7,8 @@
   --footer-color: #cbdbc5;
   --navbar-color: #fff;
   /* Add more colors as needed */
+
+  color-scheme: light only;
 }
 
 * {
@@ -26,3 +28,9 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+      color:#000;
+      background:#fff
+  }
+}
