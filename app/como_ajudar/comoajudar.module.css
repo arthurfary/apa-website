@@ -1,0 +1,394 @@
+/* Estilos padrão para telas maiores */
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.titulo {
+    display: flex;
+    min-height: 28vw;
+    width: 100%;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: -5vw;
+    padding-left: 11vw;
+    padding-bottom: 5vw;
+}
+
+.tex1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+    
+    
+    font-size: 1.7vw;
+    text-align: left;
+    max-width: 40%;
+    margin: -13vw;
+    margin-left: -50vw;
+    
+}
+.conjunto{
+    width: 100%;
+   display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+}
+.ramprever{
+    color: transparent;
+    width: 100%;
+    height: 15em;
+    position: absolute;
+    z-index: -1;
+}
+
+.comida{
+    width: 9vw;
+    height: auto;
+    max-width: 320vw;
+    position: absolute;
+    margin-left: -50vw;
+    
+    
+}
+.tex2{
+
+    font-size: 1vw;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 10vw;
+    transform: translatey(-9em);
+    display: flex;
+}
+.tex3{
+    font-size: 2vw;
+    text-align: left;
+    max-width: 60%;
+    margin-left: 20vw;
+    transform: translatey(-4.3em);
+    display: flex;
+}
+.pix{
+    font-size: 1vw;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 10vw;
+    transform: translatey(-8em);
+    display: flex;
+}
+.seta{
+    width: 13vw;
+    height: auto;
+    max-width: 200vw;
+    position: absolute;
+    margin-left: 25vw;
+    margin-top: -15vw;
+    display: flex;
+}
+.tex4{
+    display: flex;
+    min-height: 2vw;
+    width: 100%;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: 1vw;
+    padding-left: 11vw;
+    padding-bottom: 5vw;
+    
+    
+}
+.tex5{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1vw;
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+    
+    
+    font-size: 1.8vw;
+    text-align: left;
+    max-width: 70%;
+    margin: -5vw;
+    margin-left: -22vw;
+}
+.conjunto2{
+    width: 100%;
+    /* display: flex;*/
+     flex-wrap: nowrap;
+     position: relative;
+     align-items: center;
+     justify-content: center;
+     padding-top: 20vw;
+     padding-bottom: 5vw;
+     border-radius: 5vw;
+}
+.ver{
+    color: transparent;
+    width: 100%;
+    height: auto;
+    z-index: -1;;
+    margin-top: -20vw;
+}
+.quatro{
+    width: 80vw;
+    height: auto;
+    max-width: 2000vw;
+    position: absolute;
+    margin-left: -90vw;
+    margin-top: -1vw;
+}
+.pote{
+    width: 13vw;
+    height: auto;
+    max-width: 320vw;
+    position: absolute;
+    margin-left: -50vw;
+    margin-top: 30vw;
+  
+}
+
+.patas{
+    width: 8vw;
+    height: auto;
+    max-width: 320vw;
+    position: absolute;
+    margin-left: 60vw;
+    transform: translateY(10em);
+    display: flex;
+}
+/* Imagem do osso */
+.boneButtonContainer {
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    margin-left: 50vw;
+    transition: ease-out;
+    transition-duration: 0.2s;
+    margin-top: -40vw;
+    position: absolute;
+  }
+  
+  .boneButton {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10vh;
+    transform-origin: center;
+    transition-duration: 1s;
+    transition: transform 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  
+  .boneButton:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+  }
+  
+  .boneButton h1 {
+    top: 50%;
+    font-size: 1.9vw;
+    width: 100%;
+    cursor: pointer;
+    transition: ease-out;
+    transition-duration: 0.2s;
+  }
+  
+/* Retângulo Curvo */
+.curvyRectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5vw;
+    flex-direction: column;
+  }
+  
+  .CurvyRectangleBg {
+    color: transparent;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    padding: 0 2vw;
+  }
+  
+  .rectContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+  }
+  
+  .rectDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rectImage {
+    width: 15vw;
+    height: auto;
+    margin: 0 3em;
+    border-radius: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajustes para telas menores, como celulares */
+@media only screen and (max-width: 798px) {
+  
+.conjunto{
+    flex-wrap: wrap;
+        flex-direction: column-reverse;
+} 
+    .ramprever {
+        transform: translateY(40vw);
+        height: 8em;
+        display: block;
+    }
+    .comida {
+        width: 5em;
+        transform: translateY(18vw);
+        margin-left: 15vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .tex2 {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .tex3 {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .pix {
+        text-align: center;
+        max-width: 100%;
+        display: flex;
+    }
+    
+    .espira {
+        width: 5em;
+        transform: translateY(-28vw);
+        margin-left: 54vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .seta {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .tex4 {
+        transform: translateY(-4vw);
+        font-size: 1vw;
+        margin-left: 3em; /* Ajuste conforme necessário */
+    }
+    
+    .tex5 {
+        transform: translateY(-1vw);
+        margin-left: 2.5em; /* Ajuste conforme necessário */
+        font-size: 1vw;
+        display: block;
+    }
+    
+    .verde {
+        width: 110vw; /* Ajuste conforme necessário */
+        transform: translateY(4vw);
+        margin-left: -3vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .ver {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .cachorro {
+        width: 90vw; /* Ajuste conforme necessário */
+        transform: translateY(-35vw);
+        margin-left: 2em; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .quatro {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .vasilha {
+        width: 20vw;
+        transform: translateY(-33vw);
+        margin-left: 17vw; /* Ajuste conforme necessário */
+        display: block;
+    }
+    
+    .pote {
+        width: 100%;
+        height: 100%;
+    }
+    .rever{
+        width: 3em;
+        transform: translateY(10em);
+        margin-left: 1em;
+        position: absolute;
+    }
+    .patas{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
