@@ -12,6 +12,7 @@ import meAdota from "@/public/Me_adota.png";
 import petImage from "@/public/Pet.png";
 import patasReversas from "@/public/Patas_reversas.png";
 import pipoca from "@/public/pipoca.jpeg"
+import boneImage from '@/public/osso.png'
 
 export default function Contato() {
   const [windowWidth, setWindowWidth] = useState(undefined);
@@ -77,6 +78,13 @@ export default function Contato() {
         <div className={styles.curvyRectangle}>
           <Image src={windowWidth > 700 ? adoteAgro : adoteAgro} objectPosition='center' className={styles.CurvyRectangleBg} alt="imgBg2"/> 
 
+          <div className={styles.boneButtonContainer}>
+            <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
+              
+              <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
+              <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Adote um Pet!</h1>
+            </div>
+          </div>
           <div className={styles.rectContainer}>
             
               <div className={styles.rectDiv}>
@@ -92,18 +100,11 @@ export default function Contato() {
               <Image src={pipoca} className={styles.rectImage} />
               </div>
               
-           
+          
           </div>
           <Image src={petImage} className={styles.pote} alt="Imagem de um animal de estimação" />
           
-          {/* <div className={styles.boneButtonContainer}>
-            <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
-              
-              <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
-              <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Adote um Pet!</h1>
-            </div>
-          </div> */}
-
+         
           </div>
 
       </div>

@@ -95,8 +95,8 @@
     height: auto;
     max-width: 200vw;
     position: absolute;
-    margin-left: 21vw;
-    transform: translateY(-10em);
+    margin-left: 25vw;
+    margin-top: -15vw;
     display: flex;
 }
 .tex4{
@@ -162,8 +162,9 @@
     height: auto;
     max-width: 320vw;
     position: absolute;
-    margin-left: -80vw;
-    margin-top: 20vw;
+    margin-left: -50vw;
+    margin-top: 30vw;
+  
 }
 
 .patas{
@@ -175,6 +176,42 @@
     transform: translateY(10em);
     display: flex;
 }
+/* Imagem do osso */
+.boneButtonContainer {
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    margin-left: 50vw;
+    transition: ease-out;
+    transition-duration: 0.2s;
+    margin-top: -40vw;
+    position: absolute;
+  }
+  
+  .boneButton {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10vh;
+    transform-origin: center;
+    transition-duration: 1s;
+    transition: transform 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  
+  .boneButton:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+  }
+  
+  .boneButton h1 {
+    top: 50%;
+    font-size: 1.9vw;
+    width: 100%;
+    cursor: pointer;
+    transition: ease-out;
+    transition-duration: 0.2s;
+  }
+  
 /* Retângulo Curvo */
 .curvyRectangle {
     display: flex;
@@ -209,7 +246,7 @@
   }
   
   .rectImage {
-    width: 17vw;
+    width: 15vw;
     height: auto;
     margin: 0 3em;
     border-radius: 100%;
