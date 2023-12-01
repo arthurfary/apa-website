@@ -27,7 +27,7 @@ function Atividades() {
     async function salvarNovaAtividade() {
         setLoading(true)
         const nome = document.querySelector('input[name="titulo"]').value;
-        const descricao = document.querySelector('input[name="descricao"]').value;
+        const descricao = document.querySelector('textarea[name="descricao"]').value;
         const data = document.querySelector('input[name="data"]').value;
 
         if (!nome || !descricao || !data) {
@@ -41,7 +41,7 @@ function Atividades() {
             body: JSON.stringify({
                 nome: nome,
                 descricao: descricao,
-                data: data
+                date: data
             })
         })
             .then(response => response.json())
@@ -89,7 +89,7 @@ function Atividades() {
                             id={atividade.id} 
                             nome={atividade.nome} 
                             descricao={atividade.descricao} 
-                            data={atividade.data} 
+                            data={atividade.date} 
                             setRefresh={setRefresh} 
                             refresh={refresh} 
                         />
