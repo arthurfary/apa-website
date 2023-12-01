@@ -30,7 +30,7 @@
     border-radius: 5vw;
     
     
-    font-size: 14px;
+    font-size: 1.7vw;
     text-align: left;
     max-width: 40%;
     margin: -13vw;
@@ -59,7 +59,7 @@
 .comida{
     width: 9vw;
     height: auto;
-    max-width: 320px;
+    max-width: 320vw;
     position: absolute;
     margin-left: -50vw;
     
@@ -67,23 +67,23 @@
 }
 .tex2{
 
-    font-size: 14px;
+    font-size: 1vw;
     text-align: left;
     max-width: 40%;
     margin-left: 10vw;
-    transform: translatey(-11.6em);
+    transform: translatey(-9em);
     display: flex;
 }
 .tex3{
-    font-size: 30px;
+    font-size: 2vw;
     text-align: left;
     max-width: 60%;
     margin-left: 20vw;
-    transform: translatey(-5em);
+    transform: translatey(-4.3em);
     display: flex;
 }
 .pix{
-    font-size: 14px;
+    font-size: 1vw;
     text-align: left;
     max-width: 40%;
     margin-left: 10vw;
@@ -93,7 +93,7 @@
 .seta{
     width: 13vw;
     height: auto;
-    max-width: 200px;
+    max-width: 200vw;
     position: absolute;
     margin-left: 21vw;
     transform: translateY(-10em);
@@ -125,11 +125,11 @@
     border-radius: 5vw;
     
     
-    font-size: 30px;
+    font-size: 1.8vw;
     text-align: left;
     max-width: 70%;
     margin: -5vw;
-    margin-left: -28vw;
+    margin-left: -22vw;
 }
 .conjunto2{
     width: 100%;
@@ -152,7 +152,7 @@
 .quatro{
     width: 80vw;
     height: auto;
-    max-width: 2000px;
+    max-width: 2000vw;
     position: absolute;
     margin-left: -90vw;
     margin-top: -1vw;
@@ -160,7 +160,7 @@
 .pote{
     width: 13vw;
     height: auto;
-    max-width: 320px;
+    max-width: 320vw;
     position: absolute;
     margin-left: -80vw;
     margin-top: 20vw;
@@ -169,12 +169,83 @@
 .patas{
     width: 8vw;
     height: auto;
-    max-width: 320px;
+    max-width: 320vw;
     position: absolute;
     margin-left: 60vw;
     transform: translateY(10em);
     display: flex;
 }
+/* Retângulo Curvo */
+.curvyRectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5vw;
+    flex-direction: column;
+  }
+  
+  .CurvyRectangleBg {
+    color: transparent;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    padding: 0 2vw;
+  }
+  
+  .rectContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+  }
+  
+  .rectDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rectImage {
+    width: 17vw;
+    height: auto;
+    margin: 0 3em;
+    border-radius: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ajustes para telas menores, como celulares */
@@ -183,28 +254,17 @@
 .conjunto{
     flex-wrap: wrap;
         flex-direction: column-reverse;
-}
-    .ramp {
+} 
+    .ramprever {
         transform: translateY(40vw);
         height: 8em;
         display: block;
     }
-    
-    .ramprever {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .comi {
+    .comida {
         width: 5em;
         transform: translateY(18vw);
         margin-left: 15vw; /* Ajuste conforme necessário */
         display: block;
-    }
-    
-    .comida {
-        width: 100%;
-        height: 100%;
     }
     
     .tex2 {
@@ -237,15 +297,14 @@
     
     .tex4 {
         transform: translateY(-4vw);
-        font-size: 16px;
+        font-size: 1vw;
         margin-left: 3em; /* Ajuste conforme necessário */
     }
     
     .tex5 {
         transform: translateY(-1vw);
-        font-size: 35px;
         margin-left: 2.5em; /* Ajuste conforme necessário */
-        font-size: 20px;
+        font-size: 1vw;
         display: block;
     }
     
