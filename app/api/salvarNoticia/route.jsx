@@ -24,7 +24,7 @@ export async function POST(request) {
             return NextResponse.json({ message: "Notícia atualizada com sucesso!", success: 1 }, { status: 200 });
         } else {
             // Insere uma nova notícia
-            await client.query("INSERT INTO noticias (titulo, conteudo, data_publicacao) VALUES ($1, $2, $3)", [titulo, conteudo, dataPublicacao]);
+            await client.query("INSERT INTO noticias (titulo, conteudo, data) VALUES ($1, $2, $3)", [titulo, conteudo, dataPublicacao]);
             return NextResponse.json({ message: "Notícia adicionada com sucesso!", success: 1 }, { status: 201 });
         }
     } catch (error) {

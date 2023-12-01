@@ -1,0 +1,142 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+    width: 100%;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    color: #111;
+    gap: 1rem;
+    overflow-y: hidden;
+}
+
+.main h1 {
+    color: #111;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.cardGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(990px + 2rem);
+}
+
+.cardGrid > * {
+    flex: 0 0 90vw; /* Aumentado para 400px */
+    max-width: 90vw; /* Aumentado para 400px */
+}
+
+.addCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    height: 400px;
+    width: 90vw;
+    font-size: 3rem;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.addCard:hover {
+    background-color: #e6f0ff;
+}
+
+.addCardForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    height: 400px;
+    width: 90vw; /* Ajustado para 400px */
+    font-size: 3rem;
+    color: #007bff;
+    background-color: #f2f6fd;
+}
+
+.formCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputField, .textareaField {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inputField:focus, .textareaField:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.inputField::placeholder, .textareaField::placeholder {
+    color: #ccc;
+}
+
+.textareaField {
+    height: 100px; /* Altura do textarea */
+    resize: vertical; /* Permite redimensionamento vertical */
+}
+
+.cardCommon {
+    width: 90vw; /* Ajustado para 400px */
+    height: 400px;
+}
+
+.button {
+    padding: 10px;
+    margin: 0px 6px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.salvar {
+    background-color: rgb(7, 151, 26);
+}
+
+.salvar:hover {
+    background-color: rgb(12, 102, 24);
+}
+
+.cancelar {
+    background-color: #dc3545;
+}
+
+.cancelar:hover {
+    background-color: #c82333;
+}
+
+
+.dataPublicacao {
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin-top: 10px; /* Espaço superior */
+    padding: 5px; /* Espaçamento interno */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block; /* Torna o elemento em linha para que o texto fique ao lado */
+  }
+  
