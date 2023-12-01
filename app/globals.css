@@ -2,7 +2,13 @@
 :root{
   --primary-color: #96E072;
   --secondary-color: #3DA35D;
+  --facebook-color: #4267B2;
+  --instagram-color: #f2a2d7;
+  --footer-color: #cbdbc5;
+  --navbar-color: #fff;
   /* Add more colors as needed */
+
+  color-scheme: light only;
 }
 
 * {
@@ -22,3 +28,9 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+      color:#000;
+      background:#fff
+  }
+}
