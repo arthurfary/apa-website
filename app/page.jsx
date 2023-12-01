@@ -1,3 +1,4 @@
+"use client"
 import styles from './page.module.css'
 
 import BackgroundImage from '../public/foto_fundo_home.png'
@@ -9,23 +10,38 @@ import BallAndBoneImage from '@/public/ball_and_bone_home.png'
 import PawsImage from '@/public/patas_home.png'
 import CurvyRectangle from '@/public/curvy_rectangle_home.png'
 import boneImage from '@/public/osso.png'
+import MobileCurvyImage from '@/public/mobile_curvy_image.png'
 
 // pipoca temporaria
 import pipoca from '@/public/pipoca.jpeg'
 
 import SitePage from './components/page_type/site'
-import ImageHero from './components/hero_maker/ImageHero'
-import ColorHero from './components/hero_maker/ColorHero'
+
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(undefined);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <SitePage>
       <main className={styles.main}>
         
-        <ImageHero src={BackgroundImage} height={115}>
+        
           <div className={styles.heroContainer}>
+            <Image src={BackgroundImage} layout='fill' objectPosition='center' className={styles.BackgroundImage} alt="imgBg2"/> 
             <div className={styles.imageContainer}>
               <div className={styles.singleImageContainer}>
                 <Image className={styles.responsiveImage} src={CatImage}></Image>
@@ -44,7 +60,7 @@ export default function Home() {
           <div className={styles.pawsContainer}>
             <Image src={PawsImage} className={styles.pawsImage}></Image>
           </div>
-        </ImageHero>
+        
 
         
 
@@ -85,7 +101,7 @@ export default function Home() {
 
         
         <div className={styles.curvyRectangle}>
-          <Image src={CurvyRectangle} className={styles.CurvyRectangleBg} alt="imgBg2"/> 
+          <Image src={windowWidth > 700 ? CurvyRectangle : MobileCurvyImage} objectPosition='center' className={styles.CurvyRectangleBg} alt="imgBg2"/> 
 
           <div className={styles.rectContainer}>
             {Array(4).fill().map((_, i) => (
