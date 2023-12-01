@@ -7,6 +7,8 @@
   --footer-color: #cbdbc5;
   --navbar-color: #fff;
   /* Add more colors as needed */
+
+  color-scheme: light only;
 }
 
 * {

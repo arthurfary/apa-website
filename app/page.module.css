@@ -273,12 +273,12 @@
   }
 
   .heroContainer h1 {
-    font-size: 12vh;
+    font-size: 18vw;
   
   }
 
   .heroContainer p {
-    font-size: 4vh; 
+    font-size: 6vw; 
   }
 
     /* Seção de Imagens */
@@ -292,7 +292,7 @@
   .linesContainer {
     float: left;
     width: 10vw;
-    margin-top: -20vh;
+    margin-top: -25vh;
     margin-left: 30vw;
     transform: rotate(10deg);
   }
@@ -319,7 +319,7 @@
   .pawsContainer {
     margin-left: 14vw;
     margin-top: -5vh;
-    width: 17vw;
+    width: 20vw;
     transform: rotate(170deg);
   }
   
@@ -328,7 +328,6 @@
     flex-direction: column-reverse;
     text-align: center;
 
-    margin-top: 20vh;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -373,7 +372,7 @@
   }
 
   .rectImage{
-    width: 32vh;
+    width: 55vw;
   }
 
     /* Imagem do osso */
@@ -396,7 +395,7 @@
     float:left;
     width: 20rem;
     height: auto;
-    margin-top: -25vw;
+    margin-top: -30vw;
     margin-left: 40vw;
   }
   
