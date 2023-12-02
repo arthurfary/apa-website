@@ -15,4 +15,4 @@ export async function GET(request) {
     }
 
     return NextResponse.json({rows, sucess:1}, { status: 200});
-}
+} 
