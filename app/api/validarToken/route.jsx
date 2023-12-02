@@ -11,7 +11,7 @@ function isUUID(str) {
 // API route handler
 export default async function POST(req) {
 
-    // Extract parameters from the query string
+    // Extract parameters from the query strin
     const { token, nome } = req.query;
 
     // Check if the token and nome are valid
