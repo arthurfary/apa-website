@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 import client from "../database";
 
 // This function checks if a given string is a valid UUID.
