@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 import client from "../database";
 
 // This function checks if a given string is a valid UUID.
@@ -9,14 +7,18 @@ function isUUID(str) {
 }
 
 // API route handler
-export default async function POST(req) {
+export default async function handler(req, res) {
+    // Only allow GET requests
+    if (req.method !== 'GET') {
+        return res.status(405).send({ message: "Method Not Allowed" });
+    }
 
-    // Extract parameters from the query strin
+    // Extract parameters from the query string
     const { token, nome } = req.query;
 
     // Check if the token and nome are valid
     if (!token || !nome || !isUUID(token)) {
-        return NextResponse.status(401).send({ message: "Não Autorizado!" });
+        return res.status(401).send({ message: "Não Autorizado!" });
     }
 
     try {
@@ -25,14 +27,14 @@ export default async function POST(req) {
         
         // Check if any user is found
         if (rows.length === 0) {
-            return NextResponse.status(401).send({ message: "Não Autorizado!" });
+            return res.status(401).send({ message: "Não Autorizado!" });
         }
 
         // Successful authentication
-        return NextResponse.status(200).send({ message: "Logado com sucesso!" });
+        return res.status(200).send({ message: "Logado com sucesso!" });
     } catch (error) {
         // Handle any unexpected errors
         console.error(error);
-        return NextResponse.status(500).send({ message: "Internal Server Error" });
+        return res.status(500).send({ message: "Internal Server Error" });
     }
 }
