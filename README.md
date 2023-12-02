@@ -18,6 +18,7 @@ Esse é o repositório para desenvolvimento do site da apa. Postoriormente, ele 
 #### Programação
  - [ ] Página Adoção, responsivo para banco. `Darlan` 
  - [ ] Página Notícia, responsivo para banco. `-`
+ - [ ] Página error 404, `Freddy`
  > Ajuda sobre o design com a Gianne.
  > Ajuda sobre o programação com o Arthur ou Freddy
 #### Outros
