@@ -10,10 +10,6 @@ function isUUID(str) {
 
 // API route handler
 export default async function POST(req) {
-    // Only allow GET requests
-    if (req.method !== 'GET') {
-        return NextResponse.status(405).send({ message: "Method Not Allowed" });
-    }
 
     // Extract parameters from the query string
     const { token, nome } = req.query;
