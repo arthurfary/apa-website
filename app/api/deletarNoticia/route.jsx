@@ -23,7 +23,7 @@ export async function DELETE(request) {
 
         // Verifica se alguma linha foi realmente deletada
         if (result.rowCount === 0) {
-            return NextResponse.json({ message: "Notícia não encontrada!", success: 0 }, { status: 404 });
+            return NextResponse.json({ message: "Notícia não encontrada!", id:id, success: 0 }, { status: 404 });
         }
 
         // Retorna sucesso
