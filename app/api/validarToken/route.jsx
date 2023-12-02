@@ -9,10 +9,10 @@ function isUUID(str) {
 }
 
 // API route handler
-export default async function handler(req, res) {
+export default async function handler(req) {
     // Only allow GET requests
     if (req.method !== 'GET') {
-        return res.status(405).send({ message: "Method Not Allowed" });
+        return NextResponse.status(405).send({ message: "Method Not Allowed" });
     }
 
     // Extract parameters from the query string
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
     // Check if the token and nome are valid
     if (!token || !nome || !isUUID(token)) {
-        return res.status(401).send({ message: "Não Autorizado!" });
+        return NextResponse.status(401).send({ message: "Não Autorizado!" });
     }
 
     try {
@@ -29,14 +29,14 @@ export default async function handler(req, res) {
         
         // Check if any user is found
         if (rows.length === 0) {
-            return res.status(401).send({ message: "Não Autorizado!" });
+            return NextResponse.status(401).send({ message: "Não Autorizado!" });
         }
 
         // Successful authentication
-        return res.status(200).send({ message: "Logado com sucesso!" });
+        return NextResponse.status(200).send({ message: "Logado com sucesso!" });
     } catch (error) {
         // Handle any unexpected errors
         console.error(error);
-        return res.status(500).send({ message: "Internal Server Error" });
+        return NextResponse.status(500).send({ message: "Internal Server Error" });
     }
 }
