@@ -2,11 +2,10 @@ import styles from "./footer.module.css"
 import imgFaceLogo from "../../../public/facebook-logo.svg"
 import imgInstLogo from "../../../public/instagram-logo.svg"
 import imgFooterCap from "../../../public/footer-cap.svg"
-import imgLocationPin from "../../../public/location-pin.png"
 import imgPawIcon from "../../../public/paw-icon.svg"
 import imgPaws from "../../../public/paws.png"
 import imgPetToys from "../../../public/pet_toys.png"
-import imgApaLogo from "../../../public/apa-logo-placeholder.JPG"
+import imgApaLogo from "../../../public/apa-logo.png"
 
 import Image from "next/image"
 
@@ -15,14 +14,8 @@ return(
     <footer className={styles.footer}>
     <cap><Image src={imgFooterCap} alt="footerCap" className={styles.capImage}/></cap>
     <div className={styles.footerContainer}>
-      <div className={styles.adressContainer}> 
-        <Image src={imgLocationPin} alt="locatinoPin" className={styles.centeredImage}/>
-        <h2>
-          Nosso Endereço
-        </h2>
-        <p className={styles.adressText}>
-          R. Darci Roesler, 152 - Oxford, São Bento do Sul - SC, 89285-696
-        </p>
+      <div className={styles.addressContainer}> 
+        <Image src={imgApaLogo} alt="apaLogo" className={styles.apaLogo}/>
         <div className={styles.buttonsContainer}>
           <div className={styles.buttonsWrap}>
             <a href="https://www.facebook.com/ApasbsProtetoraDosAnimais" className={styles.button} target="_blank">
@@ -75,10 +68,8 @@ return(
           </li>
         </ul>
       </div>
-      
-      <Image src={imgApaLogo} alt="apaLogo" className={styles.apaLogo}/>
     </div>
-  <Image src={imgPaws} alt="imgPaws" className={styles.miscImage} style={{left:'15px', bottom:'15px'}}/>
+  <Image src={imgPaws} alt="imgPaws" className={styles.miscImage} style={{right:'15px', top:'15px'}}/>
   <Image src={imgPetToys} alt="imgPetToys" className={styles.miscImage} style={{right:'15px', bottom:'15px'}}/>
   </footer>
 )
