@@ -1,0 +1,65 @@
+/* Home.module.css */
+.styledDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 94.5vh; /* Altura da viewport */
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    padding: 20px;
+    text-align: center; /* Alinhamento central do texto */
+}
+
+.title {
+    color: #000; /* Cor escura para contraste */
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #222; /* Cor mais suave para o subtítulo */
+    font-size: 1.2rem;
+    max-width: 600px; /* Limita a largura do texto para melhor leitura */
+}
+
+.styledDiv {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 20px; /* Espaçamento entre os blocos */
+    padding: 20px;
+}
+
+.gridItem {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gridItem:hover {
+    transform: scale(1.05); /* Efeito de hover para aumentar levemente o bloco */
+}
+
+.gridItem p {
+    font-size: 1.5rem;
+    color: #333;
+}

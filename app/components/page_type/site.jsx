@@ -7,6 +7,7 @@ export default function SitePage({ children }) {
         <Header />
 
         {children}
+        
         <Footer/>
     </>
 

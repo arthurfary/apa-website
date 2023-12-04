@@ -2,10 +2,10 @@
 
 import styles from './cardEdit.module.css';
 
+import { useState } from 'react';
+
 import Load from '@/app/components/load/load';
 import ImageUpload from '@/app/components/image_upload/image_upload';
-
-import { useState } from 'react';
 
 function CardEdit({id, nome, especie, adotado, foto, setRefresh, refresh, setEdit}){
 

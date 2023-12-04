@@ -1,8 +1,10 @@
 'use client'
 
 import styles from './cardEdit.module.css';
-import Load from '@/app/components/load/load';
+
 import { useState } from 'react';
+
+import Load from '@/app/components/load/load';
 
 function CardEdit({ id, nome, descricao, data, setRefresh, refresh, setEdit }) {
 

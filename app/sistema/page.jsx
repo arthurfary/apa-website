@@ -1,24 +1,38 @@
 'use client'
 
-import React from 'react';
-
 import SystemPage from '../components/page_type/sistema';
-import styled from 'styled-components';
+import Link from 'next/link';
+import styles from './page.module.css'; // Importando o módulo CSS
 
-const StyledDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 94.5vh; /* Defina a altura como 100% da altura da viewport */
-  background-color: #f0f0f0; /* Cor de fundo opcional */
-`;
-
-function Home(){
+function Home() {
     return (
         <SystemPage>
-            <StyledDiv>
-                <h1>Sistema para gerenciamento de informações apresentadas no site!</h1>
-            </StyledDiv>
+            <div className={styles.styledDiv}>
+                <h1 className={styles.title}>Sistema de Gerenciamento</h1>
+                <p className={styles.subtitle}>Bem-vindo ao sistema para gerenciamento de informações apresentadas no site!</p>
+                
+                <div className={styles.gridContainer}>
+
+                  <Link href="/sistema/animais">
+                    <div className={styles.gridItem}>
+                      <p>Animais para Adoção</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/sistema/atividades">
+                    <div className={styles.gridItem}>
+                      <p>Atividades</p>
+                    </div>
+                  </Link>
+
+                  <Link href="/sistema/noticias">
+                    <div className={styles.gridItem}>
+                      <p>Notícias</p>
+                    </div>
+                  </Link>
+
+                </div>
+            </div>
         </SystemPage>
     );
 }
