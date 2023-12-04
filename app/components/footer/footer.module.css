@@ -8,7 +8,6 @@
   background: var(--footer-color);
   color: rgb(255, 255, 255);
   padding-top: 3vw;
-  padding-bottom: 6rem;
   margin-top: 15vw;
 }
 
@@ -37,9 +36,15 @@
 }
 
 .addressContainer{
+  display: flex;
+  flex-direction: column;
   max-width: 35%;
   width: 512px;
-  padding: 1em
+  padding: 1em;
+
+  /* Centralizar img */
+  align-items: center;
+  justify-content: center;
 }
 
 .addressContainer h2{
@@ -160,6 +165,11 @@
     justify-content: space-evenly;
   }
 
+  /* adiciona margin a todos os filhos da div */
+  .buttonsWrap *{
+    margin: 1vw;
+  }
+
   .button {
     flex: 1;
     position: relative;
@@ -235,11 +245,14 @@
     height: fit-content;
     align-self: center;
     margin-bottom: 2em;
+    width: 25vw;
   }
   
   @media screen and (max-width:719px){
     .apaLogo{
       margin-top: 2.5em;
+      margin-bottom: 0;
+      width: 40vw;
     }
 
     .footerItem{
