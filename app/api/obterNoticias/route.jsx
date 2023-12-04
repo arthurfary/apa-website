@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-
 import client from "../database";
 
 export async function GET(request) {
