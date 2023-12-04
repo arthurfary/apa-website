@@ -1,9 +1,10 @@
 'use client'
 
-import SystemPage from '@/app/components/page_type/sistema';
 import styles from '@/app/sistema/atividades/page.module.css';
+
 import { useEffect, useState } from 'react';
 
+import SystemPage from '@/app/components/page_type/sistema';
 import Load from '@/app/components/load/load';
 import Card from './card/card';
 

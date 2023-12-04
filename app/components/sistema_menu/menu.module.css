@@ -1,0 +1,27 @@
+/* Menu.module.css */
+.horizontalMenuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Fundo branco para um look clean */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 0.5rem 1rem;
+}
+
+.menuItem {
+    color: #333; /* Cor escura para contraste */
+    padding: 10px 15px;
+    margin: 0 15px; /* Espaçamento entre os itens */
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Arial', sans-serif;
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição suave para hover */
+
+}
+.menuItem:hover {
+    background-color: #f0f0f0; /* Cor sutil para hover */
+    color: #007bff; /* Mudança de cor no hover */
+    transform: translateY(-2px); /* Eleva o item no hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
+}

@@ -1,8 +1,10 @@
 'use client'
 
-import styles from './cardEdit.module.css'; // Certifique-se de atualizar o caminho do CSS
-import Load from '@/app/components/load/load';
+import styles from './cardEdit.module.css';
+
 import { useState } from 'react';
+
+import Load from '@/app/components/load/load';
 
 function CardEdit({ id, titulo, conteudo, dataPublicacao, setRefresh, refresh, setEdit }) {
 

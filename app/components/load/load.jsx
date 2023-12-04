@@ -12,7 +12,7 @@ function Load({size}) {
     };
 
     return (
-        <span className={styles.loader} style={loaderStyle}></span>
+        <span className={styles.loader} style={loaderStyle} />
     );
 }
 

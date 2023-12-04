@@ -10,6 +10,7 @@ function ImageUpload({setImage,image}) {
 
     const file = acceptedFiles[0];
     const reader = new FileReader();
+    
     reader.readAsDataURL(file);
     reader.onload = () => {
       setImage(reader.result);

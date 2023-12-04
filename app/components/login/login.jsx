@@ -5,6 +5,7 @@ import styles from './login.module.css';
 import Load from '../load/load';
 
 function Login({ setAuthenticado }){
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [refresh, setRefresh] = useState(false);
@@ -94,20 +95,29 @@ function Login({ setAuthenticado }){
 
     return(
         <section className={`${styles.mainLogin}`}>
+
             {!screenLoading &&
-            <form onSubmit={validarLogin} className={styles.formBox}>
-                <h1>Sistema de Gerneciamento</h1>
-                <input type="text" value={username} placeholder='Usuário' onChange={(e) => setUsername(e.target.value)} className={error === true ? styles.errorBorder : ''} />
-                <input type="password" value={password} placeholder='Senha' onChange={(e) => setPassword(e.target.value)} className={error === true ? styles.errorBorder : ''} />
-                <p className={styles.errorMessage} ref={message}>&emsp;</p>
-                {loginLoading && <Load size={35} />}
-                {!loginLoading && <button type='submit'>Login</button>}
-            </form>
+                <form onSubmit={validarLogin} className={styles.formBox}>
+
+                    <h1>Sistema de Gerneciamento</h1>
+                    
+                    <input type="text" value={username} placeholder='Usuário' onChange={(e) => setUsername(e.target.value)} className={error === true ? styles.errorBorder : ''} />
+                    <input type="password" value={password} placeholder='Senha' onChange={(e) => setPassword(e.target.value)} className={error === true ? styles.errorBorder : ''} />
+                    
+                    <p className={styles.errorMessage} ref={message}>&emsp;</p>
+
+                    {loginLoading && <Load size={35} />}
+                    {!loginLoading && <button type='submit'>Login</button>}
+
+                </form>
             }
+
             {screenLoading &&             
-            <div className={styles.loadingBox}>
-                <Load size={100} />
-            </div>}
+                <div className={styles.loadingBox}>
+                    <Load size={100} />
+                </div>
+            }
+
         </section>
     );
 }
