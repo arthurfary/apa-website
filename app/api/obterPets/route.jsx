@@ -1,18 +1,26 @@
 import { NextResponse } from "next/server";
-
 import client from "../database";
 
 export async function GET(request) {
-
+    // Verifica se as credenciais são do mesmo domínio
     if (request.credentials !== "same-origin") {
-        return NextResponse.json({message: "Não Autorizado!", sucess:0},{ status: 403 });
+        return NextResponse.json({ message: "Não Autorizado!", success: 0 }, { status: 403 });
     }
 
-    const { rows } = await client.query("SELECT * FROM pets");
+    try {
+        // Executa a query para obter os pets
+        const { rows } = await client.query("SELECT * FROM pets");
 
-    if (rows == '') {
-        return NextResponse.json({message: "Não existem pets cadastrados!", rows, sucess: 1},{ status: 200 });
+        // Verifica se existem pets cadastrados
+        if (rows.length === 0) {
+            return NextResponse.json({ message: "Não existem pets cadastrados!", rows, success: 1 }, { status: 200 });
+        }
+
+        // Retorna os pets encontrados
+        return NextResponse.json({ rows, success: 1 }, { status: 200 });
+    } catch (error) {
+        // Trata possíveis erros durante a execução da query
+        console.error(error);
+        return NextResponse.json({ message: "Erro ao obter os pets.", success: 0 }, { status: 500 });
     }
-
-    return NextResponse.json({rows, sucess:1}, { status: 200});
 }
