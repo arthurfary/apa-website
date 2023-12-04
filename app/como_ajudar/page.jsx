@@ -13,6 +13,8 @@ import petImage from "@/public/Pet.png";
 import patasReversas from "@/public/Patas_reversas.png";
 import pipoca from "@/public/pipoca.jpeg"
 import boneImage from '@/public/osso.png'
+import coletaBg from '@/public/comoajudar-bg-coleta.png'
+import PtoColeta from "../components/ponto_coleta/ptoColeta"
 
 export default function Contato() {
   const [windowWidth, setWindowWidth] = useState(undefined);
@@ -105,6 +107,20 @@ export default function Contato() {
           <Image src={petImage} className={styles.pote} alt="Imagem de um animal de estimação" />
           
          
+          </div>
+
+          {/* Pontos de Coleta */}
+          <div className={styles.coletaDisplay1}>
+            <Image src={coletaBg} className={styles.coletaBg} alt="Imagem de fundo para o texto sobre coleta de doação." />
+            <div className={styles.coletaT1}>Pontos de coleta para doações</div>
+            <div className={styles.coletaT2}>Você pode realizar a doação de ração, medicamentos e produtos de limpeza em nossos pontos de coleta parceiros:</div>
+          </div>
+
+          <div className={styles.coletaDisplay2}>
+            <PtoColeta/>
+            <PtoColeta/>
+            <PtoColeta/>
+
           </div>
 
       </div>

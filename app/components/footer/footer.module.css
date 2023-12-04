@@ -135,11 +135,30 @@
   z-index: 1;
 }
 
+.content h3 {
+  margin-top: 10px;
+}
+  
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+  
+.buttonsWrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .content h1 {
   font-size: 36px;
 }
 
-  .content h2 {
+.content h2 {
   margin-top: 10px;
 }
 
