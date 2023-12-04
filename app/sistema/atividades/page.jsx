@@ -15,7 +15,13 @@ function Atividades() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch('/api/obterAtividades')
+        fetch('/api/obterAtividades',{
+            headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate', // Impede o cache
+                'Pragma': 'no-cache', // Suporte para navegadores mais antigos
+                'Expires': '0' // Data de expiração passada para impedir o cache
+            }
+        })
             .then(response => response.json())
             .then(data => setAtividades(data.rows));
     }, [refresh]);
