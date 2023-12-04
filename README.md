@@ -19,6 +19,11 @@ Esse é o repositório para desenvolvimento do site da apa. Postoriormente, ele 
  - [ ] Página Adoção, responsivo para banco. `Darlan` 
  - [ ] Página Notícia, responsivo para banco. `-`
  - [ ] Página error 404, `Freddy`
+ - [ ] Atualizar pag como ajudar. `Lucas/Pedro`
+
+ - [ ] Fazer mobile da como ajudar. `-`
+ - [ ] Fazer mobile da página adoção. (quando fizer a pag) `-`
+ - [ ] Fazer mobile da página notícia. (quando fizer a pag) `-`
  > Ajuda sobre o design com a Gianne.
  > Ajuda sobre o programação com o Arthur ou Freddy
 #### Outros
