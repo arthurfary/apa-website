@@ -253,9 +253,47 @@
   }
 
 
+  /*configurações da parte de coleta*/
+  .coletaDisplay1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+    width: 75%;
+  }
 
+  .coletaDisplay2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5em;
+    padding: 5em;
+    width: 100%;
+  }
 
+  .coletaBg {
+    width: 80%;
+    height: 20em;
+    position: absolute;
+    z-index: -1;
+  }
 
+  .coletaT1{
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 24px;
+    color: black;
+  }
+
+  .coletaT2{
+    font-size: 2em;
+    text-align: center;
+    margin: 1.5vw;
+    color: black;
+  }
 
 
 
@@ -391,4 +429,11 @@
         height: 100%;
     }
     
+
+    .coletaDisplay2 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+
 }
