@@ -29,22 +29,20 @@
 
 .footerContainer {
   width: 100vw;
-
   margin-bottom: 5vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  padding-left: 10%;
 }
 
-.adressContainer{
+.addressContainer{
   max-width: 35%;
-  border-right: black 2px solid;
-  border-right-style: dashed;
+  width: 512px;
   padding: 1em
 }
 
-.adressContainer h2{
+.addressContainer h2{
   color: black;
   text-align: center;
   font-size: xxx-large;
@@ -102,7 +100,7 @@
   max-width: 6vw;
 }
 
-.adressText{
+.addressText{
   text-align: center;
   text-wrap: pretty;
   color: black;
@@ -159,6 +157,7 @@
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .button {
@@ -183,7 +182,9 @@
   .miscImage {
     color: transparent;
     max-width: 10vw;
+    width: 120px;
     max-height: 10vw;
+    height: 120px;
     position: absolute;
   }
 
@@ -196,6 +197,9 @@
   .footerItem{
     width: 20%;
     margin-left: 10%;
+    padding-left: 10%;
+    border-left: black 2px solid;
+    border-left-style: dashed;
   }
 
   .footerItem p{
@@ -227,20 +231,23 @@
 
   .apaLogo{
     color: transparent;
-    max-width: 25%;
+    width: -webkit-fill-available;
     height: fit-content;
     align-self: center;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
   
   @media screen and (max-width:719px){
     .apaLogo{
-      max-width: 40%;
       margin-top: 2.5em;
     }
 
-    .footerContainer {
-      justify-content: center;
+    .footerItem{
+      margin-left: 0;
+    }
+
+    .footerItem ul{
+      margin-top: 10vw;
     }
 
     .footerItem ul li a{
@@ -251,17 +258,17 @@
       font-weight: bold;
     }
 
-    .adressContainer{
-      max-width: 50%;
+    .addressContainer{
+      max-width: 55%;
       padding: 0em;
       padding-right: 5vw;
     }
 
-    .adressText{
+    .addressText{
       font-size: x-large;
     }
 
-    .adressContainer h2{
+    .addressContainer h2{
       font-size: xx-large;
     }
 

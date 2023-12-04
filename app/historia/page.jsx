@@ -1,6 +1,5 @@
 import SitePage from "../components/page_type/site"
 import styles from "./historia.module.css"
-import imgBack_01 from '../../public/historia-bg-01.png'
 import imgBack_02 from '../../public/historia-bg-02.png'
 import imgDog_01 from '../../public/historia-dog-01.png'
 import imgDog_02 from '../../public/historia-dog-02.png'
@@ -38,7 +37,7 @@ export default function Historia() {
             <div className={styles.historyContainer} style={{flexDirection:'column'}}>
               <Image src={imgMisc_01} className={styles.fgImgSmall} style={{left:'5%', top:'-20%'}} alt="imgMisc2"/>
               <div className={styles.historyTextCenter}>
-                A APA também realiza <strong>resgates de animais</strong> em situações de risco, oferecendo tratamento veterinário e abrigo temporário até que sejam adotados por uma família amorosa.
+                A APA também realiza <strong>resgates de animais</strong> em situações de risco, oferecendo tratamento veterinário e lar temporário até que sejam adotados por uma família amorosa.
               </div>
               <div className={styles.historyTextCenter}>
                 A entidade também promove campanhas de <strong>adoção responsável</strong>, buscando encontrar lares adequados e cuidadosos para os animais resgatados.
