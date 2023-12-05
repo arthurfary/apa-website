@@ -9,12 +9,12 @@ export async function POST(request) {
 
     // Obtém os dados do corpo da requisição
     const data = await request.json();
-    const { id, titulo, conteudo, dataPublicacao } = data;
+    const { id, titulo, conteudo, dataPublicacao, imagem } = data;
 
     try {
         if (id) {
             // Atualiza a notícia existente
-            const result = await client.query("UPDATE noticias SET titulo = $1, conteudo = $2, data = $3 WHERE id = $4", [titulo, conteudo, dataPublicacao, id]);
+            const result = await client.query("UPDATE noticias SET titulo = $1, conteudo = $2, data = $3, imagem = $4 WHERE id = $5", [titulo, conteudo, dataPublicacao, imagem, id]);
 
             // Verifica se alguma linha foi realmente atualizada
             if (result.rowCount === 0) {
@@ -24,7 +24,7 @@ export async function POST(request) {
             return NextResponse.json({ message: "Notícia atualizada com sucesso!", success: 1 }, { status: 200 });
         } else {
             // Insere uma nova notícia
-            await client.query("INSERT INTO noticias (titulo, conteudo, data) VALUES ($1, $2, $3)", [titulo, conteudo, dataPublicacao]);
+            await client.query("INSERT INTO noticias (titulo, conteudo, data, imagem) VALUES ($1, $2, $3, $4)", [titulo, conteudo, dataPublicacao, imagem]);
             return NextResponse.json({ message: "Notícia adicionada com sucesso!", success: 1 }, { status: 201 });
         }
     } catch (error) {

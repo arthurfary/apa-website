@@ -1,21 +1,18 @@
 'use client'
 
 import styles from './card.module.css';
-
 import { useState } from 'react';
-
 import Load from '@/app/components/load/load';
 import CardEdit from './cardEdit';
 
-function Card({ id, titulo, conteudo, dataPublicacao, setRefresh, refresh }) {
-
+function Card({ id, titulo, conteudo, dataPublicacao, imagem, setRefresh, refresh }) {
   const [loading, setLoading] = useState(false);
   const [edit, setEdit] = useState(false);
 
   async function removerNoticia() {
-    setLoading(true)
+    setLoading(true);
 
-    await fetch('/api/deletarNoticia?id=' + id, { // Endpoint para deletar notícia
+    await fetch('/api/deletarNoticia?id=' + id, {
         method: 'DELETE',
     })
     .then(response => response.json())
@@ -23,25 +20,28 @@ function Card({ id, titulo, conteudo, dataPublicacao, setRefresh, refresh }) {
       setRefresh(!refresh);
     });
 
-    setLoading(false)
+    setLoading(false);
   }
 
   return !edit ? (
     <div className={styles.card}>
-      <h2>{titulo}</h2>
-      <p>{conteudo}</p>
-      <p>Data de Publicação: {new Date(dataPublicacao).toLocaleDateString('pt-BR')}</p>
-      {loading === false && 
-        <>
-          <button className={styles.editar} onClick={() => {setEdit(true)}}>Editar</button>
-          <button className={styles.remover} onClick={removerNoticia}>Remover</button>
-        </>
-      }
-      {loading === true && 
-        <div className={styles.loading}>
-          <Load size={30}/>
-        </div>
-      }
+      {imagem && <div className={styles.imageSection}><img src={imagem} alt="Imagem da Notícia" /></div>}
+      <div className={styles.contentSection}>
+        <h2>{titulo}</h2>
+        <p>{conteudo}</p>
+        <p>Data de Publicação: {new Date(dataPublicacao).toLocaleDateString('pt-BR')}</p>
+        {loading === false && (
+          <div className={styles.cardButtons}>
+            <button className={styles.editar} onClick={() => setEdit(true)}>Editar</button>
+            <button className={styles.remover} onClick={removerNoticia}>Remover</button>
+          </div>
+        )}
+        {loading === true && (
+          <div className={styles.loading}>
+            <Load size={30}/>
+          </div>
+        )}
+      </div>
     </div>
   ) : (
     <CardEdit 
@@ -49,11 +49,12 @@ function Card({ id, titulo, conteudo, dataPublicacao, setRefresh, refresh }) {
       titulo={titulo} 
       conteudo={conteudo} 
       dataPublicacao={dataPublicacao} 
+      imagem={imagem} 
       setRefresh={setRefresh} 
       refresh={refresh} 
       setEdit={setEdit} 
     />
   );
-};
+}
 
 export default Card;

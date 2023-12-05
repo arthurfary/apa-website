@@ -4,7 +4,7 @@ import styles from './imgUpload.module.css'
 
 import Dropzone from 'react-dropzone';
 
-function ImageUpload({setImage,image}) {
+function ImageUpload({setImage, image, size}) {
 
   function handleDrop(acceptedFiles){
 
@@ -16,6 +16,14 @@ function ImageUpload({setImage,image}) {
       setImage(reader.result);
     };
 
+  };
+
+  // Converter o tamanho em pixels para uma string
+  const sizeInPx = `${size}px`;
+
+  // Criar um objeto de estilo para definir a largura
+  const imgSize = {
+      width: sizeInPx,
   };
 
   return (
@@ -35,7 +43,7 @@ function ImageUpload({setImage,image}) {
       {image &&
         <div className={styles.imageContainer}>
           <button className={styles.buttonX} onClick={() => setImage(false)}>X</button>
-          <img src={image} alt="Capa do Livro" className={styles.image}/>
+          <img src={image} alt="Capa do Livro" style={imgSize} className={styles.image}/>
         </div>
       }
 
