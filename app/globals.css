@@ -10,7 +10,7 @@
 
   /* font stuff */
 
-
+  
 
 
   color-scheme: light only;
@@ -50,6 +50,10 @@ h2{
   font-size: 2vw
 }
 
+p{
+  font-size: 1.7vw;
+}
+
 @media only screen and (max-width: 798px) {
   h1{
     font-size: 13vw
@@ -57,5 +61,9 @@ h2{
   
   h2{
     font-size: 6vw
+  }
+
+  p{
+    font-size: clamp(1.655rem, 5.5vw, 3em);
   }
 }

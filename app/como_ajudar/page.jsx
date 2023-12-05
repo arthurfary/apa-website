@@ -33,14 +33,15 @@ export default function Contato() {
     <SitePage>
       <div className={styles.display}>
         <div className={styles.titulo}>
-          <h1>Como ajudar</h1>
+          <h1>Como posso ajudar?</h1>
         </div>
 
         <div className={styles.tex1}>
-          
-            Somos uma associação sem fins lucrativos e, através do nosso
-            trabalho, conectamos pessoas que desejam ter um pet a cães e
-            gatos resgatados que precisam de um lar!
+            <p>
+              Somos uma associação sem fins lucrativos e, através do nosso
+              trabalho, conectamos pessoas que desejam ter um pet a cães e
+              gatos resgatados que precisam de um lar!
+            </p>
           
         </div>
         <Image src={patasReversas} className={styles.patas} alt="Imagem de patas de animais" />
@@ -51,15 +52,15 @@ export default function Contato() {
         </div>
 
         <div className={styles.tex2}>
-          <h1>Doações via PIX</h1>
+          <h2>Doações via PIX</h2>
         </div>
 
         <div className={styles.tex3}>
-          Você pode nos ajudar financeiramente fazendo sua doação!
+          <p>Você pode nos ajudar financeiramente fazendo sua doação!</p>
         </div>
 
         <div className={styles.pix}>
-          <h1>Chave PIX: CNPJ 09152206000101</h1>
+          <h2>Chave PIX: CNPJ 09152206000101</h2>
         </div>
 
         <div className={styles.tex4}>
@@ -67,8 +68,7 @@ export default function Contato() {
         </div>
 
         <div className={styles.tex5}>
-          Se você gosta de animais e tem tempo livre para se dedicar, junte-se a
-          nós!
+          <p>Se você gosta de animais e tem tempo livre para se dedicar, junte-se a nós!</p>
         </div>
 
         {/* <div className={styles.conjunto2}>
@@ -77,7 +77,7 @@ export default function Contato() {
           <Image src={petImage} className={styles.pote} alt="Imagem de um animal de estimação" />
         </div> */}
 
-        <div className={styles.curvyRectangle}>
+        {/* <div className={styles.curvyRectangle}>
           <Image src={windowWidth > 700 ? adoteAgro : adoteAgro} objectPosition='center' className={styles.CurvyRectangleBg} alt="imgBg2"/> 
 
           <div className={styles.boneButtonContainer}>
@@ -107,7 +107,7 @@ export default function Contato() {
           <Image src={petImage} className={styles.pote} alt="Imagem de um animal de estimação" />
           
          
-          </div>
+          </div> */}
 
           {/* Pontos de Coleta */}
           <div className={styles.coletaDisplay1}>
