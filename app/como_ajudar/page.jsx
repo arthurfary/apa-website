@@ -38,9 +38,9 @@ export default function Contato() {
 
         <div className={styles.tex1}>
           
-            Somos uma associação sem fins lucrativos, e através do nosso
-            trabalho a gente conecta pessoas que querem ter um pet a cães e
-            gatos resgatados que precisam de um lar
+            Somos uma associação sem fins lucrativos e, através do nosso
+            trabalho, conectamos pessoas que desejam ter um pet a cães e
+            gatos resgatados que precisam de um lar!
           
         </div>
         <Image src={patasReversas} className={styles.patas} alt="Imagem de patas de animais" />
@@ -67,7 +67,7 @@ export default function Contato() {
         </div>
 
         <div className={styles.tex5}>
-          Se gosta de animais e tem tempo livre para lhes dedicar, junte se a
+          Se você gosta de animais e tem tempo livre para se dedicar, junte-se a
           nós!
         </div>
 
