@@ -1,5 +1,9 @@
 import SitePage from "../components/page_type/site"
 
+// images
+import bgTitleImage from "@/public/bg_noticias.png"
+import bgCalendar from "@/public/calendar.png"
+
 // pipoca temporaria
 import pipoca from "@/public/pipoca.jpeg"
 
@@ -19,7 +23,7 @@ const CardMaker = ({title, postDate, image}) => {
         </div>
       </div>
       <p>Postado em: {postDate}</p>
-      <h1>{titleTrimmer(title, 80)}</h1>
+      <h2>{titleTrimmer(title, 80)}</h2>
     </div>
   )
 }
@@ -28,10 +32,18 @@ export default function Noticias() {
   return (
     <SitePage>
         <main className={styles.background}>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <div className={styles.titleContainer}>
+            
+            <Image src={bgTitleImage} className={styles.titleImage} />
+            <Image src={bgCalendar} className={styles.titleCalendar} />
+            <h1>Notícias</h1>
+
+            
+          </div>
+
           <div className={styles.mainContainer}>
           {[...Array(9)].map(() => (
-            <CardMaker title='Cara! É literalmente impossível um miojo ficar pronto em 10 minutos. IMPOSSÍVEL!' postDate='26/10/2003' image={{src: pipoca}} />
+            <CardMaker title='Campanha de adoção dia 26/10/2003 (pipoca nao inclusa)' postDate='26/10/2003' image={{src: pipoca}} />
           ))}
             
           </div>
