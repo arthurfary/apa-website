@@ -31,7 +31,7 @@ export default function Noticias() {
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           <div className={styles.mainContainer}>
           {[...Array(9)].map(() => (
-            <CardMaker title='Cara! É literalmente impossível um miojo ficar pronto' postDate='26/10/2003' image={{src: pipoca}} />
+            <CardMaker title='Cara! É literalmente impossível um miojo ficar pronto em 10 minutos. IMPOSSÍVEL!' postDate='26/10/2003' image={{src: pipoca}} />
           ))}
             
           </div>
