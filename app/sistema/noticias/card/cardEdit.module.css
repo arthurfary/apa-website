@@ -18,28 +18,35 @@
     background-color: #e6f0ff; /* Cor de fundo ao passar o mouse */
 }
 
-.addCardForm{
+.addCardForm {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-start; /* Alinhar itens à esquerda */
+    flex-direction: row; /* Itens lado a lado */
     border: 2px dashed #007bff;
     border-radius: 10px;
-    height: 400px; /* Altura fixa */
-    width: 300px;
-    font-size: 3rem; /* Tamanho grande para o símbolo de + */
+    height: 400px;
+    width: 90vw;
     color: #007bff;
     background-color: #f2f6fd;
-    margin: 0px 20px;
-    margin-bottom: 20px;
+    padding: 1rem; /* Espaçamento interno para não tocar nas bordas */
 }
 
 .formCard {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Alinhar itens à esquerda */
+    justify-content: center;
+    width: 75%; /* Ajuste conforme necessário */
+}
+
+.imageUploadSection {
+    width: 25%; /* Ajuste conforme necessário */
+    display: flex;
     align-items: center;
     justify-content: center;
-    /* Repita os estilos comuns aqui se necessário */
+    border-right: 1px solid #ccc; /* Linha divisória entre a imagem e o formulário */
+    padding: 1rem; /* Espaçamento interno */
 }
 
 .inputField, .textareaField {
@@ -78,6 +85,7 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .salvar{

@@ -1,16 +1,39 @@
 .card {
-  border: 1px solid #e0e0e0; /* Borda sutil */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  padding: 20px; /* Espaçamento interno */
-  margin: 20px; /* Espaçamento externo */
-  margin-top: 0px;
-  width: 300px; /* Largura máxima do card */
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  background-color: #ffffff;
+  width: 90vw; /* Ajuste para corresponder ao layout de adição */
   height: auto;
-  text-align: center; /* Centraliza o texto */
-  background-color: #ffffff; /* Cor de fundo */
 }
-  
+
+.imageSection {
+  width: 25%; /* Ajuste conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.imageSection img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 75%;
+}
+
 .card h2 {
   color: #333333; /* Cor do título */
   margin-bottom: 10px; /* Espaço abaixo do título */
@@ -20,38 +43,35 @@
   color: #666666; /* Cor do texto */
   margin-bottom: 10px; /* Espaço abaixo do parágrafo */
 }
-  
-.card img {
-  width: 220px; /* Largura máxima da imagem */
-  max-height: 220px; /* Altura automática */
-  border-radius: 5px; /* Bordas arredondadas na imagem */
+
+.cardButtons {
+  display: flex;
+  justify-content: flex-start; /* Alinha os botões horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
 }
-  
+
 .card button {
-    border: none; /* Remove a borda */
-    background-color: #007bff; /* Cor de fundo */
-    color: #ffffff; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Cursor apontando mão */
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.remover{
+.remover {
   background-color: red !important;
-  margin-top: 10px;
 }
 
-.remover:hover{
+.remover:hover {
   background-color: rgb(197, 1, 1) !important;
 }
 
-.loading{
-  margin-top: 20px;
+.editar {
+  background-color: rgb(10, 33, 163) !important;
 }
 
-.editar{
-  background-color: rgb(10, 33, 163) !important;
-  margin: 0px 5px;
-  margin-top: 10px;
+.loading {
+  margin-top: 20px;
 }

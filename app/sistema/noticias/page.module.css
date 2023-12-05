@@ -6,7 +6,7 @@
     min-height: 100vh;
     padding: 2rem;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0; /* Cor de fundo suave */
     font-family: 'Arial', sans-serif;
     color: #111;
     gap: 1rem;
@@ -57,22 +57,33 @@
 .addCardForm {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-start; /* Alinhar itens à esquerda */
+    flex-direction: row; /* Itens lado a lado */
     border: 2px dashed #007bff;
     border-radius: 10px;
     height: 400px;
-    width: 90vw; /* Ajustado para 400px */
+    width: 90vw;
     font-size: 3rem;
     color: #007bff;
     background-color: #f2f6fd;
+    padding: 1rem; /* Espaçamento interno para não tocar nas bordas */
 }
 
 .formCard {
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Alinhar itens à esquerda */
+    justify-content: center;
+    width: 75%; /* Ajuste conforme necessário */
+}
+
+.imageUploadSection {
+    width: 25%; /* Ajuste conforme necessário */
+    display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 1px solid #ccc; /* Linha divisória entre a imagem e o formulário */
+    padding: 1rem; /* Espaçamento interno */
 }
 
 .inputField, .textareaField {

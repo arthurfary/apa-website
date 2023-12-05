@@ -8,8 +8,8 @@ export async function GET(request) {
     }
 
     try {
-        // Executa a query para obter as notícias
-        const { rows } = await client.query("SELECT * FROM noticias");
+        // Executa a query para obter as notícias, incluindo a imagem
+        const { rows } = await client.query("SELECT id, titulo, conteudo, data, imagem FROM noticias ORDER BY data DESC");
 
         // Verifica se existem notícias cadastradas
         if (rows.length === 0) {
