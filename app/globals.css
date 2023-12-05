@@ -8,6 +8,11 @@
   --navbar-color: #fff;
   /* Add more colors as needed */
 
+  /* font stuff */
+
+
+
+
   color-scheme: light only;
 }
 
@@ -36,5 +41,25 @@ img{
   body {
       color:#000;
       background:#fff
+  }
+}
+
+
+/* TAMANHOS DE FONTE DEFAULT */
+h1{
+  font-size: 4vw
+}
+
+h2{
+  font-size: 2vw
+}
+
+@media only screen and (max-width: 798px) {
+  h1{
+    font-size: 13vw
+  }
+  
+  h2{
+    font-size: 6vw
   }
 }
