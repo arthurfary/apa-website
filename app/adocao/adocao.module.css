@@ -1,0 +1,155 @@
+/*Title Config*/
+
+.display{
+    display: flex;
+    margin-top: 75px;
+    min-height: 1900px;
+}
+
+.titleBg{
+    width: 100vw;
+    min-height: 20vw;
+    padding: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    overflow-x: clip;
+    overflow-y: visible;
+    position: absolute;
+    z-index: -1;
+    background: var(--footer-color);
+}
+
+.titleImage{
+    position: inherit;
+    width: 120vw;
+    height: auto;
+    left: -10vw;
+    z-index: -1;
+}
+
+.titleImageMisc{
+    max-width: 15vw;
+    height: auto;
+    float: right;
+}
+
+.titleImagePaws{
+    position: absolute;
+    bottom: -100%;
+    height: auto;
+    z-index: -1;
+    margin: 2vw;
+    width: 10vw;
+    left: 0;
+}
+
+.titleText{
+    color: black;
+    margin-top: 3vw;
+}
+
+
+/*Cards Container*/
+
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    width: 100vw;
+    padding: 5vw;
+    padding-bottom: 15vw;
+    padding-top: 25vw;
+    justify-content: space-around;
+}
+
+
+/*Cards Config*/
+
+.cardContainer{
+    display: flex;
+    width: 800px;
+    height: fit-content;
+    min-height: 20vw;
+
+    text-align: justify;
+    align-items: center;
+
+    margin-bottom: 2vw;
+    background-color: antiquewhite;
+
+    border-radius: 2%;
+    border-color: black;
+    border-bottom: solid;
+}
+
+.cardImageContainer{
+    width: 60%;
+    min-width: 40%;
+    height: auto;
+    display: flex;
+    padding: 5%;
+    border-right-style: solid;
+    border-right-width: medium;
+}
+
+.cardImage{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cardInfoContainer{
+    display: flex;
+    height: 100%;
+    width: -webkit-fill-available;
+    padding: 5%;
+    flex-direction: column;
+}
+
+.cardInfoContainer text1{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.cardInfoContainer text2{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.cardInfoContainer text3{
+    font-size: 1.2em;
+}
+
+.cardInfoContainer subDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardInfoContainer subDiv d{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 798px) {
+
+    .titleBg{
+        padding: 5vw;
+    }
+
+    .titleImagePaws{
+        width: 15vw;
+    }
+
+    .card{
+        width: 600px;
+    }
+
+}
