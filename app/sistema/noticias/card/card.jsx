@@ -9,6 +9,9 @@ function Card({ id, titulo, conteudo, dataPublicacao, imagem, setRefresh, refres
   const [loading, setLoading] = useState(false);
   const [edit, setEdit] = useState(false);
 
+  const trimmer = (str, trim = 150) => (str.length > trim ? str.slice(0, trim-3) + '...' : str);
+
+
   async function removerNoticia() {
     setLoading(true);
 
@@ -28,7 +31,7 @@ function Card({ id, titulo, conteudo, dataPublicacao, imagem, setRefresh, refres
       {imagem && <div className={styles.imageSection}><img src={imagem} alt="Imagem da Notícia" /></div>}
       <div className={styles.contentSection}>
         <h2>{titulo}</h2>
-        <p>{conteudo}</p>
+        <p>{trimmer(conteudo)}</p>
         <p>Data de Publicação: {new Date(dataPublicacao).toLocaleDateString('pt-BR')}</p>
         {loading === false && (
           <div className={styles.cardButtons}>
