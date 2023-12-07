@@ -2,6 +2,17 @@
     background-color: #f4f1f1;
 }
 
+.load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f1f1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+}
+
 
 .mainContainer{
     display: flex;
@@ -60,6 +71,7 @@
 .card{
 
     width: 40vw;
+    min-height: 30vw;
 
     align-self: center;
     justify-self: center;
@@ -67,14 +79,20 @@
     margin-bottom: 2vw;
 
     z-index: 2;
-   
+
+    cursor: pointer;
+
+    transition: transform 0.1s ease-out;
+    background-color: white;
+    border-radius: 2%;
+}
+
+.card:hover{
+    transform: scale(1.01);
 }
 
 .cardContainer{
-    border-radius: 2%;
     height: 20vw;
-    background-color: white;
-
     text-align: left;
 }
 
@@ -96,12 +114,28 @@
 
 }
 
+.cardText{
+    padding: 0 4%;
+}
+
+/* popup */
+
+.newsPopup{
+    top: 5vw;
+    position: absolute;
+    width: 90vw;
+    min-height: 90%;
+    background-color: #fff;
+    z-index: 10;
+    border-radius: 20px;
+}
+
 
 @media only screen and (max-width: 798px) {
     .card{
-        width: 70vw;
-        height: 50vw;
-        margin-bottom: 30vw;
+        width: 85vw;
+        height: 75vw;
+        margin-bottom: 5vw;
         line-height: 5vw;
         
         font-size: large;

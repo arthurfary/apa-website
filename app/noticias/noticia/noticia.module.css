@@ -1,0 +1,165 @@
+/* title */
+.load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f1f1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+}
+
+.titleContainer{
+    display: flex;
+    width: 100vw;
+    align-self: center;
+
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    position: relative; /* Add this line */
+}
+
+.titleImageContainer{
+    width: 80%;
+    
+}
+
+.titleImage{
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.titleContainer h1{
+    position: absolute;
+    width: 70%;
+    top: 50%; /* Add this line */
+    left: 50%; /* Add this line */
+    transform: translate(-50%, -50%); /* Add this line */
+}
+
+
+
+/* image */
+
+.imageContainer{
+    max-width: 100vw;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.imageContainer img{
+    border: 20px solid #f4f1f1;
+    border-radius: 20px;
+
+    object-fit: contain;
+    max-height: 50vw;
+}
+
+/* content */
+
+.contentContainer{
+    margin-top: 2vw;
+    min-height: 15vw;
+    width: 100vw;
+    margin-bottom: 15vw;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.contentContainer p{
+    margin: 0 10vw;
+    text-align: justify;
+}
+
+
+.data{
+    text-align: end !important;
+}
+
+
+@media only screen and (max-width: 798px) {
+
+    .titleContainer{
+        margin-top: 10vw;     
+    }
+    
+    .titleImageContainer{
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .titleImage{
+        width: 200vw;
+        height: auto;
+        
+    }
+    
+    
+    .titleContainer h1{
+        position: absolute;
+        width: 90%;
+        top: 50%; /* Add this line */
+        left: 50%; /* Add this line */
+        transform: translate(-50%, -50%); /* Add this line */
+        font-size: clamp(1vw, 7vw, 5rem);
+    }
+    
+    
+    
+    /* image */
+    
+    .imageContainer{
+        max-width: 100vw;
+        height: fit-content;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        
+    }
+    .imageContainer img{
+        border: 10px solid #f4f1f1;
+        border-radius: 20px;
+
+    }
+    
+    /* content */
+    
+    .contentContainer{
+        margin-top: 2vw;
+        min-height: 15vw;
+        width: 100vw;
+        margin-bottom: 15vw;
+    
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .contentContainer p{
+        margin: 0 10vw;
+        margin-top: -2vw;
+        text-align: justify;
+    }
+    
+}
