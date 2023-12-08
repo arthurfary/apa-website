@@ -1,3 +1,4 @@
+"use client"
 import SitePage from "../components/page_type/site"
 import styles from "./adocao.module.css";
 import Image from "next/image";
@@ -8,56 +9,23 @@ import bgTitlePaws from "@/public/Patas_reversas.png"
 
 import pipoca from "@/public/pipoca.jpeg"
 
+import { fetchPets } from "../functions/fetchPets";
+import { useState, useEffect } from "react";
 
 
-const CardMaker = ({nome, peso, idade, especie, porte, info, image}) => {
-  return(
-    /*<div className={styles.card}>*/
-      <div className={styles.cardContainer}>
-        <div className={styles.cardImageContainer}>
-          <Image src={image} className={styles.cardImage} alt="card image"/>
-        </div>
-
-        <div className={styles.cardInfoContainer}>
-          <text1>{nome}</text1>
-
-          <subDiv>
-            <d>
-              <text3>Peso</text3>
-              <text2>{peso}</text2>
-            </d>
-            <d>
-              <text3>Idade</text3>
-              <text2>{idade}</text2>
-            </d>
-          </subDiv>
-
-          <subDiv>
-            <d>
-              <text3>Espécie</text3>
-              <text2>{especie}</text2>
-            </d>
-            <d>
-              <text3>Porte</text3>
-              <text2>{porte}</text2>
-            </d>
-          </subDiv>
-
-          <div className={styles.cardInfo}>
-            <text3>Sobre o pet</text3>
-            <text2>{info}</text2>
-          </div>
-
-        </div>
-
-      </div>
-    /*</div>*/
-  )
-}
-
-
+import CardMaker from "./card/card";
 
 export default function Adocao() {
+  const [pets, setPets] = useState(null)
+
+  useEffect(() => {
+    fetchPets()
+    .then(data =>{
+      setPets(data)
+    })
+    .catch(error => console.error(error));
+  }, [])
+
   return (
     <SitePage>
       <main className={styles.display}>
@@ -69,15 +37,10 @@ export default function Adocao() {
         </div>
 
         <div className={styles.mainContainer}>
-        <CardMaker nome={'card.nome'} peso={'card.peso'} idade={'card.idade'} especie={'card.especie'} 
-                            porte={'card.porte'} info={'card.info'} image={pipoca}/>
-
-        <CardMaker nome={'card.nome'} peso={'card.peso'} idade={'card.idade'} especie={'card.especie'} 
-                            porte={'card.porte'} info={'card.info'} image={pipoca}/>
-
-        <CardMaker nome={'card.nome'} peso={'card.peso'} idade={'card.idade'} especie={'card.especie'} 
-                            porte={'card.porte'} info={'card.info'} image={pipoca}/>
-               
+        {pets?.map((pet, i) => (
+                <CardMaker key={i} id={pet.id} nome={pet.nome} especie={pet.especie} image={pet.foto}/>
+              ))
+        }
         </div>
         
         

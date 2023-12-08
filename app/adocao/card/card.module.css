@@ -1,0 +1,80 @@
+
+/*Cards Config*/
+
+.cardContainer{
+    display: flex;
+    width: 45vw;
+    height: fit-content;
+    min-height: 20vw;
+
+    text-align: justify;
+    align-items: center;
+
+    margin-bottom: 2vw;
+    background-color: antiquewhite;
+
+    border-radius: 2%;
+    border-color: black;
+    border-bottom: solid;
+}
+
+.cardImageContainer{
+    width: 60%;
+    min-width: 40%;
+    height: auto;
+    display: flex;
+    padding: 5%;
+    border-right-style: solid;
+    border-right-width: medium;
+}
+
+.cardImage{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cardInfoContainer{
+    display: flex;
+    height: 100%;
+    width: -webkit-fill-available;
+    padding: 5%;
+    flex-direction: column;
+}
+
+.cardInfoContainer text1{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.cardInfoContainer text2{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.cardInfoContainer text3{
+    font-size: 1.2em;
+}
+
+.cardInfoContainer subDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardInfoContainer subDiv d{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 798px) {
+    .cardContainer{
+        width: 90vw;
+    }
+}

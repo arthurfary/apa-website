@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.justifyContainer p{
+  font-size: 1.8vw;
+}
+
 .titleContainer{
     display: flex;
     min-height: 28vw;
@@ -61,14 +65,13 @@
 
 .historyTitle{
     color: #000000;
-    font-size: 4.5vw;
+    font-size: 3vw;
     text-align: left;
     font-weight: bold;
 }
 
 .historyText{
     color: #000000;
-    font-size: 28px;
     text-align: left;
     max-width: 40%;
     margin: 5vw;
@@ -76,7 +79,6 @@
 
 .historyTextCenter{
     color: #000000;
-    font-size: 28px;
     text-align: center;
     max-width: 60%;
     margin: 2.5vw;
@@ -99,11 +101,35 @@
     z-index: 1;
 }
 
+
+
+
 @media screen and (max-width:719px){
+    .justifyContainer p{
+        font-size: 1.8rem;
+    }
+
+    .titleContainer{
+        margin: 0;
+        padding: 0;
+
+        align-items: baseline;
+
+        padding-top: 5rem;
+
+        justify-content: center;
+        background-size: 160rem;
+
+        object-fit: cover;
+
+        height: 32vh;
+    }
 
     .historyContainer {
         flex-wrap: wrap;
         flex-direction: column-reverse;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .invHistoryContainer {
@@ -111,6 +137,7 @@
         flex-direction: column;
         align-items: center;
       }
+
 
     .historyText{
         text-align: center;
@@ -122,11 +149,12 @@
     }
 
     .historyTitle{
-        font-size: 8vw;
+        font-size: 6vw;
     }
 
     .bgImg{
-        height: -webkit-fill-available;
+        width: calc(2*100vw);
+        height: 100%;
     }
 
     .dogImageLeft{
