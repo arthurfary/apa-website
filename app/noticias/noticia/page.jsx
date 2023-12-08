@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import SitePage from "@/app/components/page_type/site"
 import Load from '@/app/components/load/load';
-import { fetchNoticias } from '@/app/functions/fetchNoticias';
+import { fetchNoticiasPorID } from '@/app/functions/fetchNoticiaPorID';
 
 // Importando estilos e imagens
 import styles from './noticia.module.css'
@@ -20,9 +20,9 @@ const NewsPage = () => {
   // Buscando noticia na montagem do componente
   useEffect(() => {
     setScreenLoading(true);
-    fetchNoticias()
+    fetchNoticiasPorID(searchParams.get('id'))
       .then(data => {
-        setNoticia(data.find(row => row.id === searchParams.get('id')));
+        setNoticia(data)
         setScreenLoading(false); // Define o carregamento como falso após buscar os dados
       })
       .catch(error => console.error(error));
