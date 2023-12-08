@@ -17,16 +17,20 @@ export async function GET(request) {
         // Executa a query para obter as notícias, incluindo a imagem
         const { rows } = await client.query("SELECT id, titulo, conteudo, data, imagem FROM noticias WHERE id = $1 ", [id]);
 
+        // Desestrutura o array para obter a notícia diretamente
+        const [noticia] = rows;
+
         // Verifica se existem notícias cadastradas
-        if (rows.length === 0) {
+        if (!noticia) {
             return NextResponse.json({ message: "Notícia não encontrada!", rows, success: 1 }, { status: 200 });
         }
 
-        // Retorna as notícias encontradas
-        return NextResponse.json({ rows, success: 1 }, { status: 200 });
+        // Retorna a notícia encontrada
+        return NextResponse.json({ rows: noticia, success: 1 }, { status: 200 });
+
     } catch (error) {
-        // Trata possíveis erros durante a execução da query
-        console.error(error);
-        return NextResponse.json({ message: "Erro ao obter as notícias.", success: 0 }, { status: 500 });
+    // Trata possíveis erros durante a execução da query
+    console.error(error);
+    return NextResponse.json({ message: "Erro ao obter as notícias.", success: 0 }, { status: 500 });
     }
 }

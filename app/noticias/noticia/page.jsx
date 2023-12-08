@@ -22,7 +22,7 @@ const NewsPage = () => {
     setScreenLoading(true);
     fetchNoticiasPorID(searchParams.get('id'))
       .then(data => {
-        setNoticia(data)
+        setNoticia(data);
         setScreenLoading(false); // Define o carregamento como falso após buscar os dados
       })
       .catch(error => console.error(error));
@@ -46,7 +46,7 @@ const NewsPage = () => {
 
             <div className={styles.contentContainer} >
               {noticia?.conteudo.split('\n').map((line, index) => (
-                line ? <p key={index}>{line}</p> : <p key={index}> </p>
+                line ? <p key={index}>{line}</p> : <p key={index}></p>
               ))}
 
               <p className={styles.data}>

@@ -24,9 +24,7 @@ export default function Header() {
             <li><ActiveLink href="/">Home</ActiveLink></li>
             <li><ActiveLink href="/historia">História</ActiveLink></li>
             <li><ActiveLink href="/como_ajudar">Como Ajudar</ActiveLink></li>
-            <li><ActiveLink href="/doacao">Doação</ActiveLink></li>
             <li><ActiveLink href="/adocao">Adoção</ActiveLink></li>
-            <li><ActiveLink href="/atividades">Atividades</ActiveLink></li>
             <li><ActiveLink href="/noticias">Notícias</ActiveLink></li>
         </ul>
       </nav>
