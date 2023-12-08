@@ -1,45 +1,36 @@
 "use client"
+
+// Importando módulos e componentes necessários
 import { useSearchParams } from 'next/navigation'
 import { useState, useEffect } from 'react';
-
-import styles from './noticia.module.css'
 import Image from 'next/image';
-
-import bgTitleImage from '@/public/noticia_title.png'
 import SitePage from "@/app/components/page_type/site"
-
 import Load from '@/app/components/load/load';
+import { fetchNoticias } from '@/app/functions/fetchNoticias';
+
+// Importando estilos e imagens
+import styles from './noticia.module.css'
+import bgTitleImage from '@/public/noticia_title.png'
 
 const NewsPage = () => {
   const searchParams = useSearchParams()
   const [screenLoading , setScreenLoading] = useState(true);
-
   const [noticia, setNoticia] = useState(null);
 
+  // Buscando noticia na montagem do componente
   useEffect(() => {
     setScreenLoading(true);
-    fetch('/api/obterNoticias', {
-        headers: {
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache',
-            'Expires': '0'
-        }
-    })
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      setNoticia(data.rows.find(row => row.id === searchParams.get('id')));
-    })
-    .catch(error => console.error(error))
-    .then(setScreenLoading(false)); // Log any errors
+    fetchNoticias()
+      .then(data => {
+        setNoticia(data.find(row => row.id === searchParams.get('id')));
+        setScreenLoading(false); // Define o carregamento como falso após buscar os dados
+      })
+      .catch(error => console.error(error));
   }, []);
-  
 
   return (
-
     <SitePage>
-        
+        {/* Renderiza a noticia se não estiver carregando, caso contrário, renderiza o componente de carregamento */}
         {!screenLoading &&
          <>
             <div className={styles.titleContainer}>
@@ -55,7 +46,7 @@ const NewsPage = () => {
 
             <div className={styles.contentContainer} >
               {noticia?.conteudo.split('\n').map((line, index) => (
-                line ? <p key={index}>{line}</p> : <p key={index}>&nbsp;</p>
+                line ? <p key={index}>{line}</p> : <p key={index}> </p>
               ))}
 
               <p className={styles.data}>

@@ -77,9 +77,7 @@ export default function Adocao() {
 
         <CardMaker nome={'card.nome'} peso={'card.peso'} idade={'card.idade'} especie={'card.especie'} 
                             porte={'card.porte'} info={'card.info'} image={pipoca}/>
-
-        <CardMaker nome={'card.nome'} peso={'card.peso'} idade={'card.idade'} especie={'card.especie'} 
-                            porte={'card.porte'} info={'card.info'} image={pipoca}/>                 
+               
         </div>
         
         
