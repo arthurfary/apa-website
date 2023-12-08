@@ -46,7 +46,7 @@ const NewsPage = () => {
 
             <div className={styles.contentContainer} >
               {noticia?.conteudo.split('\n').map((line, index) => (
-                line ? <p key={index}>{line}</p> : <p key={index}></p>
+                line ? <p key={index}>{line}</p> : <p key={index}><br/></p>
               ))}
 
               <p className={styles.data}>
