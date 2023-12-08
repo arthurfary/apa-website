@@ -45,11 +45,12 @@ export default function Contato() {
           
         </div>
         <Image src={patasReversas} className={styles.patas} alt="Imagem de patas de animais" />
+
         <div className={styles.conjunto}>
           <Image src={reversaRampa} className={styles.ramprever} alt="Imagem de uma rampa reversa" />
           <Image src={racaoImage} className={styles.comida} alt="Imagem de comida para animais" />
           <Image src={setaEspiral} className={styles.seta} alt="Imagem de uma seta espiral" />
-        </div>
+       
 
         <div className={styles.tex2}>
           <h2>Doações via PIX</h2>
@@ -62,7 +63,7 @@ export default function Contato() {
         <div className={styles.pix}>
           <h2>Chave PIX: CNPJ 09152206000101</h2>
         </div>
-
+        </div>
         <div className={styles.tex4}>
           <h1>Seja voluntário</h1>
         </div>

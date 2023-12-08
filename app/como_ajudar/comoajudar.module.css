@@ -16,6 +16,7 @@
     margin-bottom: -5vw;
     padding-left: 11vw;
     padding-bottom: 5vw;
+    font-size: 2vw;
 }
 
 .tex1 {
@@ -28,7 +29,7 @@
     padding-top: 5vw;
     padding-bottom: 5vw;
     border-radius: 5vw;
-    
+    font-size: 2vw;
     
     text-align: left;
 
@@ -38,7 +39,7 @@
 }
 .conjunto{
     width: 100%;
-   display: flex;
+    display: flex;
     flex-wrap: nowrap;
     position: relative;
     align-items: center;
@@ -46,6 +47,7 @@
     padding-top: 20vw;
     padding-bottom: 5vw;
     border-radius: 5vw;
+    flex-direction: column;
 }
 .ramprever{
     color: transparent;
@@ -66,11 +68,11 @@
 }
 .tex2{
 
-    font-size: 1vw;
+    font-size: 1.5vw;
     text-align: left;
     max-width: 40%;
     margin-left: 10vw;
-    transform: translatey(-9em);
+    
     display: flex;
 }
 .tex3{
@@ -78,15 +80,15 @@
     text-align: left;
     max-width: 60%;
     margin-left: 20vw;
-    transform: translatey(-4.3em);
+    
     display: flex;
 }
 .pix{
-    font-size: 1vw;
+    font-size: 1.5vw;
     text-align: left;
     max-width: 40%;
     margin-left: 10vw;
-    transform: translatey(-8em);
+    
     display: flex;
 }
 .seta{
@@ -109,13 +111,14 @@
     margin-bottom: 1vw;
     padding-left: 11vw;
     padding-bottom: 5vw;
+    font-size: 2vw;
     
     
 }
 .tex5{
-   
+   font-size: 2vw;
     margin: -5vw;
-    margin-left: -22vw;
+    margin-left: -10vw;
     margin-bottom: 10vw;
 }
 .conjunto2{
@@ -256,6 +259,7 @@
     justify-content: space-evenly;
     margin-bottom: 5em;
     padding: 5em;
+
     width: 100%;
   }
 
@@ -309,117 +313,153 @@
 
 
 
-/* Ajustes para telas menores, como celulares */
-@media only screen and (max-width: 798px) {
-  
-.conjunto{
-    flex-wrap: wrap;
-        flex-direction: column-reverse;
-} 
-    .ramprever {
-        transform: translateY(40vw);
-        height: 8em;
-        display: block;
-    }
-    .comida {
-        width: 5em;
-        transform: translateY(18vw);
-        margin-left: 15vw; /* Ajuste conforme necessário */
-        display: block;
-    }
-    
-    .tex2 {
-        text-align: center;
-        max-width: 100%;
-    }
-    
-    .tex3 {
-        text-align: center;
-        max-width: 100%;
-    }
-    
-    .pix {
-        text-align: center;
-        max-width: 100%;
-        display: flex;
-    }
-    
-    .espira {
-        width: 5em;
-        transform: translateY(-28vw);
-        margin-left: 54vw; /* Ajuste conforme necessário */
-        display: block;
-    }
-    
-    .seta {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .tex4 {
-        transform: translateY(-4vw);
-        font-size: 1vw;
-        margin-left: 3em; /* Ajuste conforme necessário */
-    }
-    
-    .tex5 {
-        transform: translateY(-1vw);
-        margin-left: 2.5em; /* Ajuste conforme necessário */
-        
-        
-    }
-    
-    .verde {
-        width: 110vw; /* Ajuste conforme necessário */
-        transform: translateY(4vw);
-        margin-left: -3vw; /* Ajuste conforme necessário */
-        display: block;
-    }
-    
-    .ver {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .cachorro {
-        width: 90vw; /* Ajuste conforme necessário */
-        transform: translateY(-35vw);
-        margin-left: 2em; /* Ajuste conforme necessário */
-        display: block;
-    }
-    
-    .quatro {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .vasilha {
-        width: 20vw;
-        transform: translateY(-33vw);
-        margin-left: 17vw; /* Ajuste conforme necessário */
-        display: block;
-    }
-    
-    .pote {
-        width: 100%;
-        height: 100%;
-    }
-    .rever{
-        width: 3em;
-        transform: translateY(10em);
-        margin-left: 1em;
-        position: absolute;
-    }
-    .patas{
-        width: 100%;
-        height: 100%;
-    }
-    
+/* Ajustes hara telas menores, como celulares */
 
-    .coletaDisplay2 {
-        flex-direction: column;
-        align-items: center;
-      }
+  
+@media only screen and (max-width: 798px) {
+
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.titulo{
+    font-size: 7vw;
+    margin-top: 22vw;
+        
+}
+.conjunto{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 5vw;
+    border-radius: 5vw;
+    flex-direction: column;
+    height: 70vh;
+}
+.tex1{
+    font-size: 6vw;
+    text-align: left;
+    margin: 0%;
+    margin-top: 10vw;
+    width: 100vw;
+    padding:0 10vw;
+    max-width: 100%;    
+}
+.ramprever {
+    height: 100%;
+    width: 170vw;
+    
+    display: block;
+}
+.comida {
+    width: 6em;
+    margin-left: 15vw; /* Ajuste conforme necessário */
+    display: block;
+    margin-left: 70vw;
+    margin-top: 60vw;
+    
+}
+    
+.tex2 {
+    font-size: 7vw !important;
+    text-align: center;
+    margin-left: 0;
+    max-width: 100%;
+   
+    
+}
+
+.tex3 {
+    
+    text-align: center;
+    margin: 0%;
+    font-size: 8vw;
+    width: 100vw;
+    padding:0 10vw;
+    max-width: 100%; 
+    margin-left: 0vw;
+    margin-top: 10vw;
+    
+}
+
+.pix {
+    
+    text-align: center;
+    display: flex;
+    margin-top: 20vw;
+    font-size: 5vw !important;
+    max-width: 60%;
+    margin-left: -5em;
+}
+
+.seta {
+    width: 30vw;
+    height: auto;
+    max-width: 100vw;
+    display: flex;;
+    margin-top: -110vw;
+    margin-left: 80vw;
+}
+    
+    
+.tex4 {
+    
+    font-size: 7vw;
+    max-width: 100vw;
+}
+
+.tex5 {
+    font-size: 8vw;
+    padding:0 13vw;
+    max-width: 100%; 
+    
+}
+
+.ver {
+    width: 110vw; /* Ajuste conforme necessário */
+    transform: translateY(4vw);
+    margin-left: -3vw; /* Ajuste conforme necessário */
+    display: block;
+}
+.quatro {
+    width: 90vw; /* Ajuste conforme necessário */
+    transform: translateY(-35vw);
+    margin-left: 2em; /* Ajuste conforme necessário */
+    display: block;
+}
+.pote {
+    width: 20vw;
+    transform: translateY(-33vw);
+    margin-left: 17vw; /* Ajuste conforme necessário */
+    display: block;
+}
+.patas{
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    margin-left: 60vw;
+    transform: translateY(10em);
+    display: flex;
+}
+.coletaBg {
+    width: 100%;
+    height: 35em;
+    position: absolute;
+    z-index: -1;
+    margin-top: 10vw;
+  }
+
+.coletaDisplay2 {
+    flex-direction: column;
+    align-items: center;
+}
 
 
 }

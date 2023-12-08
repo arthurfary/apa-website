@@ -45,13 +45,13 @@ img{
 }
 
 
-/* TAMANHOS DE FONTE DEFAULT */
+/* TAMANHOS DE FONTE DEFAULT
 h1{
   font-size: 4vw
 }
 
 h2{
-  font-size: 2vw
+  font-size: 2vw 
 }
 
 p{
@@ -64,10 +64,10 @@ p{
   }
   
   h2{
-    font-size: 6vw
+    /font-size: 6vw
   }
 
   p{
     font-size: clamp(1.655rem, 5.5vw, 3em);
   }
-}
+} */
