@@ -38,8 +38,8 @@ const CardMaker = ({id, nome, peso, idade, especie, porte, info, image}) => {
               <text2>{info}</text2>
             </div>
   
-            <a href={"mailto:lucianosbs151@gmail.com?&subject=Gostaria de adotar o " + nome}>
-              adotar
+            <a className={styles.cardAdotar} href={"mailto:lucianosbs151@gmail.com?&subject=Gostaria de adotar o " + nome}>
+              Entrar Em Contato
             </a>
   
           </div>
