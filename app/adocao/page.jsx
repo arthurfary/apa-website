@@ -12,18 +12,22 @@ import pipoca from "@/public/pipoca.jpeg"
 import { fetchPets } from "../functions/fetchPets";
 import { useState, useEffect } from "react";
 
+import Load from "../components/load/load";
 
 import CardMaker from "./card/card";
 
 export default function Adocao() {
   const [pets, setPets] = useState(null)
+  const [screenLoading , setScreenLoading] = useState(true);
 
   useEffect(() => {
+    setScreenLoading(true)
     fetchPets()
     .then(data =>{
       setPets(data)
     })
-    .catch(error => console.error(error));
+    .catch(error => console.error(error))
+    .then(setScreenLoading(false))
   }, [])
 
   return (
@@ -37,10 +41,17 @@ export default function Adocao() {
         </div>
 
         <div className={styles.mainContainer}>
-        {pets?.map((pet, i) => (
-                <CardMaker key={i} id={pet.id} nome={pet.nome} especie={pet.especie} image={pet.foto}/>
+        {!screenLoading && pets?.length > 0 ? (pets?.map((pet, i) => (
+                <CardMaker key={i} nome={pet.nome} raca={pet.raca} image={pet.foto} porte={pet.porte} idade={pet.idade} desc={pet.descricao}/>
               ))
+        ) : (
+          <div className={styles.semPets}>
+            <h1>Não há pets para adoção por enquanto! Volte mais tarde!</h1>
+            <a className={styles.goBackButton} href="/">Voltar para Home</a>
+          </div>
+        )
         }
+        {screenLoading && <div className={styles.load}><Load size={100}/></div>}
         </div>
         
         

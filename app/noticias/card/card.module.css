@@ -50,6 +50,10 @@
     padding: 0 4%;
 }
 
+.cardText h2{
+    font-size: 2vw;
+}
+
 
 @media only screen and (max-width: 798px) {
     .card{
@@ -63,4 +67,9 @@
     .cardContainer{
         height: 50vw;
     }
+
+    .cardText h2{
+        font-size: 1.8rem;
+    }
+    
 }

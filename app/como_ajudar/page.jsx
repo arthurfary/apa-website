@@ -17,18 +17,6 @@ import coletaBg from '@/public/comoajudar-bg-coleta.png'
 import PtoColeta from "../components/ponto_coleta/ptoColeta"
 
 export default function Contato() {
-  const [windowWidth, setWindowWidth] = useState(undefined);
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
   return (
     <SitePage>
       <div className={styles.display}>

@@ -5,23 +5,21 @@ import { useState } from 'react';
 import Load from '@/app/components/load/load';
 import CardEdit from './cardEdit';
 
+import { removeNoticia } from '@/app/functions/removeNoticia';
+
 function Card({ id, titulo, conteudo, dataPublicacao, imagem, setRefresh, refresh }) {
   const [loading, setLoading] = useState(false);
   const [edit, setEdit] = useState(false);
 
   const trimmer = (str, trim = 150) => (str.length > trim ? str.slice(0, trim-3) + '...' : str);
 
-
   async function removerNoticia() {
     setLoading(true);
 
-    await fetch('/api/deletarNoticia?id=' + id, {
-        method: 'DELETE',
-    })
-    .then(response => response.json())
-    .then(data => {
-      setRefresh(!refresh);
-    });
+    removeNoticia(id)
+    .then(
+      setRefresh(!refresh)
+    );
 
     setLoading(false);
   }
