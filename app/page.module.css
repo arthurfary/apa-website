@@ -185,10 +185,11 @@
 }
 
 .rectImage {
-  width: 17vw;
+  width: 19vw;
   height: auto;
-  margin: 0 3em;
+  margin: 0 1.5rem;
   border-radius: 100%;
+  border: 1rem solid white;
 }
 
 /* Imagem do osso */

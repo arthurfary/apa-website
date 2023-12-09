@@ -5,7 +5,7 @@
     justify-content: center;
     background-color: #f4f1f1;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     z-index: 100;
     position: absolute;
 }
@@ -46,6 +46,7 @@
     top: 50%; /* Add this line */
     left: 50%; /* Add this line */
     transform: translate(-50%, -50%); /* Add this line */
+    font-size: 4vw;
 }
 
 
@@ -85,6 +86,7 @@
 .contentContainer p{
     margin: 0 10vw;
     text-align: justify;
+    font-size: 2rem;
 }
 
 

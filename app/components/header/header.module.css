@@ -42,3 +42,93 @@
     color: var(--secondary-color); /* Cor de destaque ao passar o mouse */
 }
 
+/* Add this to your CSS */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 101;
+
+    position: relative;
+  }
+  
+  .hamburger div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--dark-color); /* Change this to whatever color you want */
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .nav.open {
+    transform: translateX(0);
+  }
+
+
+  /* hamburger button */
+  .hamburger div:nth-child(1) {
+    top: 0;
+  }
+  
+  .hamburger div:nth-child(2){
+    top: 10px;
+  }
+  
+  .hamburger div:nth-child(3){
+    top: 20px
+  }
+  
+  .hamburger.open div:nth-child(1), .hamburger.open div:nth-child(4) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+    transform: scale(0) rotate(45deg);
+    transform-origin: center;
+  }
+  
+  .hamburger.open div:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+  
+  /* Use a media query to hide the nav and show the hamburger menu on smaller screens */
+  @media (max-width: 768px) {
+    .nav {
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      background: rgba(255, 255, 255);
+      width: 90%;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      flex-direction: column;
+      
+    }
+
+    .nav ul{
+        flex-direction: column;
+        text-align: end;
+        margin-top: 5rem;
+    }
+    
+    .nav li{
+        width: 100%;
+        padding: 0.3rem 0;
+        padding-right: 2rem;
+        font-size: 2.5rem;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+  
