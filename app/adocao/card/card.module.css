@@ -50,12 +50,13 @@
 }
 
 .cardInfoContainer text2{
-    font-size: 2em;
+    font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
 .cardInfoContainer text3{
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .cardInfoContainer subDiv{

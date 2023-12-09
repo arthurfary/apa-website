@@ -38,7 +38,7 @@ export default function Adocao() {
 
         <div className={styles.mainContainer}>
         {pets?.map((pet, i) => (
-                <CardMaker key={i} id={pet.id} nome={pet.nome} especie={pet.especie} image={pet.foto}/>
+                <CardMaker key={i} nome={pet.nome} raca={pet.raca} image={pet.foto} porte={pet.porte} idade={pet.idade} desc={pet.descricao}/>
               ))
         }
         </div>
