@@ -43,6 +43,10 @@
 
 }
 
+.titleContainer h1{
+    font-size: 5rem;
+}
+
 .titleImage{
     width: 100%;
     height: 100%;
@@ -66,32 +70,9 @@
 }
 
 
-/* popup */
-
-.newsPopup{
-    top: 5vw;
-    position: absolute;
-    width: 90vw;
-    min-height: 90%;
-    background-color: #fff;
-    z-index: 10;
-    border-radius: 20px;
-}
-
 
 @media only screen and (max-width: 798px) {
-    .card{
-        width: 85vw;
-        height: 75vw;
-        margin-bottom: 5vw;
-        line-height: 5vw;
-        
-        font-size: large;
-    }
 
-    .cardContainer{
-        height: 50vw;
-    }
     /* title */
     .titleContainer{
         

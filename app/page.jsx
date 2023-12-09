@@ -12,6 +12,11 @@ import CurvyRectangle from '@/public/curvy_rectangle_home.png'
 import boneImage from '@/public/osso.png'
 import MobileCurvyImage from '@/public/mobile_curvy_image.png'
 
+import FotoHome1 from '@/public/foto_home_1.png'
+import FotoHome2 from '@/public/foto_home_2.png'
+import FotoHome3 from '@/public/foto_home_3.png'
+import FotoHome4 from '@/public/foto_home_4.png'
+
 // pipoca temporaria
 import pipoca from '@/public/pipoca.jpeg'
 
@@ -104,9 +109,9 @@ export default function Home() {
           <Image src={windowWidth > 700 ? CurvyRectangle : MobileCurvyImage} objectPosition='center' className={styles.CurvyRectangleBg} alt="imgBg2"/> 
 
           <div className={styles.rectContainer}>
-            {Array(4).fill().map((_, i) => (
+            {[FotoHome1, FotoHome2, FotoHome3, FotoHome4].map((foto, i) => (
               <div key={i} className={styles.rectDiv}>
-                <Image src={pipoca} alt={`Image ${i+1}`} className={styles.rectImage} />
+                <Image src={foto} alt={`Image ${i+1}`} className={styles.rectImage} />
               </div>
             ))}
           </div>

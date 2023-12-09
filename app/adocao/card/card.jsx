@@ -3,14 +3,15 @@ import styles from './card.module.css'
 const CardMaker = ({nome, idade, raca, porte, desc, image}) => {
 
     const calculaIdade = (dias) => {
+      // da pra fazer dias/(365 - 30) para que 12 meses seja um ano
       if (dias/365 >= 1){
         return parseInt(dias/365).toString() + (parseInt(dias/365) > 1 ? " anos" : " ano")
       }
-      else if(dias/12 >= 1){
-        return parseInt(dias/12).toString() + (parseInt(dias/12) > 1 ? " meses" : " mês")
+      else if(dias/30 >= 1){
+        return parseInt(dias/30).toString() + (parseInt(dias/30) > 1 ? " meses" : " mês")
       }
-      else if(dias/4 >= 1){
-        return parseInt(dias/4).toString() + (parseInt(dias/4) > 1 ? " semanas" : " semana")
+      else if(dias/7 >= 1){
+        return parseInt(dias/7).toString() + (parseInt(dias/7) > 1 ? " semanas" : " semana")
       }
       else{
         return dias.toString() + (dias > 1 ? " dias" : " dia")
@@ -47,7 +48,7 @@ const CardMaker = ({nome, idade, raca, porte, desc, image}) => {
   
             <div className={styles.cardInfo}>
               <text3>Sobre o pet</text3>
-              <text2>{desc}</text2>
+              <text2 className={styles.cardDesc}>{desc}</text2>
             </div>
   
             <a className={styles.cardAdotar} href={"mailto:lucianosbs151@gmail.com?&subject=Gostaria de adotar o " + nome}>
