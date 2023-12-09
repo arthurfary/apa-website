@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import client from "../database";
 
 export async function GET(request) {
+    NextResponse.setHeader('Cache-Control', 'no-store, max-age=0');
+
     // Verifica se as credenciais são do mesmo domínio
     if (request.credentials !== "same-origin") {
         return NextResponse.json({ message: "Não Autorizado!", success: 0 }, { status: 403 });
