@@ -133,6 +133,8 @@ function Animais() {
                                     placeholder="Idade"
                                     value={idade}
                                     onChange={(e) => setIdade(e.target.value)}
+                                    max={9999}
+                                    maxLength={4}
                                 />
                                 <select
                                     className={styles.selectUnidadeTempo}
@@ -177,8 +179,20 @@ function Animais() {
                     )}
 
                     {animais.map((animal, index) => (
-                        <Card key={index} id={animal.id} nome={animal.nome} raca={animal.raca} descricao={animal.descricao} idade={animal.idade} foto={animal.foto} setRefresh={setRefresh} refresh={refresh} />
+                        <Card
+                            key={index}
+                            id={animal.id}
+                            nome={animal.nome}
+                            raca={animal.raca}
+                            descricao={animal.descricao}
+                            idade={animal.idade}
+                            foto={animal.foto}
+                            porte={animal.porte}
+                            setRefresh={setRefresh}
+                            refresh={refresh}
+                        />
                     ))}
+                    
                 </section>
             </main>
         </SystemPage>
