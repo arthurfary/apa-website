@@ -112,6 +112,7 @@
     padding-left: 11vw;
     padding-bottom: 5vw;
     font-size: 2vw;
+    margin-top: 10vw;
     
     
 }
@@ -120,6 +121,7 @@
     margin: -5vw;
     margin-left: -10vw;
     margin-bottom: 10vw;
+    
 }
 .conjunto2{
     width: 100%;
@@ -368,6 +370,7 @@
 }
     
 .tex2 {
+    margin-top: 10vw;
     font-size: 7vw !important;
     text-align: center;
     margin-left: 0;
@@ -385,7 +388,7 @@
     padding:0 10vw;
     max-width: 100%; 
     margin-left: 0vw;
-    margin-top: 10vw;
+    margin-top: 5vw;
     
 }
 
@@ -393,7 +396,7 @@
     
     text-align: center;
     display: flex;
-    margin-top: 20vw;
+    margin-top: 4vw;
     font-size: 5vw !important;
     max-width: 60%;
     margin-left: -5em;
@@ -410,7 +413,7 @@
     
     
 .tex4 {
-    
+    margin-top: 20vw;
     font-size: 7vw;
     max-width: 100vw;
 }
@@ -445,7 +448,7 @@
     height: auto;
     position: absolute;
     margin-left: 60vw;
-    transform: translateY(10em);
+    transform: translateY(20em);
     display: flex;
 }
 .coletaBg {
@@ -460,6 +463,16 @@
     flex-direction: column;
     align-items: center;
 }
-
+.coletaT1{
+    font-size: 8vw;
+    text-align: center;
+    margin: 1.5vw;
+    color: black;
+  }
+.coletaT2{
+    font-size: 6vw;
+    text-align: center;
+    color: black;
+  }
 
 }
