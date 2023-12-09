@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import SystemPage from '@/app/components/page_type/sistema';
 import Load from '@/app/components/load/load';
 import Card from './card/card';
-import ImageUpload from '@/app/components/image_upload/image_upload'; // Importação do componente ImageUpload
+import ImageUpload from '@/app/components/image_upload/image_upload';
 
 function Noticias() {
     const [noticias, setNoticias] = useState([]);
@@ -16,11 +16,7 @@ function Noticias() {
 
     useEffect(() => {
         fetch('/api/obterNoticias', {
-            headers: {
-                'Cache-Control': 'no-cache, no-store, must-revalidate',
-                'Pragma': 'no-cache',
-                'Expires': '0'
-            }
+            method: 'GET'
         })
         .then(response => response.json())
         .then(data => setNoticias(data.rows));

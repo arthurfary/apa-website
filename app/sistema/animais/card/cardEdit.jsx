@@ -3,32 +3,21 @@ import styles from './cardEdit.module.css';
 import Load from '@/app/components/load/load';
 import ImageUpload from '@/app/components/image_upload/image_upload';
 
-function CardEdit({
-  id,
-  nome,
-  raca,
-  descricao,
-  idade,
-  foto,
-  porte,
-  setRefresh,
-  refresh,
-  setEdit,
-}) {
+function CardEdit({id,nome,raca,descricao,idade,foto,porte,setRefresh,refresh,setEdit,}) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     nomeEdit: nome,
     racaEdit: raca,
     descricaoEdit: descricao,
-    idadeEdit: idade ? idade.toString() : '', // Convertemos para string para que o input do tipo number funcione
-    unidadeTempoEdit: 'semanas', // Inicialize com um valor padrão
+    idadeEdit: idade ? idade.toString() : '',
+    unidadeTempoEdit: 'semanas',
     imageEdit: foto,
     porteEdit: porte,
   });
 
   const { nomeEdit, racaEdit, descricaoEdit, idadeEdit, unidadeTempoEdit, imageEdit, porteEdit } = formData;
 
-  const handleChange = (e) => {
+  function handleChange(e) {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -36,14 +25,14 @@ function CardEdit({
     });
   };
 
-  const handleImageUpload = (image) => {
+  function handleImageUpload (image){
     setFormData({
       ...formData,
       imageEdit: image,
     });
   };
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit (e){
     e.preventDefault();
     setLoading(true);
 
@@ -53,7 +42,8 @@ function CardEdit({
       return;
     }
 
-    const idadeDias = idadeEdit ? calcularIdadeEmDias(idadeEdit, unidadeTempoEdit) : null;
+    // Converte a idade para dias apenas se a unidade de tempo for diferente de "semanas"
+    const idadeDias = unidadeTempoEdit !== 'semanas' ? calcularIdadeEmDias(idadeEdit, unidadeTempoEdit) : idadeEdit;
 
     await fetch('/api/salvarPet', {
       method: 'POST',

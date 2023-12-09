@@ -26,7 +26,7 @@ function Card({ id, nome, raca, descricao, idade, foto, porte, setRefresh, refre
     } else {
       return 'Menos de 1 ano';
     }
-  }  
+  }
 
   async function removerPet() {
     setLoading(true);
