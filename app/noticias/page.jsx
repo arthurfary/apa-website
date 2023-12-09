@@ -39,10 +39,16 @@ export default function Noticias() {
            
           <div className={styles.mainContainer}>
             {/* Renderiza as noticias se não estiver carregando, caso contrário, renderiza o componente de carregamento */}
-            {!screenLoading && noticias?.map((noticia, i) => (
+            {!screenLoading && noticias?.length > 0 ? (
+              noticias.map((noticia, i) => (
                 <CardMaker key={i} id={noticia.id} title={noticia.titulo} postDate={noticia.data} image={noticia.imagem}/>
               ))
-            }
+            ) : (
+              <div className={styles.semNoticias}>
+                <h1>Não há noticias por enquanto! Volte mais tarde!</h1>
+                <a className={styles.goBackButton} href="/">Voltar para Home</a>
+              </div>
+            )}
             {screenLoading && <div className={styles.load}><Load size={100}/></div>}
           </div>
         </main>

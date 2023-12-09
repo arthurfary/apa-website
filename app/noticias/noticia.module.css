@@ -11,6 +11,10 @@
     height: 100vh;
     z-index: 100;
     position: absolute;
+
+    margin: 0;
+    padding: 0;
+    top: 0;
 }
 
 
@@ -69,6 +73,30 @@
     margin-top: -5vw;
 }
 
+.semNoticias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+
+    z-index: 99;
+    margin: 0 2rem;
+}
+
+.goBackButton{
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: .2rem;
+    background-color: var(--footer-color);
+    border-bottom: 2px solid var(--dark-color);
+}
+
+.goBackButton:active{
+    border: 0;
+    transform: translateY(2px);
+}
 
 
 @media only screen and (max-width: 798px) {

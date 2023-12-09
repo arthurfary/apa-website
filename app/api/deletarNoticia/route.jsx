@@ -22,12 +22,14 @@ export async function DELETE(request) {
         const result = await client.query("DELETE FROM noticias WHERE id = $1", [id]);
 
         // Verifica se alguma linha foi realmente deletada
-        if (result.rowCount === 0) {
+        if (result) {
+            // Retorna sucesso
+            return NextResponse.json({ message: "Notícia deletada com sucesso!", success: 1 }, { status: 200 });
+        }
+        else{
             return NextResponse.json({ message: "Notícia não encontrada!", id:id, success: 0 }, { status: 404 });
         }
-
-        // Retorna sucesso
-        return NextResponse.json({ message: "Notícia deletada com sucesso!", success: 1 }, { status: 200 });
+        
     } catch (error) {
         // Trata possíveis erros
         console.error(error);

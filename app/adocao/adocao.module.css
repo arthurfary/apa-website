@@ -1,5 +1,21 @@
 /*Title Config*/
 
+.load{
+    position: absolute;
+    display: flex;
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--dimmed-navbar-color);
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
 .display{
     display: flex;
     margin-top: 75px;
@@ -59,6 +75,33 @@
     padding-bottom: 15vw;
     padding-top: 25vw;
     justify-content: space-around;
+}
+
+
+.semPets{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+
+    z-index: 99;
+    margin: 0 2rem;
+}
+
+.goBackButton{
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: .2rem;
+    background-color: var(--footer-color);
+    border-bottom: 2px solid var(--dark-color);
+}
+
+.goBackButton:active{
+    border: 0;
+    transform: translateY(2px);
 }
 
 

@@ -70,6 +70,8 @@
     transform: translateX(0);
   }
 
+
+  /* hamburger button */
   .hamburger div:nth-child(1) {
     top: 0;
   }
