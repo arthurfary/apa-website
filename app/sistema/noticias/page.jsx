@@ -16,7 +16,7 @@ function Noticias() {
 
     useEffect(() => {
         fetch('/api/obterNoticias', {
-            cache: 'no-store',
+            next: { revalidate: 3600 }
         })
         .then(response => response.json())
         .then(data => setNoticias(data.rows));
