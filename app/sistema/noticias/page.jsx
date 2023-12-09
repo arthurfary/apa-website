@@ -16,7 +16,7 @@ function Noticias() {
 
     useEffect(() => {
         fetch('/api/obterNoticias', {
-            method: 'GET'
+            cache: 'no-store',
         })
         .then(response => response.json())
         .then(data => setNoticias(data.rows));
