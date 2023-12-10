@@ -23,11 +23,7 @@ function Animais() {
 
     useEffect(() => {
         fetch('/api/obterPets', {
-            headers: {
-                'Cache-Control': 'no-cache, no-store, must-revalidate',
-                'Pragma': 'no-cache',
-                'Expires': '0'
-            }
+            method: 'POST'
         })
         .then(response => response.json())
         .then(data => setAnimais(data.rows));
