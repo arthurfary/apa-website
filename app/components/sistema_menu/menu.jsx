@@ -12,9 +12,9 @@ export default function Menu() {
         </div>
       </Link>
 
-      <Link href="/sistema/atividades">
+      <Link href="/sistema/pontos_de_coleta">
         <div className={styles.menuItem}>
-          <p>Atividades</p>
+          <p>Pontos de Coleta</p>
         </div>
       </Link>
 

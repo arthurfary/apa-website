@@ -7,7 +7,9 @@ import { useState } from 'react';
 import Load from '@/app/components/load/load';
 import CardEdit from './cardEdit';
 
-function Card({ id, nome, descricao, data, setRefresh, refresh }) {
+import { deletarPonto } from '@/app/functions/removePonto';
+
+function Card({ id, nome, rua, numero, cidade, estado, cep, setRefresh, refresh }) {
 
   const [loading, setLoading] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -15,13 +17,11 @@ function Card({ id, nome, descricao, data, setRefresh, refresh }) {
   async function removerAtividade() {
     setLoading(true)
 
-    await fetch('/api/deletarAtividade?id='+id, {
-        method: 'DELETE',
-    })
-    .then(response => response.json())
-    .then(data => {
+    deletarPonto(id)
+    .then(() => {
       setRefresh(!refresh);
-    });
+    })
+    .catch(error => alert(error));
 
     setLoading(false)
   }
@@ -29,8 +29,8 @@ function Card({ id, nome, descricao, data, setRefresh, refresh }) {
   return !edit ? (
     <div className={styles.card}>
       <h2>{nome}</h2>
-      <p>{descricao}</p>
-      <p>Data: {new Date(data).toLocaleDateString('pt-BR')}</p>
+      <p>Rua: {rua}, Número: {numero}</p>
+      <p>Cidade: {cidade}, Estado: {estado}, CEP: {cep}</p>
       {loading === false && 
         <>
           <button className={styles.editar} onClick={() => {setEdit(true)}}>Editar</button>
@@ -47,13 +47,17 @@ function Card({ id, nome, descricao, data, setRefresh, refresh }) {
     <CardEdit 
       id={id} 
       nome={nome} 
-      descricao={descricao} 
-      data={data} 
+      rua={rua} 
+      numero={numero} 
+      cidade={cidade} 
+      estado={estado} 
+      cep={cep} 
       setRefresh={setRefresh} 
       refresh={refresh} 
       setEdit={setEdit} 
     />
   );
 };
+
 
 export default Card;

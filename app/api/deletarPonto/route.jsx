@@ -14,23 +14,23 @@ export async function DELETE(request) {
     const id = url.searchParams.get("id");
 
     if (!id) {
-        return NextResponse.json({ message: "ID da atividade não fornecido!", success: 0 }, { status: 400 });
+        return NextResponse.json({ message: "ID do ponto não fornecido!", success: 0 }, { status: 400 });
     }
 
     try {
         // Executa a query de deleção
-        const result = await client.query("DELETE FROM atividades WHERE id = $1", [id]);
+        const result = await client.query("DELETE FROM pontos WHERE id = $1", [id]);
 
         // Verifica se alguma linha foi realmente deletada
         if (result.rowCount === 0) {
-            return NextResponse.json({ message: "Atividade não encontrada!", success: 0 }, { status: 404 });
+            return NextResponse.json({ message: "ponto não encontrado!", success: 0 }, { status: 404 });
         }
 
         // Retorna sucesso
-        return NextResponse.json({ message: "Atividade deletada com sucesso!", success: 1 }, { status: 200 });
+        return NextResponse.json({ message: "ponto deletado com sucesso!", success: 1 }, { status: 200 });
     } catch (error) {
         // Trata possíveis erros
         console.error(error);
-        return NextResponse.json({ message: "Erro ao deletar a atividade.", success: 0 }, { status: 500 });
+        return NextResponse.json({ message: "Erro ao deletar a ponto.", success: 0 }, { status: 500 });
     }
 }
