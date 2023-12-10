@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
+
 import SitePage from "../components/page_type/site";
 import styles from "./comoajudar.module.css";
 import Image from "next/image";
@@ -7,16 +8,25 @@ import Image from "next/image";
 import reversaRampa from "@/public/rampa_reversa.png";
 import racaoImage from "@/public/racao.png";
 import setaEspiral from "@/public/Espiral_seta.png";
-import adoteAgro from "@/public/Adote_agora_1.png";
-import meAdota from "@/public/Me_adota.png";
-import petImage from "@/public/Pet.png";
+
 import patasReversas from "@/public/Patas_reversas.png";
-import pipoca from "@/public/pipoca.jpeg"
-import boneImage from '@/public/osso.png'
+
 import coletaBg from '@/public/comoajudar-bg-coleta.png'
 import PtoColeta from "../components/ponto_coleta/ptoColeta"
 
+import { fetchPontos } from '../functions/fetchPontos';
+
 export default function ComoAjudar() {
+  const [pontos, setPontos] = useState(null);
+
+  useEffect(() => {
+    fetchPontos()
+    .then(data => {
+      setPontos(data);
+    })
+    .catch(error => console.error(error));
+  }, [])
+
   return (
     <SitePage>
       <div className={styles.display}>
@@ -60,44 +70,6 @@ export default function ComoAjudar() {
           <p>Se você gosta de animais e tem tempo livre para se dedicar, junte-se a nós!</p>
         </div>
 
-        {/* <div className={styles.conjunto2}>
-          <Image src={adoteAgro} className={styles.ver} alt="Imagem de adoção" />
-          <Image src={meAdota} className={styles.quatro} alt="Imagem de um convite para adoção" />
-          <Image src={petImage} className={styles.pote} alt="Imagem de um animal de estimação" />
-        </div> */}
-
-        {/* <div className={styles.curvyRectangle}>
-          <Image src={windowWidth > 700 ? adoteAgro : adoteAgro} objectPosition='center' className={styles.CurvyRectangleBg} alt="imgBg2"/> 
-
-          <div className={styles.boneButtonContainer}>
-            <div className={styles.boneButton} style={{ position: 'relative', width: '100%', height: '100%' }}>
-              
-              <Image src={boneImage} layout='fill' objectFit={'contain'} objectPosition='center' style={{cursor: 'pointer'}}></Image>
-              <h1 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Adote um Pet!</h1>
-            </div>
-          </div>
-          <div className={styles.rectContainer}>
-            
-              <div className={styles.rectDiv}>
-                <Image src={pipoca} className={styles.rectImage} />
-              </div>
-              <div className={styles.rectDiv}>
-              <Image src={pipoca} className={styles.rectImage} />
-              </div>
-              <div className={styles.rectDiv}>
-              <Image src={pipoca} className={styles.rectImage} />
-              </div>
-              <div className={styles.rectDiv}>
-              <Image src={pipoca} className={styles.rectImage} />
-              </div>
-              
-          
-          </div>
-          <Image src={petImage} className={styles.pote} alt="Imagem de um animal de estimação" />
-          
-         
-          </div> */}
-
           {/* Pontos de Coleta */}
           <div className={styles.coletaDisplay1}>
             <Image src={coletaBg} className={styles.coletaBg} alt="Imagem de fundo para o texto sobre coleta de doação." />
@@ -106,9 +78,10 @@ export default function ComoAjudar() {
           </div>
 
           <div className={styles.coletaDisplay2}>
-            <PtoColeta/>
-            <PtoColeta/>
-            <PtoColeta/>
+            {/* <PtoColeta/> */}
+            {pontos?.map((ponto, key) => 
+              <PtoColeta key={key} nome={ponto.nome} rua={ponto.rua} numero={ponto.numero} cidade={ponto.cidade} estado={ponto.estado} cep={ponto.cep}/>
+            )}
 
           </div>
 

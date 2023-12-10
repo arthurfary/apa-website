@@ -19,9 +19,9 @@ function Home() {
                     </div>
                   </Link>
 
-                  <Link href="/sistema/atividades">
+                  <Link href="/sistema/pontos_de_coleta">
                     <div className={styles.gridItem}>
-                      <p>Atividades</p>
+                      <p>Pontos de Coleta</p>
                     </div>
                   </Link>
 

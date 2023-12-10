@@ -1,8 +1,8 @@
 
 
 
-export async function fetchPets() {
-    const response = await fetch('/api/obterPets', {
+export async function fetchPontos() {
+    const response = await fetch('/api/obterPontos', {
       headers: {
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Pragma': 'no-cache',
@@ -11,6 +11,5 @@ export async function fetchPets() {
       method: 'POST'
     });
     const data = await response.json();
-    console.log(data);
     return data.rows;
-}
+  }
