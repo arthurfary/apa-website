@@ -1,14 +1,39 @@
-
+"use client"
 import SitePage from "../components/page_type/site"
 
 import styles from './feitopor.module.css'
 
 import ajudantes from './feitopor.json'
 
+import { useEffect, useState } from "react"
+
+
 const CardMaker = ({nome, desc, linkedin = null, github = null}) => {
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
+    function abreviarNome(nome) {
+
+        const partes = nome.split(' ');
+    
+        if (partes.length <= 2) {
+            return nome;
+        }
+    
+        for (let i = 1; i < partes.length - 1; i++) {
+            partes[i] = partes[i].charAt(0) + '.';
+        }
+    
+        return partes.join(' ');
+    }
+
+
     return(
         <div className={styles.card}>
-            <h1>{nome}</h1>
+            <h1>{width < 430 ? abreviarNome(nome) : nome}</h1>
             <h2>{desc}</h2>
 
             <div className={styles.cardButtonContainer}>

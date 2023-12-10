@@ -11,11 +11,13 @@
     align-items: center;
 
     margin-bottom: 2vw;
-    background-color: antiquewhite;
+    background-color: var(--navbar-color);
 
     border-radius: 2%;
     border-color: black;
     border-bottom: solid;
+
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5);
 }
 
 .cardImageContainer{
@@ -107,5 +109,31 @@
     .cardContainer{
         width: 90vw;
         margin-bottom: 5rem;
+        flex-direction: column;
+    }
+
+    .cardImageContainer{
+        border-right: 0;
+        border-bottom: solid black;
+        
+    }
+
+    .cardDesc{
+        min-height: fit-content;
+    }
+
+    .subDiv{
+        flex-direction: column;
+    }
+    
+    .cardInfoContainer text1{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        max-width: unset;
+    }
+
+    .cardAdotar{
+        margin-top: 2vw;
     }
 }

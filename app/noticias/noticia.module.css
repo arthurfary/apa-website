@@ -1,5 +1,5 @@
 .background{
-    background-color: #f4f1f1;
+    background-color: #fff;
 }
 
 .load{
@@ -136,9 +136,11 @@
         margin: 0;
 
         align-self: center;
-        margin-right: 2vw;
+        margin-left: 2vw;
 
         width: 12vw;
+
+        order: 2;
  
     }
 

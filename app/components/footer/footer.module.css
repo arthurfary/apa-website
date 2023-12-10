@@ -25,22 +25,22 @@
 
 .footerContainer {
   width: 100vw;
-  margin-bottom: 5vw;
+  margin-bottom: 1vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding-left: 10%;
+  align-items: center;
+  justify-content: center;
 }
 
 .addressContainer{
   display: flex;
   flex-direction: column;
-  max-width: 35%;
-  width: 512px;
+  width: 50%;
   padding: 1em;
 
   /* Centralizar img */
-  align-items: center;
+  align-items: end;
   justify-content: center;
 }
 
@@ -142,7 +142,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  width: 50%;
+  margin-right: 2vw;
 }
   
 .buttonsWrap {
@@ -168,8 +169,9 @@
 .buttonsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  align-items: end;
+  justify-content: end;
+  width: 30%;
 }
 
 .buttonsWrap {
@@ -182,9 +184,7 @@
 }
 
 /* adiciona margin a todos os filhos da div */
-.buttonsWrap *{
-  margin: 1vw;
-}
+
 
 .button {
   flex: 1;
@@ -200,7 +200,7 @@
 }
 
 .btnImage {
-  width: 4vw;
+  width: 2vw;
   height: auto;
   filter: invert(1);
 }
@@ -221,16 +221,16 @@
 }
 
 .footerItem{
-  width: 30%;
-  margin-left: 10%;
-  padding-left: 10%;
+  width: 50%;
+
+  padding-left: 4vw;
   border-left: black 2px solid;
   border-left-style: dashed;
 }
 
 .footerItem p{
-  font-weight: 500;
-  font-size: 1.125rem;
+  font-weight: 400;
+  font-size: 1rem;
   line-height: 23px;
   letter-spacing: 0px;
   color: black;
@@ -250,31 +250,54 @@
 .footerItem ul li a{
   color: black;
   text-decoration: none;
-  font-size: xx-large;
-  font-style: italic;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .apaLogo{
   color: transparent;
-  width: -webkit-fill-available;
   height: fit-content;
-  align-self: center;
-  margin-bottom: 2em;
-  width: 25vw;
+  align-self: end;
+  margin-right: 2vw;
+  width: 30%;
 }
 
 
 
 .feitoPorButtonContainer{
   display: flex;
+  width: 100vw;
+  align-content: center;
+  justify-content: center;
 }
-.feitoPorButtonContainer a{ 
-  background-color: var(--dimmed-navbar-color);
-  padding: 10px;
-  border-radius: 5px;
+
+.conhecaOsDesvContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  width: fit-content;
+}
+
+.conhecaOsDesvContainer p{
+  margin-bottom: 1vw;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: var(--dark-color);
+}
+
+.imgFeitoPor{
+  width: 15%;
+  height: auto;
+
+  margin-bottom: 2vw;
+}
+
+.feitoPorButtonContainer{ 
   
+
 }
 
 @media screen and (max-width:719px){
@@ -286,32 +309,33 @@
 
   .footerItem{
     margin-left: 0;
+    align-items: center;
+    justify-content: center;
   }
 
   .footerItem ul{
-    margin-top: 10vw;
+    padding-left: 10%;
+    align-items: center;
+    justify-content: center;
   }
 
   .footerItem ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: x-large;
-    font-style: italic;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
+
+
 
   .addressContainer{
-    max-width: 55%;
+    width: 50%;
     padding: 0em;
-    padding-right: 5vw;
+    display: flex;
   }
 
-  .addressText{
-    font-size: x-large;
-  }
 
-  .addressContainer h2{
-    font-size: xx-large;
+  .addressContainer {
+    align-items: center;
+    justify-content: center;
+
   }
 
   .centeredImage {
@@ -322,4 +346,20 @@
     width: 8vw;
   }
 
+  .buttonsContainer{
+    width: 100%;
+  }
+
+  .btnImage{
+    width: 5vw
+  }
+
+  .apaLogo{
+    width: 35vw;
+    align-self: center;
+  }
+
+  .buttonsContainer{
+    width: 50%;
+  }
 }

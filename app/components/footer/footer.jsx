@@ -7,13 +7,15 @@ import imgPaws from "../../../public/paws.png"
 import imgPetToys from "../../../public/pet_toys.png"
 import imgApaLogo from "../../../public/apa-logo.png"
 
+import imgFeitoPor from "@/public/footer_image2.svg"
+
 import Image from "next/image"
 
 export default function Footer() {
 return(
     <footer className={styles.footer}>
-      <cap><Image src={imgFooterCap} alt="footerCap" className={styles.capImage}/></cap>
       <div className={styles.footerContainer}>
+
         <div className={styles.addressContainer}> 
           <Image src={imgApaLogo} alt="apaLogo" className={styles.apaLogo}/>
           <div className={styles.buttonsContainer}>
@@ -37,13 +39,10 @@ return(
               <a href="/historia">História</a>
             </li>
             <li>
-              <a href="/doacao">Doação</a>
+              <a href="/como_ajudar">Como Ajudar</a>
             </li>
             <li>
               <a href="/adocao">Adoção</a>
-            </li>
-            <li>
-              <a href="/atividades">Atividades</a>
             </li>
             <li>
               <a href="/noticias">Noticias</a>
@@ -52,16 +51,15 @@ return(
               <a href="/sistema">Área Restrita</a>
             </li>
           </ul>
-
-          <div className={styles.feitoPorButtonContainer}>
-          <a href="/feito_por">Este site foi feito por...</a>
-        </div>
         </div>
 
-        
-       
+      </div>
 
-
+      <div className={styles.feitoPorButtonContainer}>
+        <a href="/feito_por" className={styles.conhecaOsDesvContainer}>
+          <p>Conheça os Desenvolvedores</p>
+          <Image src={imgFeitoPor} className={styles.imgFeitoPor}></Image>
+        </a>
       </div>
 
      

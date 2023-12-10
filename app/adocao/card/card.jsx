@@ -28,7 +28,7 @@ const CardMaker = ({nome, idade, raca, porte, desc, image}) => {
           <div className={styles.cardInfoContainer}>
             <text1>{nome}</text1>
 
-            <subDiv>
+            <subDiv className={styles.subDiv}>
               <d>
                 <text3>Raça</text3>
                 <text2>{raca}</text2>
@@ -39,7 +39,7 @@ const CardMaker = ({nome, idade, raca, porte, desc, image}) => {
               </d>
             </subDiv>
 
-            <subDiv>
+            <subDiv className={styles.subDiv}>
               <d>
                 <text3>Idade</text3>
                 <text2>{calculaIdade(idade)}</text2>
