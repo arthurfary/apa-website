@@ -41,6 +41,7 @@ export default function Adocao() {
         </div>
 
         <div className={styles.mainContainer}>
+        {screenLoading && <div className={styles.load}><Load size={100}/></div>}
         {!screenLoading && pets?.length > 0 ? (pets?.map((pet, i) => (
                 <CardMaker key={i} nome={pet.nome} raca={pet.raca} image={pet.foto} porte={pet.porte} idade={pet.idade} desc={pet.descricao}/>
               ))
@@ -51,7 +52,6 @@ export default function Adocao() {
           </div>
         )
         }
-        {screenLoading && <div className={styles.load}><Load size={100}/></div>}
         </div>
         
         

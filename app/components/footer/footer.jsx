@@ -52,8 +52,19 @@ return(
               <a href="/sistema">Área Restrita</a>
             </li>
           </ul>
+
+          <div className={styles.feitoPorButtonContainer}>
+          <a href="/feito_por">Este site foi feito por...</a>
         </div>
+        </div>
+
+        
+       
+
+
       </div>
+
+     
     <Image src={imgPaws} alt="imgPaws" className={styles.miscImage} style={{right:'15px', top:'15px'}}/>
     <Image src={imgPetToys} alt="imgPetToys" className={styles.miscImage} style={{right:'15px', bottom:'15px'}}/>
   </footer>

@@ -1,0 +1,16 @@
+{
+    "programadores": [
+        {"nome": "Arthur Eduardo Fary", "desc": "Programador Full-Stack", "linkedin": "https://www.linkedin.com/in/arthur-eduardo-fary-199346213/", "github": "https://github.com/arthurfary"},
+        {"nome": "Freddy Albert Baier", "desc": "Programador Full-Stack", "linkedin": "https://www.linkedin.com/in/freddy-baier/", "github": "https://github.com/Fooyer"},
+        {"nome": "Matheus Henrique Weber Pasini", "desc": "Programador Front-End", "linkedin": "", "github": "https://github.com/MhPasini"},
+        {"nome": "Lucas Tangerino Berto", "desc": "Programador Front-End", "linkedin": "https://www.linkedin.com/in/lucas-tangerino-5537a51bb/", "github": "https://github.com/LucasTangerino"}
+    ],
+    "designers": [
+        {"nome": "Gianne Meireles", "desc": "Designer", "linkedin": "https://www.linkedin.com/in/gianne-meireles-7434412a3/"},
+        {"nome": "Luana Renata Humochinsk", "desc": "Designer", "linkedin": "https://www.linkedin.com/in/luana-renata-humochinski-7319a025a/"},
+        {"nome": "Jussara Günther Righi Vivas", "desc": "Designer", "linkedin": "https://www.linkedin.com/in/jussara-gunther-righi-vivas-628821242/"}
+    ],
+    "outros": [
+        {"nome": "Sideney Dalmazo do Nascimento", "desc": "Assistência Geral", "linkedin": "https://www.linkedin.com/in/sideney-nascimento/"}
+    ]
+}

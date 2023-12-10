@@ -16,7 +16,7 @@ import boneImage from '@/public/osso.png'
 import coletaBg from '@/public/comoajudar-bg-coleta.png'
 import PtoColeta from "../components/ponto_coleta/ptoColeta"
 
-export default function Contato() {
+export default function ComoAjudar() {
   return (
     <SitePage>
       <div className={styles.display}>

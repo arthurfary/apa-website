@@ -1,0 +1,93 @@
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100vw;
+    min-height: 125vh;
+
+    justify-content: center;
+    margin-bottom: 20vw;
+}
+
+.titleContainer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    padding: 0 20vw;
+    margin: 5rem 0;
+}
+
+.namesContainer{
+    display: flex;
+    text-align: center;
+
+    flex-direction: column;
+}
+
+.tipoContainer{
+    width: 45vw;
+}
+
+
+/* card */
+
+.card{
+    text-align: center;
+    margin-top: 2em;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTipoTexto{
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+
+.cardButtonContainer {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 0.2rem;
+}
+
+.cardGithub{
+    background-color: #24292e;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    width: fit-content;
+
+    transition: all 0.1s;
+    
+}
+.cardGithub:hover{
+    background-color: #34393e;
+}
+.cardLinkedin{
+    background-color: #0077b5;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    width: fit-content;
+
+    transition: all 0.1s;
+}
+
+.cardLinkedin:hover{
+    background-color: #1087c5;
+}
+
+@media only screen and (max-width: 798px) {
+    .tipoContainer{
+        width: 100vw;
+    }
+    .titleContainer{
+        padding: 0 5vw;
+    }
+}

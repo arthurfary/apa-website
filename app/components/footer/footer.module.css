@@ -264,6 +264,19 @@
   width: 25vw;
 }
 
+
+
+.feitoPorButtonContainer{
+  display: flex;
+}
+.feitoPorButtonContainer a{ 
+  background-color: var(--dimmed-navbar-color);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--dark-color);
+  
+}
+
 @media screen and (max-width:719px){
   .apaLogo{
     margin-top: 2.5em;
