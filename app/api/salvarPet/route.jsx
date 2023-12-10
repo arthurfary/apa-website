@@ -9,12 +9,12 @@ export async function POST(request) {
 
     // Obtém os dados do corpo da requisição
     const data = await request.json();
-    const { id, nome, especie, foto } = data;
+    const { id, nome, raca, descricao, idade, foto, porte } = data;
 
     try {
         if (id) {
             // Atualiza o pet existente
-            const result = await client.query("UPDATE pets SET nome = $1, especie = $2, foto = $3 WHERE id = $4", [nome, especie, foto, id]);
+            const result = await client.query("UPDATE pets SET nome = $1, raca = $2, descricao = $3, idade = $4, foto = $5, porte = $6 WHERE id = $7", [nome, raca, descricao, idade, foto, porte, id]);
 
             // Verifica se alguma linha foi realmente atualizada
             if (result.rowCount === 0) {
@@ -24,7 +24,7 @@ export async function POST(request) {
             return NextResponse.json({ message: "Pet atualizado com sucesso!", success: 1 }, { status: 200 });
         } else {
             // Insere um novo pet
-            await client.query("INSERT INTO pets (nome, especie, foto) VALUES ($1, $2, $3)", [nome, especie, foto]);
+            await client.query("INSERT INTO pets (nome, raca, descricao, idade, foto, porte) VALUES ($1, $2, $3, $4, $5, $6)", [nome, raca, descricao, idade, foto, porte]);
             return NextResponse.json({ message: "Pet adicionado com sucesso!", success: 1 }, { status: 201 });
         }
     } catch (error) {

@@ -1,57 +1,79 @@
 .card {
-  border: 1px solid #e0e0e0; /* Borda sutil */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  padding: 20px; /* Espaçamento interno */
-  margin: 20px; /* Espaçamento externo */
-  margin-top: 0px;
-  width: 300px; /* Largura máxima do card */
-  height: 400px;
-  text-align: center; /* Centraliza o texto */
-  background-color: #ffffff; /* Cor de fundo */
-}
-  
-.card h2 {
-  color: #333333; /* Cor do título */
-  margin-bottom: 10px; /* Espaço abaixo do título */
-}
-  
-.card p {
-  color: #666666; /* Cor do texto */
-  margin-bottom: 10px; /* Espaço abaixo do parágrafo */
-}
-  
-.card img {
-  width: 220px; /* Largura máxima da imagem */
-  max-height: 220px; /* Altura automática */
-  border-radius: 5px; /* Bordas arredondadas na imagem */
-}
-  
-.card button {
-    border: none; /* Remove a borda */
-    background-color: #007bff; /* Cor de fundo */
-    color: #ffffff; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Cursor apontando mão */
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.remover{
-  background-color: red !important;
-  margin-top: 10px;
+.card .imageContainer {
+  display: flex;
+  justify-content: center;
 }
 
-.remover:hover{
-  background-color: rgb(197, 1, 1) !important;
+.card .image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
-.loading{
-  margin-top: 20px;
+.card .cardDetails {
+  margin-top: 16px;
+  text-align: left;
 }
 
-.editar{
-  background-color: rgb(10, 33, 163) !important;
-  margin: 0px 5px;
-  margin-top: 10px;
+.card .cardDetails h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card .cardDetails p {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.card .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.card .buttonContainer button:first-child {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-right: 8px;
+  transition: background-color 0.2s;
+}
+
+.card .buttonContainer button:first-child:hover {
+  background-color: #2980b9;
+}
+
+.card .buttonContainer button:last-child {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.card .buttonContainer button:last-child:hover {
+  background-color: #c0392b;
+}
+
+.card .loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }

@@ -2,7 +2,7 @@
 
 import SystemPage from '../components/page_type/sistema';
 import Link from 'next/link';
-import styles from './page.module.css'; // Importando o módulo CSS
+import styles from './page.module.css';
 
 function Home() {
     return (
