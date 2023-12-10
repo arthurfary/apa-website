@@ -9,23 +9,23 @@ export async function POST(request) {
 
     // Obtém os dados do corpo da requisição
     const data = await request.json();
-    const { id, nome, descricao, date } = data;
+    const { id, nome, rua, numero, cidade, estado, cep } = data;
 
     try {
         if (id) {
             // Atualiza a atividade existente
-            const result = await client.query("UPDATE atividades SET nome = $1, descricao = $2, data = $3 WHERE id = $4", [nome, descricao, date, id]);
+            const result = await client.query("UPDATE pontos SET nome = $1, rua = $2, numero = $3, cidade = $4, estado = $5, cep = $6 WHERE id = $7", [nome, rua, numero, cidade, estado, cep, id]);
 
             // Verifica se alguma linha foi realmente atualizada
             if (result.rowCount === 0) {
-                return NextResponse.json({ message: "Atividade não encontrada para atualização!", success: 0 }, { status: 404 });
+                return NextResponse.json({ message: "Ponto não encontrado para atualização!", success: 0 }, { status: 404 });
             }
 
-            return NextResponse.json({ message: "Atividade atualizada com sucesso!", success: 1 }, { status: 200 });
+            return NextResponse.json({ message: "Ponto atualizado com sucesso!", success: 1 }, { status: 200 });
         } else {
             // Insere uma nova atividade
-            await client.query("INSERT INTO atividades (nome, descricao, data) VALUES ($1, $2, $3)", [nome, descricao, date]);
-            return NextResponse.json({ message: "Atividade adicionada com sucesso!", success: 1 }, { status: 201 });
+            await client.query("INSERT INTO pontos (nome, rua, numero, cidade, estado, cep) VALUES ($1, $2, $3, $4, $5, $6)", [nome, rua, numero, cidade, estado, cep]);
+            return NextResponse.json({ message: "Ponto adicionada com sucesso!", success: 1 }, { status: 201 });
         }
     } catch (error) {
         // Trata possíveis erros

@@ -9,11 +9,11 @@ export async function POST(request) {
 
     try {
         // Executa a query para obter as atividades
-        const { rows } = await client.query("SELECT * FROM atividades");
+        const { rows } = await client.query("SELECT id, nome, rua, numero, cidade, estado, cep FROM pontos");
 
         // Verifica se existem atividades cadastradas
         if (rows.length === 0) {
-            return NextResponse.json({ message: "Não existem atividades cadastradas!", rows, success: 1 }, { status: 200 });
+            return NextResponse.json({ message: "Não existem pontos cadastrados!", rows, success: 1 }, { status: 200 });
         }
 
         // Retorna as atividades encontradas
@@ -21,6 +21,6 @@ export async function POST(request) {
     } catch (error) {
         // Trata possíveis erros durante a execução da query
         console.error(error);
-        return NextResponse.json({ message: "Erro ao obter as atividades.", success: 0 }, { status: 500 });
+        return NextResponse.json({ message: "Erro ao obter os pontos.", success: 0 }, { status: 500 });
     }
 }
