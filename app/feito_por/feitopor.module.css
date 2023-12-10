@@ -15,7 +15,13 @@
     justify-content: center;
 
     padding: 0 20vw;
-    margin: 5rem 0;
+    margin: 6rem 0;
+
+}
+
+.titleContainer h1{
+    font-weight: 300;
+    font-size: 3rem;
 }
 
 .namesContainer{
@@ -41,11 +47,23 @@
 
     display: flex;
     flex-direction: column;
+
+    background-image: url('../../public/comoajudar-bg-coleta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    padding: 3rem ;  
+}
+
+.card h1{
+    font-size: 1.8rem;
+    max-width: 70%;
 }
 
 .cardTipoTexto{
-    color: var(--primary-color);
-    font-size: 4rem;
+    font-size: 5rem;
+    
 }
 
 .cardButtonContainer {
@@ -89,5 +107,18 @@
     }
     .titleContainer{
         padding: 0 5vw;
+    }
+
+    .cardTipoTexto{
+        font-size: 12vw;
+        margin-top: 6vh;
+        margin-bottom: 2vh;
+    }
+
+    .card{
+
+        margin-top: 0;
+
+        padding: 3rem 0;  
     }
 }
