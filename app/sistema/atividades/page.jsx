@@ -17,11 +17,7 @@ function Atividades() {
 
     useEffect(() => {
         fetch('/api/obterAtividades',{
-            headers: {
-                'Cache-Control': 'no-cache, no-store, must-revalidate', // Impede o cache
-                'Pragma': 'no-cache', // Suporte para navegadores mais antigos
-                'Expires': '0' // Data de expiração passada para impedir o cache
-            }
+            method: 'POST',
         })
             .then(response => response.json())
             .then(data => setAtividades(data.rows));
