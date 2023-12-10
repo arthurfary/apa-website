@@ -16,7 +16,7 @@ function Noticias() {
 
     useEffect(() => {
         fetch('/api/obterNoticias', {
-            method: 'GET',
+            method: 'POST',
             cache: 'no-cache'
         })
         .then(response => response.json())

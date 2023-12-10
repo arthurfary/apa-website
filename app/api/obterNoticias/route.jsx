@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import client from "../database";
 
-export async function GET(request) {
+export async function POST(request) {
 
     // Verifica se as credenciais são do mesmo domínio
     if (request.credentials !== "same-origin") {
