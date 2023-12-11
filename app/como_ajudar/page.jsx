@@ -82,10 +82,18 @@ export default function ComoAjudar() {
 
           <div className={styles.coletaDisplay2}>
             {/* <PtoColeta/> */}
-            {pontos?.map((ponto, key) => 
+            {pontos?.length > 0 ? ( pontos?.map((ponto, key) => 
               <PtoColeta key={key} nome={ponto.nome} rua={ponto.rua} numero={ponto.numero} cidade={ponto.cidade} estado={ponto.estado} cep={ponto.cep}/>
-            )}
-
+            )) : (
+              <div className={styles.semPontos}>
+                <h1>Estamos temporariamente sem pontos de coleta, volte mais tarde ou contate-nos</h1>
+                <div className={styles.buttonsBack}>
+                  <a className={styles.goBackButton} href="/">Voltar para Home</a>
+                  <a className={styles.goBackButton} href="mailto:lucianosbs151@gmail.com?&subject=Gostaria de ajudar!">Entrar em Contato</a>
+                </div>
+              </div>
+            )     
+            }
           </div>
 
       </div>
