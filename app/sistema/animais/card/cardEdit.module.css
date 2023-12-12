@@ -10,13 +10,24 @@
   margin-bottom: 20px;
 }
 
-/* Estilos para o formulário de adição */
-.addCard {
+.addCardForm img{
+  max-height: 200px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  align-self: center;
+}
+
+.addCardForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px dashed #0056b3;
   padding: 20px;
   margin-bottom: 20px;
+  height: 600px !important;
 }
 
 .inputField, .textArea, .selectPorte {
@@ -26,6 +37,9 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+}
+.inputField, .selectPorte{
+  max-height: 40px;
 }
 
 .textArea {

@@ -105,60 +105,62 @@ function CardEdit({id,nome,raca,descricao,idade,foto,porte,setRefresh,refresh,se
   return (
     <div className={styles.addCardForm}>
       <ImageUpload setImage={handleImageUpload} image={imageEdit} />
-      <input
-        className={styles.inputField}
-        type="text"
-        placeholder="Nome"
-        name="nomeEdit"
-        value={nomeEdit}
-        onChange={handleChange}
-      />
-      <input
-        className={styles.inputField}
-        type="text"
-        placeholder="Raça"
-        name="racaEdit"
-        value={racaEdit}
-        onChange={handleChange}
-      />
-      <textarea
-        className={styles.textArea}
-        placeholder="Descrição (máximo de 100 caracteres)"
-        maxLength={100}
-        name="descricaoEdit"
-        value={descricaoEdit}
-        onChange={handleChange}
-      />
-      <div className={styles.inputGroup}>
+      <div>
         <input
           className={styles.inputField}
-          type="number"
-          placeholder="Idade"
-          name="idadeEdit"
-          value={idadeEdit}
+          type="text"
+          placeholder="Nome"
+          name="nomeEdit"
+          value={nomeEdit}
           onChange={handleChange}
         />
+        <input
+          className={styles.inputField}
+          type="text"
+          placeholder="Raça"
+          name="racaEdit"
+          value={racaEdit}
+          onChange={handleChange}
+        />
+        <textarea
+          className={styles.textArea}
+          placeholder="Descrição (máximo de 100 caracteres)"
+          maxLength={100}
+          name="descricaoEdit"
+          value={descricaoEdit}
+          onChange={handleChange}
+        />
+        <div className={styles.inputGroup}>
+          <input
+            className={styles.inputField}
+            type="number"
+            placeholder="Idade"
+            name="idadeEdit"
+            value={idadeEdit}
+            onChange={handleChange}
+          />
+          <select
+            className={styles.selectUnidadeTempo}
+            name="unidadeTempoEdit"
+            value={unidadeTempoEdit}
+            onChange={handleChange}
+          >
+            <option value="semanas">Semanas</option>
+            <option value="meses">Meses</option>
+            <option value="anos">Anos</option>
+          </select>
+        </div>
         <select
-          className={styles.selectUnidadeTempo}
-          name="unidadeTempoEdit"
-          value={unidadeTempoEdit}
+          className={styles.selectPorte}
+          name="porteEdit"
+          value={porteEdit}
           onChange={handleChange}
         >
-          <option value="semanas">Semanas</option>
-          <option value="meses">Meses</option>
-          <option value="anos">Anos</option>
+          <option value="Pequeno">Pequeno</option>
+          <option value="Medio">Médio</option>
+          <option value="Grande">Grande</option>
         </select>
       </div>
-      <select
-        className={styles.selectPorte}
-        name="porteEdit"
-        value={porteEdit}
-        onChange={handleChange}
-      >
-        <option value="pequeno">Pequeno</option>
-        <option value="medio">Médio</option>
-        <option value="grande">Grande</option>
-      </select>
       {loading === false && (
         <div>
           <button className={`${styles.button} ${styles.salvar}`} onClick={handleSubmit}>
