@@ -3,8 +3,6 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-import imgLogo from '@/public/apa-logo.png'
-
 export const metadata = {
   title: 'APA São Bento do Sul',
   description: 'Junte-se à APA em apasbs.org para fazer a diferença na vida dos animais! Descubra como você pode contribuir através de doações, voluntariado ou adotando um pet. Explore nossas histórias inspiradoras e saiba mais sobre nosso compromisso com o bem-estar animal. Adote um amigo, transforme uma vida!',
