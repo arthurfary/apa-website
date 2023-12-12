@@ -37,7 +37,7 @@ function Animais() {
         setRaca('');
         setDescricao('');
         setIdade('');
-        setUnidadeTempo('semanas');
+        setUnidadeTempo('anos');
         setPorte('pequeno'); // Defina o porte de volta para o valor padrão 'pequeno'
     }
 
@@ -101,56 +101,58 @@ function Animais() {
                         <div className={styles.addCard}>
                         <form className={styles.addCardForm}>
                             <ImageUpload setImage={setImage} image={image} />
-                            <input
-                                className={styles.inputField}
-                                type="text"
-                                placeholder="Nome"
-                                value={nome}
-                                onChange={(e) => setNome(e.target.value)}
-                            />
-                            <input
-                                className={styles.inputField}
-                                type="text"
-                                placeholder="Raça"
-                                value={raca}
-                                onChange={(e) => setRaca(e.target.value)}
-                            />
-                            <textarea
-                                className={styles.textArea}
-                                placeholder="Descrição (máximo de 100 caracteres)"
-                                maxLength={100}
-                                value={descricao}
-                                onChange={(e) => setDescricao(e.target.value)}
-                            />
-                            <div className={styles.inputContainer}>
+                            <div>
                                 <input
                                     className={styles.inputField}
-                                    type="number"
-                                    placeholder="Idade"
-                                    value={idade}
-                                    onChange={(e) => setIdade(e.target.value)}
-                                    max={9999}
-                                    maxLength={4}
+                                    type="text"
+                                    placeholder="Nome"
+                                    value={nome}
+                                    onChange={(e) => setNome(e.target.value)}
                                 />
+                                <input
+                                    className={styles.inputField}
+                                    type="text"
+                                    placeholder="Raça"
+                                    value={raca}
+                                    onChange={(e) => setRaca(e.target.value)}
+                                />
+                                <textarea
+                                    className={styles.textArea}
+                                    placeholder="Descrição (máximo de 100 caracteres)"
+                                    maxLength={100}
+                                    value={descricao}
+                                    onChange={(e) => setDescricao(e.target.value)}
+                                />
+                                <div className={styles.inputContainer}>
+                                    <input
+                                        className={styles.inputField}
+                                        type="number"
+                                        placeholder="Idade"
+                                        value={idade}
+                                        onChange={(e) => setIdade(e.target.value)}
+                                        max={9999}
+                                        maxLength={4}
+                                    />
+                                    <select
+                                        className={styles.selectUnidadeTempo}
+                                        value={unidadeTempo}
+                                        onChange={(e) => setUnidadeTempo(e.target.value)}
+                                    >
+                                        <option value="semanas">Semanas</option>
+                                        <option value="meses">Meses</option>
+                                        <option value="anos">Anos</option>
+                                    </select>
+                                </div>
                                 <select
-                                    className={styles.selectUnidadeTempo}
-                                    value={unidadeTempo}
-                                    onChange={(e) => setUnidadeTempo(e.target.value)}
+                                    className={styles.selectPorte}
+                                    value={porte}
+                                    onChange={(e) => setPorte(e.target.value)}
                                 >
-                                    <option value="semanas">Semanas</option>
-                                    <option value="meses">Meses</option>
-                                    <option value="anos">Anos</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Medio">Médio</option>
+                                    <option value="Grande">Grande</option>
                                 </select>
                             </div>
-                            <select
-                                className={styles.selectPorte}
-                                value={porte}
-                                onChange={(e) => setPorte(e.target.value)}
-                            >
-                                <option value="pequeno">Pequeno</option>
-                                <option value="medio">Médio</option>
-                                <option value="grande">Grande</option>
-                            </select>
                             {loading === false && (
                                 <div>
                                     <button className={`${styles.button} ${styles.salvar}`} onClick={salvarNovo}>

@@ -1,12 +1,14 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  max-height: 600px;
 }
 
 .card .imageContainer {
@@ -18,6 +20,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 4px;
+  max-height: 300px;
 }
 
 .card .cardDetails {

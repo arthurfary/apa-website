@@ -14,17 +14,24 @@ function Card({ id, nome, raca, descricao, idade, foto, porte, setRefresh, refre
     const anos = Math.floor(idadeEmDias / 365);
     const mesesRestantes = idadeEmDias % 365;
     const meses = Math.floor(mesesRestantes / 30);
+    const semanasRestantes = idadeEmDias % 30;
+    const semanas = Math.floor(semanasRestantes / 7);
+  
+    // Construindo strings de anos e meses
     const anosString = anos > 0 ? `${anos} ${anos === 1 ? 'ano' : 'anos'}` : '';
     const mesesString = meses > 0 ? `${meses} ${meses === 1 ? 'mês' : 'meses'}` : '';
+    const semanasString = semanas > 0 ? `${semanas} ${semanas === 1 ? 'semana' : 'semanas'}` : '';
   
-    if (anosString && mesesString) {
-      return `${anosString} e ${mesesString}`;
+    if (anos === 0 && meses === 0 && semanas > 0) {
+      return semanasString; // Exibe em semanas se for menos de 1 mês
+    } else if (anos === 0 && meses > 0) {
+      return mesesString; // Exibe em meses se for menos de 1 ano
+    } else if (anosString && mesesString) {
+      return `${anosString} e ${mesesString}`; // Exibe anos e meses
     } else if (anosString) {
-      return anosString;
-    } else if (mesesString) {
-      return mesesString;
+      return anosString; // Exibe apenas anos
     } else {
-      return 'Menos de 1 ano';
+      return 'Não informada';
     }
   }
 
