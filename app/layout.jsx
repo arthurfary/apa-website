@@ -14,7 +14,7 @@ export const metadata = {
   og: {
     title: 'Apa São Bento do Sul',
     type: 'website',
-    image: `${imgLogo.src}`,
+    image: `https://apa-website-test.vercel.app${imgLogo.src}`,
     url: 'https://www.apasbs.org/',
     description: 'Junte-se à APA em apasbs.org para fazer a diferença na vida dos animais! Adote, doe ou seja voluntário.',
   },
