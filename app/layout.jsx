@@ -4,7 +4,6 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 import imgLogo from '@/public/apa-logo.png'
-import { images } from '@/next.config';
 
 export const metadata = {
   title: 'APA São Bento do Sul',
@@ -15,7 +14,7 @@ export const metadata = {
   og: {
     title: 'Apa São Bento do Sul',
     type: 'website',
-    image: `${images.basePath}${imgLogo.src}`,
+    image: `${imgLogo.src}`,
     url: 'https://www.apasbs.org/',
     description: 'Junte-se à APA em apasbs.org para fazer a diferença na vida dos animais! Adote, doe ou seja voluntário.',
   },
@@ -28,7 +27,6 @@ export const metadata = {
   },
   // Meta tags adicionais para melhorar a acessibilidade e SEO
   'robots': 'index, follow',
-  'viewport': 'width=device-width, initial-scale=1.0',
   'charset': 'UTF-8',
 };
 
